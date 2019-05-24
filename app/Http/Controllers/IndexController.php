@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
-public function verIndex(){
+public function showIndex(){
   return view('index');
 }
 }

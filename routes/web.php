@@ -10,9 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
-Route::get('/index','IndexController@verIndex');
+Route::get('/shop/{category_id}/{product_id}','ProductController@showProduct');
+Route::get('/shop/{category_id}','ShopController@Metodoqueyoquiera');
+Route::get('/shop','ShopController@showShop');
+Route::get('/contacto','ContactController@showContact');
+Route::get('/ayuda','HelpController@showHelp');
+Route::get('/carrito','CartController@showCart');
+Route::get('/index','IndexController@showIndex');
 
 Route::get('/', function () {
     return view('welcome');
