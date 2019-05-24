@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* fondo */
+  background-color: #F3F3F3;
+  /* texto */
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #232326;
+  }
+
+.contenedor {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  }
+.caja-pregunta {
+  width: 40%;
+  height: 120px;
+  background-color: white;
+  display: inline-block;
+  border: solid 1px black;
+  margin-top: 20px;
+  padding: 45px 0;
+  text-decoration: none;
+}
+.categoria-pregunta {
+  text-align: center;
+  letter-spacing: 3px;
+  background-color: white;
+  font-size: 0.9em;
+}
+
+.titulo {
+  color: #CC9FD8;
+  font-size: 1.5em;
+  }
+
+.contenedor-titulo {
+  padding: 8px 0;
+  }
+
+.margen-izq {
+  margin-left: 20px;
+  }
+
+.borde-titulo {
+  border-top: solid 1px #232326;
+  border-bottom: solid 1px #232326;
+}
+
+
+/*Media querys*/
+/*Tablet*/
+@media (min-width:768px) {
+  .contenedor {
+    padding: 0 20px;
+  }
+  .caja-pregunta {
+    width: 30%;
+    height: 130px;
+    padding: 52px 0;
+  }
+}
+
+/*Desktop*/
+
+@media (min-width: 1024px) {
+  .caja-pregunta {
+    height: 180px;
+    padding: 78px 0;
+  }
+
+}
