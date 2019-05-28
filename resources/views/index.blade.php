@@ -16,7 +16,7 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="estilos/glider.min.css" />
+    <link rel="stylesheet" href="glider.min" />
 
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -26,12 +26,12 @@
   </head>
 
   <body>
-  <?php include("includes/menu.php");?>
+  <?php include("/partials/header.blade.php");?>
 
 
     <!-- ___________________________________SECCION HERO / SLIDE __________________________________________________-->
 
-    <section class="Hero" >
+    <section class="Hero">
       <div class="glider-contain">
         <div class="glider draggable" id="glider-single">
           <div>
@@ -395,7 +395,7 @@
 
     <!-- ___________________________________END BOTON BACK TO TOP______________________________________________-->
 
-    <?php include("includes/footer.php");?>
+    <?php include("partials/footer");?>
 
 
     <!--------------------------------------------LIBRARY PARA RESPONSIVE VIDEO -->
