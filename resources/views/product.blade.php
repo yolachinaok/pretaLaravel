@@ -3,12 +3,12 @@
 <section class="gallery">
 
 <div class="gallery__minim">
-<img src="./assets/img/modulo1.jpg" alt="">
-<img src="./assets/img/modulo1.jpg" alt="">
-<img src="./assets/img/modulo1.jpg" alt="">
+<img src=".//images/modulo1.jpg" alt="">
+<img src=".//images/modulo1.jpg" alt="">
+<img src=".//images/modulo1.jpg" alt="">
 </div>
 <div class="gallery__big">
-<img src="./assets/img/modulo1.jpg" alt="">
+<img src=".//images/modulo1.jpg" alt="">
 
 </div>
 

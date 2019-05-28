@@ -32,11 +32,11 @@ if ($_POST) {
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-    <link rel="stylesheet" href="../estilos/style-registro.css">
+    <link rel="stylesheet" href="/css/style-registro.css">
     <title>Preta Shop - Registro</title>
   </head>
   <body>
-
+    @include("partials/header")
 <!-- Un contenedor para ambos formularios -->
 <div class="contenedor">
 
@@ -125,5 +125,6 @@ if ($_POST) {
    </div>
 </div>
 </div>
+@include("partials/footer")
   </body>
 </html>

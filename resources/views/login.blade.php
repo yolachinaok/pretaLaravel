@@ -33,6 +33,7 @@ if ($_POST) {
     <title>Preta Shop - Login</title>
   </head>
   <body>
+    @include("partials/header")
 
 <!-- Un contenedor para ambos formularios -->
 <div class="contenedor">
@@ -102,5 +103,7 @@ if ($_POST) {
    </div>
 </div>
 </div>
+
+  @include("partials/footer")
   </body>
 </html>

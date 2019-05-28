@@ -16,17 +16,17 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="glider.min" />
+    <link rel="stylesheet" href="/css/glider.min.css" />
 
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="estilos/scss/home.css" />
+    <link rel="stylesheet" href="/css/home.css" />
   </head>
 
   <body>
-  <?php include("/partials/header.blade.php");?>
+  @include("partials/header")
 
 
     <!-- ___________________________________SECCION HERO / SLIDE __________________________________________________-->
@@ -38,39 +38,39 @@
             <picture>
               <source
                 media="(min-width: 1200px)"
-                srcset="assets/img/hero-d.jpg"
+                srcset="/images/hero-d.jpg"
               />
               <source
                 media="(min-width: 768px)"
-                srcset="assets/img/hero-d.jpg"
+                srcset="/images/hero-d.jpg"
               />
-              <img src="assets/img/hero-m.jpg" />
+              <img src="/images/hero-m.jpg" />
             </picture>
           </div>
           <div>
             <picture>
               <source
                 media="(min-width: 1200px)"
-                srcset="assets/img/hero-d.jpg"
+                srcset="/images/hero-d.jpg"
               />
               <source
                 media="(min-width: 768px)"
-                srcset="assets/img/hero-d.jpg"
+                srcset="/images/hero-d.jpg"
               />
-              <img src="assets/img/hero-m.jpg" />
+              <img src="/images/hero-m.jpg" />
             </picture>
           </div>
           <div>
             <picture>
               <source
                 media="(min-width: 1200px)"
-                srcset="assets/img/hero-d.jpg"
+                srcset="/images/hero-d.jpg"
               />
               <source
                 media="(min-width: 768px)"
-                srcset="assets/img/hero-d.jpg"
+                srcset="/images/hero-d.jpg"
               />
-              <img src="assets/img/hero-m.jpg" />
+              <img src="/images/hero-m.jpg" />
             </picture>
           </div>
         </div>
@@ -146,13 +146,13 @@
             <picture>
               <source
                 media="(min-width: 1200px)"
-                srcset="assets/img/newIn-img1.jpg"
+                srcset="/images/newIn-img1.jpg"
               />
               <source
                 media="(min-width: 768px)"
-                srcset="assets/img/newIn-img1.jpg"
+                srcset="/images//newIn-img1.jpg"
               />
-              <img src="assets/img/newIn-img1.jpg" />
+              <img src="/images/newIn-img1.jpg" />
             </picture>
             <div class="newIn-bajadaFoto">
               <h3>Saco Montserrat</h3>
@@ -167,13 +167,13 @@
             <picture>
               <source
                 media="(min-width: 1200px)"
-                srcset="assets/img/newIn-img1.jpg"
+                srcset="/images/newIn-img1.jpg"
               />
               <source
                 media="(min-width: 768px)"
-                srcset="assets/img/newIn-img1.jpg"
+                srcset="/images/newIn-img1.jpg"
               />
-              <img src="assets/img/newIn-img1.jpg" />
+              <img src="/images/newIn-img1.jpg" />
             </picture>
             <div class="newIn-bajadaFoto">
               <h3>Saco Montserrat</h3>
@@ -187,13 +187,13 @@
             <picture>
               <source
                 media="(min-width: 1200px)"
-                srcset="assets/img/newIn-img1.jpg"
+                srcset="/images/newIn-img1.jpg"
               />
               <source
                 media="(min-width: 768px)"
-                srcset="assets/img/newIn-img1.jpg"
+                srcset="/images/newIn-img1.jpg"
               />
-              <img src="assets/img/newIn-img1.jpg" />
+              <img src="/images/newIn-img1.jpg" />
             </picture>
             <div class="newIn-bajadaFoto">
               <h3>Saco Montserrat</h3>
@@ -207,13 +207,13 @@
             <picture>
               <source
                 media="(min-width: 1200px)"
-                srcset="assets/img/newIn-img1.jpg"
+                srcset="/images/newIn-img1.jpg"
               />
               <source
                 media="(min-width: 768px)"
-                srcset="assets/img/newIn-img1.jpg"
+                srcset="/images/newIn-img1.jpg"
               />
-              <img src="assets/img/newIn-img1.jpg" />
+              <img src="/images/newIn-img1.jpg" />
             </picture>
             <div class="newIn-bajadaFoto">
               <h3>Saco Montserrat</h3>
@@ -227,13 +227,13 @@
             <picture>
               <source
                 media="(min-width: 1200px)"
-                srcset="assets/img/newIn-img1.jpg"
+                srcset="/images/newIn-img1.jpg"
               />
               <source
                 media="(min-width: 768px)"
-                srcset="assets/img/newIn-img1.jpg"
+                srcset="/images/newIn-img1.jpg"
               />
-              <img src="assets/img/newIn-img1.jpg" />
+              <img src="/images/newIn-img1.jpg" />
             </picture>
             <div class="newIn-bajadaFoto">
               <h3>Saco Montserrat</h3>
@@ -247,13 +247,13 @@
             <picture>
               <source
                 media="(min-width: 1200px)"
-                srcset="assets/img/newIn-img1.jpg"
+                srcset="/images/img/newIn-img1.jpg"
               />
               <source
                 media="(min-width: 768px)"
-                srcset="assets/img/newIn-img1.jpg"
+                srcset="/images/newIn-img1.jpg"
               />
-              <img src="assets/img/newIn-img1.jpg" />
+              <img src="/images/newIn-img1.jpg" />
             </picture>
             <div class="newIn-bajadaFoto">
               <h3>Saco Montserrat</h3>
@@ -292,22 +292,22 @@
       </div>
       <div class="categorias">
         <div class="categoria-1">
-          <img src="assets/img/categorias.jpg" alt="" />
+          <img src="/images/categorias.jpg" alt="" />
           <h3>TOPS</h3>
         </div>
 
         <div class="categoria-1">
-          <img src="assets/img/categorias.jpg" alt="" />
+          <img src="/images/categorias.jpg" alt="" />
           <h3>TOPS</h3>
         </div>
 
         <div class="categoria-1">
-          <img src="assets/img/categorias.jpg" alt="" />
+          <img src="/images/categorias.jpg" alt="" />
           <h3>TOPS</h3>
         </div>
 
         <div class="categoria-1 categoria-1__borrar">
-          <img src="assets/img/categorias.jpg" alt="" />
+          <img src="/images/categorias.jpg" alt="" />
           <h3>TOPS</h3>
         </div>
       </div>
@@ -373,12 +373,12 @@
         </div>
       </div>
       <div class="instagram-fotos">
-        <div><img src="assets/img/instagram.png" alt="instagram" /></div>
-        <div><img src="assets/img/instagram.png" alt="instagram" /></div>
-        <div><img src="assets/img/instagram.png" alt="instagram" /></div>
-        <div><img src="assets/img/instagram.png" alt="instagram" /></div>
-        <div><img src="assets/img/instagram.png" alt="instagram" /></div>
-        <div><img src="assets/img/instagram.png" alt="instagram" /></div>
+        <div><img src="/images/instagram.png" alt="instagram" /></div>
+        <div><img src="/images/instagram.png" alt="instagram" /></div>
+        <div><img src="/images/instagram.png" alt="instagram" /></div>
+        <div><img src="/images/instagram.png" alt="instagram" /></div>
+        <div><img src="/images/instagram.png" alt="instagram" /></div>
+        <div><img src="/images/instagram.png" alt="instagram" /></div>
       </div>
     </section>
 
@@ -395,15 +395,15 @@
 
     <!-- ___________________________________END BOTON BACK TO TOP______________________________________________-->
 
-    <?php include("partials/footer");?>
+    @include("partials/footer")
 
 
     <!--------------------------------------------LIBRARY PARA RESPONSIVE VIDEO -->
 
-    <script src="js/resizeIframe.js"></script>
+    <script src="/js/resizeIframe.js"></script>
 
     <!--------------------------------------------LIBRARY GLIDER.JS SLIDE -->
-    <script src="js/glider.min.js"></script>
+    <script src="/js/glider.min.js"></script>
     <script>
       /* SLIDE HERO */
 

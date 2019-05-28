@@ -16,11 +16,11 @@
         <a href=""><i class="material-icons">shop</i></a>
       </div>
       <div class="nav-logo-mobile">
-        <img src="assets/img/logo-preta.png" alt="" />
+        <img src="/images/logo-preta.png" alt="" />
       </div>
       <div class="hamb-nav">
         <ul>
-          <img src="assets/img/banner-menu.png" alt="" />
+          <img src="/images/banner-menu.png" alt="" />
           <div class="ingresar">
             <a href="registro.php">
               <h3>INGRESAR</h3>
@@ -147,7 +147,7 @@
           </div>
 
           <div class="nav-logo">
-            <img src="assets/img/logo-preta.png" alt="" />
+            <img src="/images/logo-preta.png" alt="" />
           </div>
           <div class="nav-ingresar">
             <ul>

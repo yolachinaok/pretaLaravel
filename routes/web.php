@@ -18,7 +18,7 @@ Route::get('/contacto','ContactController@showContact');
 Route::get('/ayuda','HelpController@showHelp');
 Route::get('/carrito','CartController@showCart');
 Route::get('/registro',function(){
-  return view('registro');
+  return view('register');
 });
 Route::get('/login',function(){
   return view('login');

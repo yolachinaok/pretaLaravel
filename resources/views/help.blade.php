@@ -10,6 +10,7 @@
     <title>Preta Shop - Preguntas Frecuentes</title>
   </head>
   <body>
+    @include("partials/header")
     <!-- titulo -->
     <div class="borde-titulo">
       <div class="contenedor-titulo margen-izq">
@@ -37,5 +38,6 @@
         <p class="categoria-pregunta">MAS PREGUNTAS</p>
       </div></a>
     </div>
+    @include("partials/footer")
   </body>
 </html>
