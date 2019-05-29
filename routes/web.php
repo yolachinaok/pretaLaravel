@@ -25,9 +25,13 @@ Route::get('/login',function(){
 });
 Route::get('/index','IndexController@showIndex');
 
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('layout/master');
 });
+
+
+
 
 Auth::routes();
 
