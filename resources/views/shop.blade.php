@@ -1,3 +1,6 @@
+<!-- var_dump($products);
+exit;  -->
+
 @extends('layouts.master')
 
 @section('styles')
@@ -6,10 +9,10 @@
 
 @section('content')
 <nav>
- 
+
 @include('partials/shop/nav_shop')
 @include('partials/shop/nav_shop_mobile')
-   
+
 </nav>
 
 <!-- CUERPO SHOP -->
@@ -30,9 +33,28 @@
 @include('partials/shop/filterPages_shop')
 </div>
 <div class="modulosTodos">
-@for($i = 0; $i < 6; $i++)
-@include('partials/shop/modulo_shop')
-@endfor
+
+<?php foreach ($products as $product) {
+  echo '<div class="modulo-shop">
+    <div class="modulo-shop__img">
+      <img class="uno" src="' .
+      $product['photo1'] .
+      '" alt="">
+      <img class="dos" src="'.
+      $product['photo3'] .
+      '" alt="">
+  </div>
+  <div class="modulo-shop__descripcion">
+    <div class="titulo"><h4>'.
+    $product['name'].
+    '</h4></div>
+    <div class="precio"><h4>$'. $product['price'].'</h4></div>
+    <div class="color"><h4>' . $product['discount'] . '%OFF
+  </h4></div>
+  </div>
+  </div>';
+} ?>
+
 </div>
 </main>
 @endsection

@@ -11,12 +11,12 @@
 |
 */
 //Route::get('admin/productos', 'AdminController@products'); //no creado aun
-Route::get('/', 'IndexController@showIndex');
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/', 'IndexController@showIndex');
+//Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/shop/{category_id}/{product_id}','ProductController@showProduct');
-Route::get('/shop/{category_id}','ShopController@Metodoqueyoquiera');
-Route::get('/shop','ShopController@showShop');
+Route::get('/shop/{product_id}','ProductController@showProduct');
+Route::get('/shop/{category_id}','ProductController@showCategory');
+Route::get('/shop','ProductController@showShop');
 Route::get('/contacto','ContactController@showContact');
 Route::get('/ayuda','HelpController@showHelp');
 Route::get('/carrito','CartController@showCart');
@@ -33,5 +33,3 @@ Route::get('/login',function(){
 
 
 Auth::routes();
-
-
