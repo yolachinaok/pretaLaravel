@@ -11,6 +11,9 @@
 |
 */
 //Route::get('admin/productos', 'AdminController@products'); //no creado aun
+Route::get('/', 'IndexController@showIndex');
+Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('/shop/{category_id}/{product_id}','ProductController@showProduct');
 Route::get('/shop/{category_id}','ShopController@Metodoqueyoquiera');
 Route::get('/shop','ShopController@showShop');
@@ -23,16 +26,12 @@ Route::get('/registro',function(){
 Route::get('/login',function(){
   return view('login');
 });
-Route::get('/index','IndexController@showIndex');
 
 
-Route::get('/', function () {
-    return view('layout/master');
-});
 
 
 
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+

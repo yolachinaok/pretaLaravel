@@ -19,21 +19,14 @@ if ($_POST) {
  if(!empty($_SESSION['email'])){
      header('location: ../index.html');
 }
-
 ?>
-<!DOCTYPE html>
-<html lang="es" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-    <link rel="stylesheet" href="../estilos/style-login.css">
-    <title>Preta Shop - Login</title>
-  </head>
-  <body>
-    @include("partials/header")
+
+
+@extends('layouts.master')
+@section('styles')
+<link href="/css/style-login.css" rel="stylesheet">
+@endsection
+@section('content')
 
 <!-- Un contenedor para ambos formularios -->
 <div class="contenedor">
@@ -103,7 +96,4 @@ if ($_POST) {
    </div>
 </div>
 </div>
-
-  @include("partials/footer")
-  </body>
-</html>
+@endsection

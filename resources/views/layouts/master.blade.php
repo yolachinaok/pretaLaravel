@@ -22,7 +22,8 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/home.css" />
+
+  @yield('styles')
     <link rel="stylesheet" href="/css/menu.css" />
     <link rel="stylesheet" href="/css/footer.css" />
   </head>

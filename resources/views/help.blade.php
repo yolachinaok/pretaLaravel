@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="es" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-    <link rel="stylesheet" href="estilos/style-faqs.css">
-    <title>Preta Shop - Preguntas Frecuentes</title>
-  </head>
-  <body>
-    @include("partials/header")
+@extends('layouts.master')
+@section('styles')
+<link href="/css/style-faqs.css" rel="stylesheet">
+@endsection
+@section('content')
     <!-- titulo -->
     <div class="borde-titulo">
       <div class="contenedor-titulo margen-izq">
@@ -38,6 +30,4 @@
         <p class="categoria-pregunta">MAS PREGUNTAS</p>
       </div></a>
     </div>
-    @include("partials/footer")
-  </body>
-</html>
+@endsection

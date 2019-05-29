@@ -13,7 +13,7 @@
       </label>
 
       <div class="nav-shop">
-        <a href=""><i class="material-icons">shop</i></a>
+        <a href="{{  url('/shop') }}"><i class="material-icons">shop</i></a>
       </div>
       <div class="nav-logo-mobile">
         <img src="/images/logo-preta.png" alt="" />
@@ -22,12 +22,12 @@
         <ul>
           <img src="/images/banner-menu.png" alt="" />
           <div class="ingresar">
-            <a href="registro.php">
+            <a href="{{  url('/login') }}">
               <h3>INGRESAR</h3>
             </a>
 
             <hr />
-            <a href="registro.php">
+            <a href="{{  url('/registro') }}">
               <h3>REGISTRARME</h3>
             </a>
           </div>
@@ -89,7 +89,7 @@
               </div>
             </li></a
           >
-          <a class="nombre" href="#">
+          <a class="nombre" href="{{  url('/ayuda') }}">
             <li>
               <div class="li-flex">
                 AYUDA
@@ -139,19 +139,19 @@
               <hr />
               <div class="nav-search">
                 <a href=""><i class="material-icons">search</i></a>
-                <li><a href="">SEARCH</a></li>
+                <li><a href="{{  url('/ayuda') }}">BUSCAR</a></li>
               </div>
               <hr />
-              <li><a href="faqs.php">AYUDA</a></li>
+              <li><a href="{{  url('/ayuda') }}">AYUDA</a></li>
             </ul>
           </div>
 
           <div class="nav-logo">
-            <img src="/images/logo-preta.png" alt="" />
+            <a href="{{  url('/') }}"> <img src="/images/logo-preta.png" alt="" /></a>  
           </div>
           <div class="nav-ingresar">
             <ul>
-              <li><a href="registro.php">INGRESAR</a></li>
+              <li><a href="{{  url('/registro') }}">INGRESAR</a></li>
               <hr />
               <div class="nav-search">
                 <a href=""><i class="material-icons">favorite</i></a>
@@ -166,8 +166,8 @@
         </div>
         <div class="nav-container2">
           <ul>
-            <li><a href="shop.html">NEW IN</a></li>
-            <li><a href="shop.html">SHOP</a></li>
+            <li><a href="{{  url('/shop') }}">NEW IN</a></li>
+            <li><a href="{{  url('/shop') }}">SHOP</a></li>
             <li><a href="">JEANS</a></li>
             <li><a href="">ABRIGOS</a></li>
             <li><a href="">VESTIDOS</a></li>
