@@ -11,7 +11,7 @@
 |
 */
 //Route::get('admin/productos', 'AdminController@products'); //no creado aun
-//Route::get('/', 'IndexController@showIndex');
+Route::get('/', 'IndexController@showIndex');
 //Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/shop/{product_id}','ProductController@showProduct');
