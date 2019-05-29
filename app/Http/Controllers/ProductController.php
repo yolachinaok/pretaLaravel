@@ -12,9 +12,9 @@ class ProductController extends Controller
     return view('shop')->with(['products'=> $products]);
   }
 
-  public function showCategory($category_id){
+  public function showCategory($categoria, $category_id){
     $products = Product::where('category_id', '=', $category_id)->get();
-    return view('shop-category')->with('products', $products);
+    return view('shop-category')->with(['products' => $products]);
   }
 
   public function showProduct($product_id){
