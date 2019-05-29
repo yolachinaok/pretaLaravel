@@ -147,7 +147,7 @@
           </div>
 
           <div class="nav-logo">
-            <a href="{{  url('/') }}"> <img src="/images/logo-preta.png" alt="" /></a>  
+            <a href="{{  url('/') }}"> <img src="/images/logo-preta.png" alt="" /></a>
           </div>
           <div class="nav-ingresar">
             <ul>
@@ -168,10 +168,10 @@
           <ul>
             <li><a href="{{  url('/shop') }}">NEW IN</a></li>
             <li><a href="{{  url('/shop') }}">SHOP</a></li>
-            <li><a href="">JEANS</a></li>
-            <li><a href="">ABRIGOS</a></li>
-            <li><a href="">VESTIDOS</a></li>
-            <li><a href="">TOPS</a></li>
+            <li><a href="/shop/jeans/1">JEANS</a></li>
+            <li><a href="/shop/abrigos/3">ABRIGOS</a></li>
+            <li><a href="/shop/vestidos/4">VESTIDOS</a></li>
+            <li><a href="/shop/tops/2">TOPS</a></li>
             <li><a href="">SALE</a></li>
           </ul>
         </div>
