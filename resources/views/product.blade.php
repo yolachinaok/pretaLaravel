@@ -1,14 +1,21 @@
+@extends('layouts.master')
+
+@section('styles')
+    <link rel="stylesheet" href="css/product.css" />
+@endsection
+
+@section('content')
 <main>
 <div class="container2">
 <section class="gallery">
 
 <div class="gallery__minim">
-<img src=".//images/modulo1.jpg" alt="">
-<img src=".//images/modulo1.jpg" alt="">
-<img src=".//images/modulo1.jpg" alt="">
+<img src="/images/modulo1.jpg" alt="">
+<img src="/images/modulo1.jpg" alt="">
+<img src="/images/modulo1.jpg" alt="">
 </div>
 <div class="gallery__big">
-<img src=".//images/modulo1.jpg" alt="">
+<img src="/images/modulo1.jpg" alt="">
 
 </div>
 
@@ -53,3 +60,4 @@
 
 </div>
 </main>
+@endsection

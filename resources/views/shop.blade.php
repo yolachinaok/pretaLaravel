@@ -1,6 +1,3 @@
-<!-- var_dump($products);
-exit;  -->
-
 @extends('layouts.master')
 
 @section('styles')
@@ -45,9 +42,9 @@ exit;  -->
       '" alt="">
   </div>
   <div class="modulo-shop__descripcion">
-    <div class="titulo"><h4>'.
+    <div class="titulo"><a href="/shop/'.$product['id'].'"><h4>'.
     $product['name'].
-    '</h4></div>
+    '</h4></a></div>
     <div class="precio"><h4>$'. $product['price'].'</h4></div>
     <div class="color"><h4>' . $product['discount'] . '%OFF
   </h4></div>
