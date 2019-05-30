@@ -11,10 +11,11 @@
 |
 */
 //Route::get('admin/productos', 'AdminController@products'); //no creado aun
-//Route::get('/', 'IndexController@showIndex');
+Route::get('/', 'IndexController@showIndex');
 //Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/shop/{product_id}','ProductController@showProduct');
+// Route::get('/shop/{category_name}/{category_id}/{page}','ProductController@showCategory');
 Route::get('/shop/{category_name}/{category_id}','ProductController@showCategory');
 Route::get('/shop','ProductController@showShop');
 Route::get('/contacto','ContactController@showContact');

@@ -1,5 +1,6 @@
 @extends('layouts.master')
-
+@yield('title')
+<title>PRETA - HOME</title>
 @section('styles')
             <link href="/css/home.css" rel="stylesheet">
 @endsection

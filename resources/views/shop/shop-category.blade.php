@@ -1,5 +1,7 @@
 
 @extends('layouts.master')
+@yield('title')
+<title>SHOP - PRETA</title>
 
 @section('styles')
     <link rel="stylesheet" href="/css/shop.css" />

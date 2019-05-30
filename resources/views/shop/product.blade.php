@@ -1,5 +1,7 @@
 
 @extends('layouts.master')
+@yield('title')
+<title>PRETA - <?php echo $product['name']; ?></title>
 
 @section('styles')
     <link rel="stylesheet" href="/css/product.css" />

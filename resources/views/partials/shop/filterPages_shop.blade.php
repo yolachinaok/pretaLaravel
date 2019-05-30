@@ -1,3 +1,4 @@
+
 <div class="filter-pages-left">
 <div class="filter">
     <i class="material-icons filter-icon">
@@ -14,18 +15,12 @@
         arrow_back_ios
         </i>
   <ul class="numeros">
-    <a href="">
-      <li>1</li>
-    </a>
-    <a href="">
-        <li>1</li>
-      </a>
-      <a href="">
-          <li>1</li>
-     </a>
-     <a href="">
-        <li>1</li>
-   </a>
+    <?php for ($i=0; $i < ceil($quantity/3) ; $i++) {
+      echo '<a href="">
+        <li>'. ($i+1) .'</li>
+      </a>';
+    } ?>
+
   </ul>
   <i class="material-icons pages-icon">
       arrow_forward_ios

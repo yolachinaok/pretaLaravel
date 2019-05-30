@@ -1,4 +1,8 @@
+
 @extends('layouts.master')
+
+@yield('title')
+<title>SHOP</title>
 
 @section('styles')
     <link rel="stylesheet" href="/css/shop.css" />

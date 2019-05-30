@@ -1,4 +1,6 @@
 @extends('layouts.master')
+@yield('title')
+<title>PRETA - AYUDA</title>
 @section('styles')
 <link href="/css/style-faqs.css" rel="stylesheet">
 @endsection
