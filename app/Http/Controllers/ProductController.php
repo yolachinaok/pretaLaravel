@@ -23,4 +23,8 @@ class ProductController extends Controller
     $product = Product::find($product_id);
     return view('shop.product')->with('product', $product);
     }
+
+    public function showProductAdmin(){
+      return view('productAdmin');
+    }
 }
