@@ -1,3 +1,4 @@
+
 @extends('layouts.master')
 
 @section('styles')
@@ -10,26 +11,26 @@
 <section class="gallery">
 
 <div class="gallery__minim">
-<img src="/images/modulo1.jpg" alt="">
-<img src="/images/modulo1.jpg" alt="">
-<img src="/images/modulo1.jpg" alt="">
+<img src="<?php echo $product['photo1'];?>" alt="">
+<img src="<?php echo $product['photo2'];?>" alt="">
+<img src="<?php echo $product['photo3'];?>" alt="">
 </div>
 <div class="gallery__big">
-<img src="/images/modulo1.jpg" alt="">
+<img src="<?php echo $product['photo1'];?>" alt="">
 
 </div>
 
 
 </section>
 <section class="buy">
-<div class="buy__categoria">
-<h4>new this week / final sale</h4>
-</div>
 <div class="buy__nombre">
-<h2>campera brown texas</h2>
+<h2><?php echo $product['name'];?></h2>
+</div>
+<div class="buy__categoria">
+  <h4><?php echo $product['description'];?></h4>
 </div>
 <div class="buy__precio">
-<h3>$890</h3>
+<h3>$<?php echo $product['price'];?></h3>
 </div>
 <div class="buy__color">
 <input type="radio" name="color" id="">
