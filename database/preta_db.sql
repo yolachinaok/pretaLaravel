@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 30-05-2019 a las 00:59:27
--- Versión del servidor: 10.1.38-MariaDB
--- Versión de PHP: 7.3.2
+-- Servidor: localhost
+-- Tiempo de generación: 30-05-2019 a las 11:58:33
+-- Versión del servidor: 5.7.26-0ubuntu0.18.10.1
+-- Versión de PHP: 7.2.17-0ubuntu0.18.10.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -56,10 +56,10 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `name`, `icon`, `created_at`, `updated_at`) VALUES
-(1, 'denim', NULL, '2019-05-29 03:00:00', '2019-05-29 03:00:00'),
-(2, 'tops', NULL, '2019-05-29 03:00:00', '2019-05-29 03:00:00'),
-(3, 'outerwear', NULL, '2019-05-29 03:00:00', '2019-05-29 03:00:00'),
-(4, 'dresses', NULL, '2019-05-29 03:00:00', '2019-05-29 03:00:00');
+(1, 'denim', '/images/products/denim/icon-denim.jpeg', '2019-05-29 03:00:00', '2019-05-29 03:00:00'),
+(2, 'tops', '/images/products/tops/icon-tops.jpeg', '2019-05-29 03:00:00', '2019-05-29 03:00:00'),
+(3, 'outerwear', '/images/products/outerwear/icon-outerwear.jpeg', '2019-05-29 03:00:00', '2019-05-29 03:00:00'),
+(4, 'dresses', '/images/products/dresses/icon-dresses.jpeg', '2019-05-29 03:00:00', '2019-05-29 03:00:00');
 
 -- --------------------------------------------------------
 
@@ -131,7 +131,9 @@ INSERT INTO `products` (`id`, `name`, `price`, `description`, `discount`, `photo
 (10, 'Parka ARMY', '2800.00', 'Parka de gabardina verde militar', NULL, '/images/products/outerwear/jacket_parka_front_green.jpg', '/images/products/outerwear/jacket_parka_back_green.jpg', '/images/products/outerwear/jacket_parka_detail_green.jpg', 3, '2019-05-01 03:00:00', NULL),
 (11, 'Pantalon WIDE', '1650.00', 'Jean negro pierna ancha, tiro extra alto', NULL, '/images/products/denim/denim_ancho_front_black.jpg', '/images/products/denim/denim_ancho_back_black.jpg', '/images/products/denim/denim_ancho_detail_black.jpg', 1, '2019-05-01 03:00:00', NULL),
 (12, 'Jean BOYFRIEND', '1890.00', 'Jean rigido corte boyfriend, roturas al frente', NULL, '/images/products/denim/denim_boyfriend_front_blue.jpg', '/images/products/denim/denim_boyfriend_back_blue.jpg', '/images/products/denim/denim_boyfriend_detail_blue.jpg', 1, '2019-05-29 03:00:00', NULL),
-(13, 'Pantalon SNOW', '1300.00', 'Jean skinny blanco elastizado', NULL, '/images/products/denim/denim_skinny_front_white.jpg', '/images/products/denim/denim_skinny_back_white.jpg', '/images/products/denim/denim_skinny_detail_white.jpg', 1, '2019-05-01 03:00:00', NULL);
+(13, 'Pantalon SNOW', '1300.00', 'Jean skinny blanco elastizado', NULL, '/images/products/denim/denim_skinny_front_white.jpg', '/images/products/denim/denim_skinny_back_white.jpg', '/images/products/denim/denim_skinny_detail_white.jpg', 1, '2019-05-01 03:00:00', NULL),
+(14, 'Remera STONE', '450.00', 'Remera estampada de algodon.', NULL, NULL, NULL, NULL, 2, '2019-05-30 17:40:01', '2019-05-30 17:40:01'),
+(15, 'Campera HUNTER', '2980.00', 'Campera cazadora de jean elastizado con botones.', NULL, '/images/products/outerwear/campera_cazadora_front_pink.jpeg', '/images/products/outerwear/campera_cazadora_back_pink.jpeg', '/images/products/outerwear/campera_cazadora_detail_pink.jpeg', 3, '2019-05-30 17:54:35', '2019-05-30 17:54:35');
 
 -- --------------------------------------------------------
 
@@ -224,7 +226,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `users`

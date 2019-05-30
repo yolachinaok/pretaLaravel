@@ -10,8 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-//Route::get('admin/productos', 'AdminController@products'); //no creado aun
-Route::get('/', 'IndexController@showIndex');
+
+Route::get('admin/productos', 'ProductController@createProduct');
+Route::post('admin/productos', 'ProductController@createProductSave');
 //Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/shop/{product_id}','ProductController@showProduct');
@@ -28,6 +29,7 @@ Route::get('/registro',function(){
 Route::get('/login',function(){
   return view('login');
 });
+Route::get('/', 'IndexController@showIndex');
 
 
 
