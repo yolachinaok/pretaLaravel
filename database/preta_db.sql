@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost
--- Tiempo de generación: 30-05-2019 a las 11:58:33
--- Versión del servidor: 5.7.26-0ubuntu0.18.10.1
--- Versión de PHP: 7.2.17-0ubuntu0.18.10.1
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 31-05-2019 a las 03:07:50
+-- Versión del servidor: 10.1.38-MariaDB
+-- Versión de PHP: 7.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,10 +25,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `cart`
+-- Estructura de tabla para la tabla `carts`
 --
 
-CREATE TABLE `cart` (
+CREATE TABLE `carts` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `user_id` bigint(20) UNSIGNED DEFAULT NULL,
   `product_id` bigint(20) UNSIGNED NOT NULL,
@@ -56,10 +56,10 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `name`, `icon`, `created_at`, `updated_at`) VALUES
-(1, 'denim', '/images/products/denim/icon-denim.jpeg', '2019-05-29 03:00:00', '2019-05-29 03:00:00'),
-(2, 'tops', '/images/products/tops/icon-tops.jpeg', '2019-05-29 03:00:00', '2019-05-29 03:00:00'),
-(3, 'outerwear', '/images/products/outerwear/icon-outerwear.jpeg', '2019-05-29 03:00:00', '2019-05-29 03:00:00'),
-(4, 'dresses', '/images/products/dresses/icon-dresses.jpeg', '2019-05-29 03:00:00', '2019-05-29 03:00:00');
+(1, 'denim', NULL, '2019-05-29 03:00:00', '2019-05-29 03:00:00'),
+(2, 'tops', NULL, '2019-05-29 03:00:00', '2019-05-29 03:00:00'),
+(3, 'outerwear', NULL, '2019-05-29 03:00:00', '2019-05-29 03:00:00'),
+(4, 'dresses', NULL, '2019-05-29 03:00:00', '2019-05-29 03:00:00');
 
 -- --------------------------------------------------------
 
@@ -82,7 +82,23 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (2, '2014_10_12_100000_create_password_resets_table', 1),
 (3, '2019_05_23_111207_create_categories_table', 1),
 (4, '2019_05_23_135406_create_products_table', 1),
-(5, '2019_05_23_141721_create_cart_table', 1);
+(6, '2019_05_23_140001_create_carts_table', 2),
+(7, '2019_05_30_235743_create_orders_table', 3);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `price` decimal(10,2) NOT NULL,
+  `order_number` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -131,9 +147,7 @@ INSERT INTO `products` (`id`, `name`, `price`, `description`, `discount`, `photo
 (10, 'Parka ARMY', '2800.00', 'Parka de gabardina verde militar', NULL, '/images/products/outerwear/jacket_parka_front_green.jpg', '/images/products/outerwear/jacket_parka_back_green.jpg', '/images/products/outerwear/jacket_parka_detail_green.jpg', 3, '2019-05-01 03:00:00', NULL),
 (11, 'Pantalon WIDE', '1650.00', 'Jean negro pierna ancha, tiro extra alto', NULL, '/images/products/denim/denim_ancho_front_black.jpg', '/images/products/denim/denim_ancho_back_black.jpg', '/images/products/denim/denim_ancho_detail_black.jpg', 1, '2019-05-01 03:00:00', NULL),
 (12, 'Jean BOYFRIEND', '1890.00', 'Jean rigido corte boyfriend, roturas al frente', NULL, '/images/products/denim/denim_boyfriend_front_blue.jpg', '/images/products/denim/denim_boyfriend_back_blue.jpg', '/images/products/denim/denim_boyfriend_detail_blue.jpg', 1, '2019-05-29 03:00:00', NULL),
-(13, 'Pantalon SNOW', '1300.00', 'Jean skinny blanco elastizado', NULL, '/images/products/denim/denim_skinny_front_white.jpg', '/images/products/denim/denim_skinny_back_white.jpg', '/images/products/denim/denim_skinny_detail_white.jpg', 1, '2019-05-01 03:00:00', NULL),
-(14, 'Remera STONE', '450.00', 'Remera estampada de algodon.', NULL, NULL, NULL, NULL, 2, '2019-05-30 17:40:01', '2019-05-30 17:40:01'),
-(15, 'Campera HUNTER', '2980.00', 'Campera cazadora de jean elastizado con botones.', NULL, '/images/products/outerwear/campera_cazadora_front_pink.jpeg', '/images/products/outerwear/campera_cazadora_back_pink.jpeg', '/images/products/outerwear/campera_cazadora_detail_pink.jpeg', 3, '2019-05-30 17:54:35', '2019-05-30 17:54:35');
+(13, 'Pantalon SNOW', '1300.00', 'Jean skinny blanco elastizado', NULL, '/images/products/denim/denim_skinny_front_white.jpg', '/images/products/denim/denim_skinny_back_white.jpg', '/images/products/denim/denim_skinny_detail_white.jpg', 1, '2019-05-01 03:00:00', NULL);
 
 -- --------------------------------------------------------
 
@@ -161,12 +175,12 @@ CREATE TABLE `users` (
 --
 
 --
--- Indices de la tabla `cart`
+-- Indices de la tabla `carts`
 --
-ALTER TABLE `cart`
+ALTER TABLE `carts`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `cart_user_id_foreign` (`user_id`),
-  ADD KEY `cart_product_id_foreign` (`product_id`);
+  ADD KEY `carts_user_id_foreign` (`user_id`),
+  ADD KEY `carts_product_id_foreign` (`product_id`);
 
 --
 -- Indices de la tabla `categories`
@@ -179,6 +193,13 @@ ALTER TABLE `categories`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `orders_user_id_foreign` (`user_id`);
 
 --
 -- Indices de la tabla `password_resets`
@@ -205,9 +226,9 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT de la tabla `cart`
+-- AUTO_INCREMENT de la tabla `carts`
 --
-ALTER TABLE `cart`
+ALTER TABLE `carts`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
@@ -220,13 +241,19 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT de la tabla `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT de la tabla `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
@@ -239,11 +266,17 @@ ALTER TABLE `users`
 --
 
 --
--- Filtros para la tabla `cart`
+-- Filtros para la tabla `carts`
 --
-ALTER TABLE `cart`
-  ADD CONSTRAINT `cart_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
-  ADD CONSTRAINT `cart_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+ALTER TABLE `carts`
+  ADD CONSTRAINT `carts_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
+  ADD CONSTRAINT `carts_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+--
+-- Filtros para la tabla `orders`
+--
+ALTER TABLE `orders`
+  ADD CONSTRAINT `orders_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
 -- Filtros para la tabla `products`
