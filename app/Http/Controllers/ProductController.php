@@ -66,4 +66,36 @@ class ProductController extends Controller
       );
 
     }
+    public function editProduct($id){
+      $product = Product::find($id);
+      $categories = Category::all();
+      return view('editProductAdmin')->with(['product'=> $product])->with(['categories'=>$categories]);
+    }
+
+    public function updateProduct($id, Request $request){
+      $this->validate($request,
+      [
+        'name'=> 'required',
+        'price'=> 'required|numeric',
+        'category_id'=> 'required',
+        'description' => 'nullable',
+        'discount' => 'nullable'
+      ],[
+        'name.required' => 'El nombre es necesario.',
+        'price.required' => 'El precio es necesario.',
+        'category_id.required' => 'La categoría es necesaria.'
+      ]);
+
+      $product = Product::find($id);
+      $product->name = $request->name;
+      $product->price = $request->price;
+      $product->description = $request->description;
+      $product->category_id = $request->category_id;
+      $product->discount = $request->discount;
+
+      $product->save()
+      ;
+    }
+
+
 }

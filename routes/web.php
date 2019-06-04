@@ -10,7 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::post('admin/productos/editar/{id}', 'ProductController@updateProduct');
+Route::get('admin/productos/editar/{id}', 'ProductController@editProduct');
 Route::get('admin/productos', 'ProductController@createProduct');
 Route::post('admin/productos', 'ProductController@createProductSave');
 //Route::get('/home', 'HomeController@index')->name('home');
@@ -19,7 +20,7 @@ Route::get('/shop/{product_id}','ProductController@showProduct');
 // Route::get('/shop/{category_name}/{category_id}/{page}','ProductController@showCategory');
 Route::get('/shop/{category_name}/{category_id}','ProductController@showCategory');
 Route::get('/shop','ProductController@showShop');
-Route::get('/productAdmin','ProductController@showProductAdmin');
+//Route::get('/productAdmin','ProductController@showProductAdmin');
 Route::get('/contacto','ContactController@showContact');
 Route::get('/ayuda','HelpController@showHelp');
 Route::get('/carrito','CartController@showCart');
