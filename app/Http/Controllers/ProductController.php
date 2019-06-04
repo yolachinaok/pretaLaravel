@@ -69,7 +69,7 @@ class ProductController extends Controller
     public function editProduct($id){
       $product = Product::find($id);
       $categories = Category::all();
-      return view('editProductAdmin')->with(['product'=> $product])->with(['categories'=>$categories]);
+      return view('editProductAdmin', compact('product','categories'));
     }
 
     public function updateProduct($id, Request $request){

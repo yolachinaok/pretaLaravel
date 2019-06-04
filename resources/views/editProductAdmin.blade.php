@@ -53,16 +53,17 @@
           @enderror
 
           <span class="separador-xs"></span>
-
+            <br>
           <label class="label-desktop" for="category_id">
              Categoría<span class="color-rojo">*</span>
           </label> <br>
-            <select class="" name="category_id">
+          <select class="" name="category_id">
               <option value="{{old('category_id',$product->category_id)}}">Seleccione</option>
               @foreach ($categories as $category)
                 <option value="{{$category->id}}"> {{$category->name}} </option>
               @endforeach
             </select>
+            {{ $product->productCategory()}} <br>
             @error('category_id')
             <div class="">
             {{$message}}
