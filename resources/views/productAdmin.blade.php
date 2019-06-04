@@ -13,6 +13,13 @@
     </div>
 
   <!--formulario carga -->
+  <div class="margen-izq">
+    @if (session('message'))
+    <div class="alert alert-success">
+        {{ session('message') }}
+    </div>
+@endif
+  </div>
   <div class="padding-eje-y">
     @if (count($errors)>0)
       <div class="alert alert-danger">

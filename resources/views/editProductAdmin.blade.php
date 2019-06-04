@@ -14,6 +14,13 @@
 
   <!--formulario carga -->
   <div class="padding-eje-y">
+    <form class="" action="/admin/productos/eliminar/{{$product->id}}" method="post">
+      @csrf
+      @method('DELETE')
+      <p class="boton">
+        <button style="color:white; background-color:red; outline: none;" type="submit" name="eliminar" id="eliminar">ELIMINAR PRODUCTO</button>
+      </p>
+    </form>
     <div class="margen-izq contenedor">
       <div width="30%">
         <p class="boton">FRONT</p>

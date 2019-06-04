@@ -64,6 +64,7 @@ class ProductController extends Controller
           'discount'=>$request->input('discount'),
         ]
       );
+    return redirect('/admin/productos')->with('message', 'Producto agregado exitosamente');
 
     }
     public function editProduct($id){
@@ -93,9 +94,14 @@ class ProductController extends Controller
       $product->category_id = $request->category_id;
       $product->discount = $request->discount;
 
-      $product->save()
-      ;
+      $product->save();
+      return redirect('/ruta');
     }
 
+    public function deleteProduct($id){
+      $toDelete = Product::find($id);
+      $toDelete->delete();
+      return redirect('shop');
+    }
 
 }
