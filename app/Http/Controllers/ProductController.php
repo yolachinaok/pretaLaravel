@@ -17,7 +17,13 @@ class ProductController extends Controller
   public function showCategory($categoria, $category_id){
     $products = Product::where('category_id', '=', $category_id)->get();
     $quantity = count($products);
-    return view('shop.shop-category')->with(['products' => $products])->with(['quantity'=>$quantity]);;
+    return view('shop.shop-category')->with(['products' => $products])->with(['quantity'=>$quantity]);
+//OTRA FORMA DE HACERLO USANDO HASMANY()
+  // $category = Category::find($category_id);
+  // $products = $category->products;
+  // $quantity = $products->count();
+  // return view('shop.shop-category')->with(['products' => $products, 'quantity'=>$quantity]);
+
   }
 
   public function showProduct($product_id){

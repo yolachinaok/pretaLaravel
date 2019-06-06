@@ -34,8 +34,8 @@
 </div>
 <div class="modulosTodos">
 
-<?php foreach ($products as $product) {
-  echo '<div class="modulo-shop">
+  <?php foreach ($products as $product) {
+    echo '<div class="modulo-shop">
     <div class="modulo-shop__img">
       <img class="uno" src="' .
       $product['photo1'] .
