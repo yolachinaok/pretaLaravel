@@ -24,15 +24,15 @@
     <div class="margen-izq contenedor">
       <div width="30%">
         <p class="boton">FRONT</p>
-        <img src="{{$product->photo1}}" width="100px" alt="">
+        <img src="/storage/{{$product->photo1}}" width="100px" alt="">
       </div>
       <div width="30%">
       <p class="boton">BACK</p>
-      <img src="{{$product->photo2}}" width="100px" alt="">
+      <img src="/storage/{{$product->photo2}}" width="100px" alt="">
       </div>
       <div width="30%">
       <p class="boton">DETAIL</p>
-      <img src="{{$product->photo3}}" width="100px" alt="">
+      <img src="/storage/{{$product->photo3}}" width="100px" alt="">
       </div>
     </div>
       <form class="margen-izq" action="" method="post" enctype="multipart/form-data">

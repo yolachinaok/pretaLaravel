@@ -9,9 +9,10 @@ use App\Category;
 class ProductController extends Controller
 {
   public function showShop(){
-    $products = Product::all();
-    $quantity = Product::count();
-    return view('shop.shop')->with(['products'=> $products])->with(['quantity'=>$quantity]);
+    $products = Product::paginate(6);
+    // $quantity = Product::count();
+    return view('shop.shop')->with(['products'=> $products]);
+    //->with(['quantity'=>$quantity]);
   }
 
   public function showCategory($categoria, $category_id){
@@ -60,6 +61,12 @@ class ProductController extends Controller
       // $product->category_id = $request->input('category_id');
       // $product->discount = $request->input('discount');
 
+      $route1 = $request->file('photo1')->store('public');
+      $photo1= basename($route1);
+      $route2 = $request->file('photo2')->store('public');
+      $photo2= basename($route2);
+      $route3 = $request->file('photo3')->store('public');
+      $photo3= basename($route3);
 
       Product::create(
         [
@@ -68,6 +75,9 @@ class ProductController extends Controller
           'description'=>$request->input('description'),
           'category_id'=>$request->input('category_id'),
           'discount'=>$request->input('discount'),
+          'photo1'=>$photo1,
+          'photo2'=>$photo2,
+          'photo3'=>$photo3
         ]
       );
     return redirect('/admin/productos')->with('message', 'Producto agregado exitosamente');
@@ -92,6 +102,12 @@ class ProductController extends Controller
         'price.required' => 'El precio es necesario.',
         'category_id.required' => 'La categoría es necesaria.'
       ]);
+      $route1 = $request->file('photo1')->store('public');
+      $photo1= basename($route1);
+      $route2 = $request->file('photo2')->store('public');
+      $photo2= basename($route2);
+      $route3 = $request->file('photo3')->store('public');
+      $photo3= basename($route3);
 
       $product = Product::find($id);
       $product->name = $request->name;
@@ -99,6 +115,9 @@ class ProductController extends Controller
       $product->description = $request->description;
       $product->category_id = $request->category_id;
       $product->discount = $request->discount;
+      $product->photo1 = $photo1;
+      $product->photo2 = $photo2;
+      $product->photo3 = $photo3;
 
       $product->save();
       return redirect('/ruta');

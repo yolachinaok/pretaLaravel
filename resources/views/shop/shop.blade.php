@@ -38,10 +38,10 @@
 <?php foreach ($products as $product) {
   echo '<div class="modulo-shop">
     <div class="modulo-shop__img">
-      <img class="uno" src="' .
+      <img class="uno" src="/storage/' .
       $product['photo1'] .
       '" alt="">
-      <img class="dos" src="'.
+      <img class="dos" src="/storage/'.
       $product['photo3'] .
       '" alt="">
   </div>

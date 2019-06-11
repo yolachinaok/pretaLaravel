@@ -15,11 +15,7 @@
         arrow_back_ios
         </i>
   <ul class="numeros">
-    <?php for ($i=0; $i < ceil($quantity/3) ; $i++) {
-      echo '<a href="">
-        <li>'. ($i+1) .'</li>
-      </a>';
-    } ?>
+    
 
   </ul>
   <i class="material-icons pages-icon">

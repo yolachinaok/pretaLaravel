@@ -13,12 +13,12 @@
 <section class="gallery">
 
 <div class="gallery__minim">
-<img src="<?php echo $product['photo1'];?>" alt="">
-<img src="<?php echo $product['photo2'];?>" alt="">
-<img src="<?php echo $product['photo3'];?>" alt="">
+<img src="/storage/<?php echo $product['photo1'];?>" alt="">
+<img src="/storage/<?php echo $product['photo2'];?>" alt="">
+<img src="/storage/<?php echo $product['photo3'];?>" alt="">
 </div>
 <div class="gallery__big">
-<img src="<?php echo $product['photo1'];?>" alt="">
+<img src="/storage/<?php echo $product['photo1'];?>" alt="">
 
 </div>
 
