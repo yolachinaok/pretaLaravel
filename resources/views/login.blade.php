@@ -1,27 +1,3 @@
-<?php
-session_start();
-
-// INICIALIZO VARIABLES
-  $nombre='';
-  $apellido='';
-  $email='';
-
-// INICIALIZO VARIABLES DE ERROR
-$errorEmailLogin='';
-$errorPassLogin='';
-
-
-if ($_POST) {
-  require_once('validacionesLogReg.php');
-}
-
-//Si esta logueado, redirigir al HOME
- if(!empty($_SESSION['email'])){
-     header('location: ../index.html');
-}
-?>
-
-
 @extends('layouts.master')
 @section('styles')
 <link href="/css/style-login.css" rel="stylesheet">
@@ -29,6 +5,7 @@ if ($_POST) {
 @section('content')
 
 <!-- Un contenedor para ambos formularios -->
+<br><br><br><br><br><br><br>
 <div class="contenedor">
 
 <div class="contenedor-formulario">
@@ -42,40 +19,57 @@ if ($_POST) {
 
     <!-- formulario de login -->
     <div class="padding-eje-y">
-      <form class="margen-izq" action="../login.php" method="post">
-
-        <label class="label-desktop" for="email-login" value="<?php echo $email ?>">
+      <form class="margen-izq" action="{{ route('login') }}" method="post">
+          @csrf
+        <label class="label-desktop" for="email" value="{{ old('email') }}">
           Correo Electrónico
         </label> <br>
-          <input class="input-blanco" type="email" id="email-login" name="email-login">
+          <input class="input-blanco @error('email') is-invalid @enderror" type="email" id="email" name="email">
+
+          @error('email')
+              <span>
+                  <strong>{{ $message }}</strong>
+              </span>
+          @enderror
 
         <span class="separador"></span>
 
-        <label class="label-desktop" for="pass-login">
+        <label class="label-desktop" for="password">
           Contraseña
         </label><br>
-          <input class="input-blanco" type="password" id="pass-login" name="pass-login">
+          <input class="input-blanco @error('password') is-invalid @enderror" type="password" id="password" name="password">
 
+          @error('password')
+              <span>
+                  <strong>{{ $message }}</strong>
+              </span>
+          @enderror
         <span class="separador-xs"></span>
 
         <br><label class="label-desktop" for="recordarme"></label>
-          <input type="checkbox" name="recordarme" id="recordarme" value="1"> Recordarme
+          <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}> Recordarme
 
         <span class="separador-s"></span>
 
         <p class="boton">
-          <button class="boton-gris" type="submit" name="ingresar" id="ingresar">INGRESAR</button>
+          <button class="boton-gris" type="submit">INGRESAR</button>
         </p>
       </form>
 
       <span class="separador-s"></span>
 
-        <div class="contenedor">
-          <p class="margen-izq">
-            <a id="enlace-olvide" href="#">olvidé mi contraseña y/o correo electrónico</a>
+      @if (Route::has('password.request'))
+          <div class="contenedor">
+            <p class="margen-izq">
+          <a id="enlace-olvide" href="{{ route('password.request') }}">
+              {{ __('Olvidé mi contraseña') }}
+          </a>
           </p>
+          </div>
+      @endif
+
         </div>
-    </div>
+
   </div>
 
 
