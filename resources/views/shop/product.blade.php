@@ -50,7 +50,13 @@
 
 </div>
 <div class="buy__add">
-<a href="">ADD TO CART</a>
+  <form class="" action="/carrito" method="post">
+    @csrf
+    <label for="quantity"></label>
+    <input type="text" name="quantity" value="">
+    <button type="submit" name="product_id" value="{{$product->id}}">AGREGAR</button>
+  </form>
+
 </div>
 <div class="buy__faqs">
 

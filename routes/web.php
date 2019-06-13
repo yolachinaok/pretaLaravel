@@ -11,11 +11,14 @@
 |
 */
 
-Route::delete('admin/productos/eliminar/{id}', 'ProductController@deleteProduct')->middleware('auth');
-Route::post('admin/productos/editar/{id}', 'ProductController@updateProduct')->middleware('auth');
-Route::get('admin/productos/editar/{id}', 'ProductController@editProduct')->middleware('auth');
-Route::get('admin/productos', 'ProductController@createProduct')->middleware('auth')->middleware('auth');
-Route::post('admin/productos', 'ProductController@createProductSave')->middleware('auth');
+
+Route::post('carrito', 'CartController@add')->middleware('auth');
+Route::get('carrito', 'CartController@showCart')->middleware('auth');
+Route::delete('admin/productos/eliminar/{id}', 'ProductController@deleteProduct')->middleware(['auth', 'admin']);
+Route::post('admin/productos/editar/{id}', 'ProductController@updateProduct')->middleware(['auth', 'admin']);
+Route::get('admin/productos/editar/{id}', 'ProductController@editProduct')->middleware(['auth', 'admin']);
+Route::get('admin/productos', 'ProductController@createProduct')->middleware(['auth', 'admin']);
+Route::post('admin/productos', 'ProductController@createProductSave')->middleware(['auth', 'admin']);
 
 
 Route::get('/shop/{product_id}','ProductController@showProduct');
@@ -25,7 +28,6 @@ Route::get('/shop','ProductController@showShop');
 
 Route::get('/contacto','ContactController@showContact');
 Route::get('/ayuda','HelpController@showHelp');
-Route::get('/carrito','CartController@showCart');
 
 Route::get('/', 'IndexController@showIndex');
 
