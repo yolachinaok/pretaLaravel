@@ -67,7 +67,7 @@
           </p>
           </div>
       @endif
-
+      <a href="/login/facebook">Ingresar con Facebook</a>
         </div>
 
   </div>
