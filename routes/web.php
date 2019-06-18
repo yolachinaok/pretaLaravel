@@ -10,7 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/cursos/comisiones/{id}', 'IndexController@comisionesDH');
+Route::get('/cursos', 'IndexController@cursosDH');
 
 Route::post('carrito', 'CartController@add')->middleware('auth');
 Route::get('carrito', 'CartController@showCart')->middleware('auth');
