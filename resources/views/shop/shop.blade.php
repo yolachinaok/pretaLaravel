@@ -33,6 +33,14 @@
 </div>
 @include('partials/shop/filterPages_shop')
 </div>
+
+<div>
+
+{{$products->links()}}
+
+
+
+</div>
 <div class="modulosTodos">
 
 <?php foreach ($products as $product) {

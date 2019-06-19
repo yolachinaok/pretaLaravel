@@ -129,4 +129,11 @@ class ProductController extends Controller
       return redirect('shop');
     }
 
+    public function listProduct(){
+$products=Product::paginate(6);
+$vac= compact("products");
+return view('shop.shop', $vac);
+
+    }
+
 }
