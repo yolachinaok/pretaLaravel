@@ -53,6 +53,8 @@
             </picture>
           </div>
         </div>
+
+
         <button role="button" aria-label="Previous" class="glider-prev ">
           <i class="material-icons arrow">
             arrow_back_ios
@@ -68,6 +70,7 @@
           <button data-index="" aria-label="Page 2" class="glider-dot"></button>
         </div>
       </div>
+
       <div class="Hero-descuento">
         <h2>60% OFF JACKETS</h2>
         <a href="">
@@ -116,6 +119,8 @@
       </div>
       <div class="glider-contain2">
         <div class="glider2 draggable">
+<?php foreach ($newIn as $producto): ?>
+
           <div class="g-slide">
             <div class="icon">
               <i class="material-icons favorito">favorite </i>
@@ -124,121 +129,24 @@
             <picture>
               <source
                 media="(min-width: 1200px)"
-                srcset="/images/newIn-img1.jpg"
+                srcset="<?php $producto->photo1?>"
               />
               <source
                 media="(min-width: 768px)"
-                srcset="/images//newIn-img1.jpg"
+                srcset="<?php $producto->photo1?>"
               />
-              <img src="/images/newIn-img1.jpg" />
+              <img src="<?php $producto->photo1?>" />
             </picture>
             <div class="newIn-bajadaFoto">
-              <h3>Saco Montserrat</h3>
-              <h4>$3500</h4>
+              <h3><?php $producto->name ?></h3>
+              <h4><?php $producto->price ?></h4>
             </div>
           </div>
+        <?php endforeach; ?>
 
-          <div class="g-slide">
-            <div class="icon">
-              <i class="material-icons favorito">favorite </i>
-            </div>
-            <picture>
-              <source
-                media="(min-width: 1200px)"
-                srcset="/images/newIn-img1.jpg"
-              />
-              <source
-                media="(min-width: 768px)"
-                srcset="/images/newIn-img1.jpg"
-              />
-              <img src="/images/newIn-img1.jpg" />
-            </picture>
-            <div class="newIn-bajadaFoto">
-              <h3>Saco Montserrat</h3>
-              <h4>$3500</h4>
-            </div>
-          </div>
-          <div class="g-slide">
-            <div class="icon">
-              <i class="material-icons favorito">favorite </i>
-            </div>
-            <picture>
-              <source
-                media="(min-width: 1200px)"
-                srcset="/images/newIn-img1.jpg"
-              />
-              <source
-                media="(min-width: 768px)"
-                srcset="/images/newIn-img1.jpg"
-              />
-              <img src="/images/newIn-img1.jpg" />
-            </picture>
-            <div class="newIn-bajadaFoto">
-              <h3>Saco Montserrat</h3>
-              <h4>$3500</h4>
-            </div>
-          </div>
-          <div class="g-slide">
-            <div class="icon">
-              <i class="material-icons favorito">favorite </i>
-            </div>
-            <picture>
-              <source
-                media="(min-width: 1200px)"
-                srcset="/images/newIn-img1.jpg"
-              />
-              <source
-                media="(min-width: 768px)"
-                srcset="/images/newIn-img1.jpg"
-              />
-              <img src="/images/newIn-img1.jpg" />
-            </picture>
-            <div class="newIn-bajadaFoto">
-              <h3>Saco Montserrat</h3>
-              <h4>$3500</h4>
-            </div>
-          </div>
-          <div class="g-slide">
-            <div class="icon">
-              <i class="material-icons favorito">favorite </i>
-            </div>
-            <picture>
-              <source
-                media="(min-width: 1200px)"
-                srcset="/images/newIn-img1.jpg"
-              />
-              <source
-                media="(min-width: 768px)"
-                srcset="/images/newIn-img1.jpg"
-              />
-              <img src="/images/newIn-img1.jpg" />
-            </picture>
-            <div class="newIn-bajadaFoto">
-              <h3>Saco Montserrat</h3>
-              <h4>$3500</h4>
-            </div>
-          </div>
-          <div class="g-slide">
-            <div class="icon">
-              <i class="material-icons favorito">favorite </i>
-            </div>
-            <picture>
-              <source
-                media="(min-width: 1200px)"
-                srcset="/images/img/newIn-img1.jpg"
-              />
-              <source
-                media="(min-width: 768px)"
-                srcset="/images/newIn-img1.jpg"
-              />
-              <img src="/images/newIn-img1.jpg" />
-            </picture>
-            <div class="newIn-bajadaFoto">
-              <h3>Saco Montserrat</h3>
-              <h4>$3500</h4>
-            </div>
-          </div>
         </div>
+
+
         <button role="button" aria-label="Previous" class="glider-prev2 ">
           <i class="material-icons arrow arrow__black">
             arrow_back_ios
