@@ -1,19 +1,14 @@
 .container2 {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   max-width: 100%;
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
           align-items: center;
   background-color: #f3f3f3;
 }
@@ -32,23 +27,20 @@
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .container2 {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
 }
 
 /*_____________________________________GALLERY*/
+
 .gallery {
   margin: 30px;
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
           justify-content: flex-start;
 }
 
@@ -114,26 +106,23 @@
 }
 
 /*______________________________________END GALLERY*/
+
 /*______________________________________BIG*/
+
 .buy {
   border: 1px #cc9fd8 solid;
-  height: 500px;
-  width: 30%;
+  height: 400px;
+  width: 35%;
   margin-bottom: 6px;
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
           flex-flow: column wrap;
   -webkit-box-align: center;
-      -ms-flex-align: center;
           align-items: center;
-  -ms-flex-line-pack: distribute;
-      align-content: space-around;
+  align-content: space-around;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
           justify-content: center;
 }
 
@@ -159,10 +148,10 @@
 .buy__categoria h4 {
   font-weight: 200;
   letter-spacing: 0.1rem;
-  padding-left: 40px;
-  padding-right: 40px;
   padding-bottom: 30px;
+  width: 80%;
   text-align: center;
+  margin: 0 auto;
 }
 
 .buy__nombre {
@@ -193,14 +182,11 @@
 
 .buy__color {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
           justify-content: center;
   width: 40%;
   padding: 20px;
@@ -240,14 +226,11 @@
 
 .buy__size ul {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0;
   padding: 0;
@@ -312,4 +295,4 @@
 }
 
 /*______________________________________ END BIG*/
-/*# sourceMappingURL=product.css.map */
+

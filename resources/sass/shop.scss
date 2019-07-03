@@ -1,0 +1,436 @@
+@import "media-queries";
+
+$font: "Open Sans", sans-serif;
+$violeta: #cc9fd8;
+$negro: #232326;
+$blanco: #f3f3f3;
+$separacion: 40px;
+
+
+footer{
+  position: absolute;
+  width:100%;
+  top:190%;
+  
+  z-index: 1000000000;
+  @include mobile{
+    top:175%;
+  }
+  @include tablet{
+    top:302%;
+  }
+}
+
+/*___________________________________________________________ NAV-SHOP*/
+
+.nav-shopPage {
+  
+  font-family: $font;
+  text-transform: uppercase;
+  // width: 300px;
+  height: 100%;
+  @include mobile {
+    
+    height: 10%;
+    display:none;
+    padding: 0;
+    margin:0;
+    
+  }
+
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: flex-start;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10001;
+  box-sizing: border-box;
+  padding-top: 15px;
+  width: 100%;
+  @include desktop {
+    width: 20%;
+    top:110px;
+  }
+  @include tablet {
+    width: 20%;
+    top:110px;
+  }
+  background: $blanco;
+}
+
+.nav-logo img {
+  width: 70px;
+  height: auto;
+}
+
+.mainmenu,
+.submenu,
+.categoria-mobile {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mainmenu a {
+  display: block;
+  background-color: $blanco;
+  text-decoration: none;
+  padding: 10px 50px;
+  color: #000;
+  @include tablet{
+    padding: 10px 30px;  
+  }
+}
+
+.categoria-mobile a {
+  display: none;
+  background-color: $blanco;
+  text-decoration: none;
+  padding: 10px 50px;
+  color: #000;
+
+}
+
+.mainmenu a:hover,
+.mainmenu a:focus {
+  background-color: $violeta;
+}
+
+.mainmenu li:hover .submenu,
+.mainmenu li:focus .submenu {
+  display: block;
+  max-height: 200px;
+}
+.mainmenu li,
+.categoria-mobile {
+  font-size: 1rem;
+}
+
+.submenu a {
+  background-color: $blanco;
+  font-size: 0.9rem;
+  border: none;
+}
+
+.submenu a:hover,
+.submenu a:focus {
+  background-color: $negro;
+  color: $blanco;
+}
+.submenu {
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: all 0.5s ease-out;
+}
+.mainmenu li {
+  position: relative;
+}
+
+.nav-flecha {
+  position: absolute;
+  top: 12px;
+  right: 10%;
+  font-size: 1.2rem;
+}
+
+.mainmenu li:hover > .nav-flecha {
+  transform: rotate(90deg);
+  -webkit-transition: transform 0.2s ease-out;
+}
+
+/*---------------mobile*/
+.nav-logo {
+  @include mobile {
+    display: none;
+  }
+}
+
+.mainmenu,
+.submenu {
+  @include mobile {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.categoria-mobile .categoria{
+    border: 1px solid $violeta;
+   
+    text-align: center;
+}
+
+.categoria-mobile {
+  @include desktop {
+    display: none;
+  }
+  @include tablet {
+    display: none;
+  }
+}
+
+.categoria-mobile li:hover > .mainmenu {
+  @include mobile {
+    overflow: hidden;
+   display: block;
+    transition: all 0s ease-in-out;
+  }
+}
+.mainmenu {
+  @include mobile {
+   display:none;
+  }
+}
+
+
+
+.nomobile {
+  @include mobile {
+    display: none;
+  }
+}
+/*---------------------*/
+/*___________________________________________________________ END NAV-SHOP*/
+
+
+
+main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: absolute;
+  left: 20%;
+  @include mobile{
+      width:100vw;
+      left:0;
+     
+      
+  }
+
+  width: 80%;
+  background-color: $blanco;
+}
+/*___________________________________________________________ MODULO-SHOP*/
+.modulosTodos {
+    @include mobile{
+width: 100%;
+flex-wrap: wrap;
+justify-content: center;
+
+    
+}
+
+  margin-top: 110px;
+  @include flex;
+  justify-content: space-around;
+}
+.modulo-shop {
+    @include mobileS{
+       
+       padding: 0px 7px;
+     
+    
+    }
+    @include mobile{
+      
+       margin: 4px 25px;
+    
+    
+    }
+    @include tablet{
+      padding:0px 30px;
+      width:35%;
+    }
+  width: 30%;
+  background-color: $blanco;
+  @include flex;
+  justify-content: center;
+  
+}
+.modulo-shop__img {
+    
+  position: relative;
+ 
+}
+.modulo-shop__img img {
+    @include mobileS{
+        width:145px;
+      
+    }
+    @include mobile{
+        width:150px;
+        margin-bottom:5px;
+    }
+   @include tablet{
+       width:280px;
+   }
+ 
+  width: 308px;
+ 
+  margin: 0 auto;
+  padding:0;
+  margin-bottom:15px;
+}
+
+.modulo-shop__img .dos {
+  position: absolute;
+  top: 0px;
+  display: none;
+}
+
+.modulo-shop__img:hover > .dos {
+  display: block;
+}
+.modulo-shop__img:focus > .dos {
+    display: block;
+  }
+
+.modulo-shop__descripcion{
+    margin-bottom:15px;
+    @include mobile{
+        margin-bottom:5px;
+       }
+}
+.modulo-shop__descripcion h4 {
+@include mobile{
+ font-size:0.7rem;
+ height:15px;
+}
+  font-family: $font;
+  font-weight: 200;
+  font-size: 0.9rem;
+  background-color: $blanco;
+  margin: 0;
+  padding: 0;
+height:25px;
+}
+
+.modulo-shop__descripcion .titulo,
+.precio,
+.color {
+  text-align: center;
+}
+
+/*___________________________________________________________ END MODULO-SHOP*/
+/*___________________________________________________________ FILTER-PAGES*/
+.filter-pages {
+  height: 60px;
+  @include flex;
+  justify-content: space-around;
+  align-items: center;
+  background: $blanco;
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+
+  @include tablet{
+      width:80%;
+      left:20%;
+      top:110px;
+  }
+  @include mobile{
+      left:0;
+      top:45px;
+  }
+  top: 110px;
+  left: 10%;
+  box-sizing: border-box;
+}
+.filter-pages h4 {
+  font-family: $font;
+}
+.filter-pages__categoria {
+    @include mobile{
+        display: none;
+    }
+  width: 200px;
+  @include flex;
+  justify-content: flex-start;
+}
+
+.filter-pages__categoria a {
+  text-decoration: none;
+  color: $negro;
+}
+
+.filter-pages__categoria .link {
+  color: $negro;
+
+  @include flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.filter-pages__categoria h4,
+.filter h4 {
+  font-size: 1rem;
+  font-weight: 200;
+}
+.filter-pages__categoria h4:first-child {
+  margin-right: 5px;
+}
+.filter-pages__categoria h4:last-child {
+  margin-left: 5px;
+}
+.filter-pages__categoria .link a h4 {
+  color: $negro;
+}
+.filter {
+    @include mobile{
+        padding-left:10px;
+    }
+  @include flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.filter-icon {
+  font-size: 1.3rem;
+}
+.pages {
+    @include mobile{
+        display: none;
+    }
+  width: 80px;
+  @include flex;
+  justify-content: center;
+  align-items: center;
+}
+.pages ul li {
+  list-style: none;
+  padding: 0px 2px;
+}
+.pages ul {
+  @include flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+}
+.pages ul a {
+  text-decoration: none;
+  color: $negro;
+
+  font-family: $font;
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+
+.pages-icon {
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+.filter-pages-left {
+  width: 260px;
+  @include flex;
+  @include mobile{
+      justify-content: flex-end;
+      margin:0;
+      width:100%;
+      padding-right:20px;
+  }
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20%;
+}
+
+/*___________________________________________________________ END FILTER-PAGE*/

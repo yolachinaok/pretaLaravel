@@ -4,7 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   /* fondo */
-  background-color: #F3F3F3;
+ 
   /* texto */
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
@@ -12,6 +12,7 @@
   }
 
 .contenedor {
+  background-color: #F3F3F3;
   width: 100%;
   display: flex;
   flex-wrap: wrap;

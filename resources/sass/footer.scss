@@ -1,0 +1,128 @@
+/*___________________________________________________________ FOOTER*/
+@import "media-queries";
+
+$font: "Open Sans", sans-serif;
+$violeta: #cc9fd8;
+$negro: #232326;
+$blanco: #f3f3f3;
+$separacion: 40px; 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+footer {
+    background-color: $negro;
+    padding-top: 20px;
+  }
+  .newslater a h3,
+  .locales a h3,
+  .footer-menu a h3 {
+    font-family: $font;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .newslater,
+  .locales {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  
+    padding-top: 10px;
+  }
+  .newslater a {
+    @include desktop {
+      width: 40%;
+    }
+    @include tablet {
+      width: 60%;
+    }
+    width: 90%;
+    display: inline-block;
+    background-color: $negro;
+  }
+  
+  .newslater .boton {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border: 1px solid $blanco;
+    color: $blanco;
+  }
+  
+  .locales a {
+    @include desktop {
+      width: 40%;
+    }
+    @include tablet {
+      width: 60%;
+    }
+    width: 90%;
+    display: inline-block;
+    background-color: $blanco;
+  }
+  
+  .locales .boton {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 10px 20px;
+    border: 1px solid $blanco;
+    color: $negro;
+  }
+  .locales i {
+    font-size: 1.3rem;
+    margin-left: 3px;
+  }
+  
+  .footer-menu {
+    padding-top: 15px;
+    @include desktop {
+      width: 39.5%;
+    }
+    @include tablet {
+      width: 59.5%;
+    }
+    width: 89.5%;
+    margin: 0 auto;
+    @include flex;
+    justify-content: space-between;
+  }
+  
+  .footer-menu a {
+    color: $blanco;
+  }
+  .footer-menu a:hover {
+    border-bottom: 1px solid $blanco;
+    padding-bottom: 2px;
+  }
+  .redes {
+    background-color: $violeta;
+  }
+  .redes ul {
+    @include flex;
+    @include desktop {
+      width: 40%;
+    }
+    @include tablet {
+      width: 60%;
+    }
+    width: 90%;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 15px 15px;
+    margin-top: 15px;
+  }
+  
+  .footer-icon {
+    color: $negro;
+    font-size: 2rem;
+  }
+  
+  .footer-icon:hover,
+  .footer-icon:focus {
+    color: $blanco;
+  }
+  

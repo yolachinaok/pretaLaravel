@@ -34,11 +34,6 @@
 <div class="buy__precio">
 <h3>$<?php echo $product['price'];?></h3>
 </div>
-<div class="buy__color">
-<input type="radio" name="color" id="">
-<input type="radio" name="color" id="">
-<input type="radio" name="color" id="">
-</div>
 <div class="buy__size">
 
 <ul>

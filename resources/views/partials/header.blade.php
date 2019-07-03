@@ -1,6 +1,7 @@
 <!-- ___________________________________NAV __________________________________________________-->
-
+<div class="nav-abajo"></div>
 <nav id="hero">
+
     <!-- ___________________________________HAMB-->
 
     <div class="nav-hamburguer">
@@ -180,7 +181,7 @@
               </div>
               <hr />
               <li>
-                <a href=""> <i class="material-icons">shopping_basket</i></a>
+                <a href="{{  url('/carrito') }}"> <i class="material-icons">shopping_basket</i></a>
               </li>
             </ul>
           </div>
