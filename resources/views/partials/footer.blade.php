@@ -3,7 +3,7 @@
      <div class="newslater">
        <a href="#">
          <div class="boton">
-           <h3>NEWSLATER</h3>
+           <h3>NEWSLETTER</h3>
            <i class="material-icons">chevron_right</i>
          </div>
        </a>

@@ -152,7 +152,28 @@
           </div>
           <div class="nav-ingresar">
             <ul>
-              <li><a href="{{  url('/login') }}">INGRESAR</a></li>
+
+
+@if (Auth::guest())
+                    <li><a href="{{  url('/login') }}">INGRESAR</a></li>
+  @else
+  <li><a href="{{  url('/perfil') }}">HOLA {{ Auth::user()->name }}</a></li>
+
+      <li>
+         <a href="{{ url('/logout') }}"
+                onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
+                LOGOUT
+         </a>
+         <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+      </li>
+    </ul>
+  </li>
+  @endif
+
+
               <hr />
               <div class="nav-search">
                 <a href=""><i class="material-icons">favorite</i></a>

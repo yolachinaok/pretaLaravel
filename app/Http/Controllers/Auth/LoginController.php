@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Socialite;
+use Auth;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -26,7 +28,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -39,7 +41,7 @@ class LoginController extends Controller
     }
 
     public function showLoginForm(){
-      return view('login');
+      return view('auth/login');
     }
 
     public function redirectToProvider(){
@@ -49,5 +51,10 @@ class LoginController extends Controller
     public function handleProviderCallback(){
       $user = Socialite::driver('facebook')->user();
       dd($user);
+    }
+
+    public function logout(Request $request) {
+      Auth::logout();
+      return redirect('/login');
     }
 }
