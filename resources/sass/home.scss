@@ -1,39 +1,38 @@
+@import "media-queries";
+
+$font: "Open Sans", sans-serif;
+$violeta: #cc9fd8;
+$negro: #232326;
+$blanco: #f3f3f3;
+$separacion: 40px;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 html {
   font-size: 14px;
 }
-
 .container {
   margin: 0 auto;
   width: 100%;
-  background: #f3f3f3;
+  background: $blanco;
 }
 
 img {
   width: 100%;
   margin: 0 auto;
 }
-
 /*___________________________________________________________SECCION HERO
 /*HERO SLIDE*/
-
-@media (min-width: 1024px) {
-  .Hero {
-    padding-top: 111px;
+.Hero{
+  @include desktop{
+  padding-top:111px;};
+  @include tablet{
+    padding-top:111px;  
   }
 }
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .Hero {
-    padding-top: 111px;
-  }
-}
-
 .glider-contain {
   position: relative;
 }
@@ -43,84 +42,59 @@ img {
   top: 40%;
   left: 3%;
 }
-
 .glider-next {
   position: absolute;
   top: 40%;
   right: 3%;
 }
-
 .arrow {
   font-size: 2rem;
-  color: #cc9fd8;
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .arrow {
+  color: $violeta;
+  @include tablet {
     font-size: 2.5rem;
   }
-}
-
-@media (min-width: 1024px) {
-  .arrow {
+  @include desktop {
     font-size: 4rem;
   }
-}
-
-@media (min-width: 320px) and (max-width: 767px) {
-  .arrow {
+  @include mobile {
     display: none;
   }
 }
 
 .punto {
-  color: #cc9fd8;
+  color: $violeta;
 }
-
 #dots {
-  display: -webkit-box;
   display: flex;
-}
-
-@media (min-width: 320px) and (max-width: 767px) {
-  #dots {
+  @include mobile {
     display: none;
   }
 }
-
 /*END HERO SLIDE*/
-
 /*HERO DESCUENTO*/
-
 .Hero-descuento {
   position: absolute;
   top: 55px;
   right: 0%;
-  font-family: "Open Sans", sans-serif;
+  font-family: $font;
   font-size: 0.8rem;
-  background-color: #cc9fd8;
+  background-color: $violeta;
   opacity: 0.7;
   width: 170px;
   height: 60px;
   text-align: right;
   padding-right: 6px;
-  color: #f3f3f3;
+  color: $blanco;
   font-weight: 700;
   padding-top: 3px;
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .Hero-descuento {
+  @include tablet {
     font-size: 1rem;
     top: 115px;
     width: 190px;
     height: 70px;
     padding: 6px 6px 0 0px;
   }
-}
-
-@media (min-width: 1024px) {
-  .Hero-descuento {
+  @include desktop {
     font-size: 1.5rem;
     top: 115px;
     width: 300px;
@@ -128,13 +102,11 @@ img {
     padding: 10px 10px 0 0px;
   }
 }
-
 .Hero-descuento a {
   text-decoration: none;
-  color: #232326;
+  color: $negro;
   font-weight: 400;
 }
-
 .Hero-descuento a h2 {
   font-weight: 600;
 }
@@ -142,52 +114,36 @@ img {
 .Hero-descuento a:focus,
 .Hero-descuento a:hover {
   color: black;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
 }
 
 /*END HERO DESCUENTO*/
-
 /*___________________________________________________________END SECCION HERO
 
 
 /*___________________________________________________________SECCION ALLSEASON*/
 
 .allSeason {
-  margin: 20px 0px 40px 0;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 900;
-  font-size: 1rem;
-  text-align: center;
-  letter-spacing: 2px;
-}
+  margin: 20px 0px $separacion 0;
 
-@media (min-width: 768px) and (max-width: 1023px) {
-  .allSeason {
+  @include titulos;
+
+  @include tablet {
     font-size: 1.5rem;
     letter-spacing: 9px;
   }
-}
-
-@media (min-width: 1024px) {
-  .allSeason {
+  @include desktop {
     font-size: 1.5rem;
     letter-spacing: 12px;
   }
 }
-
 /*START ALL SEASON TITULO*/
-
 .allSeason-titulo {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-          justify-content: center;
+  flex-flow: row wrap;
+  justify-content: center;
   width: 100%;
-  color: #232326;
+  color: $negro;
 }
 
 .allSeason a {
@@ -197,81 +153,44 @@ img {
 .allSeason-video {
   position: relative !important;
   padding: 40px 0 40px 0;
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .allSeason-video {
+  @include tablet {
     padding: 40px 0 100px 0;
   }
-}
-
-@media (min-width: 1024px) {
-  .allSeason-video {
+  @include desktop {
     padding: 40px 0 180px 0;
   }
 }
-
 .allSeason-arrows {
   padding-left: 0px;
-  -webkit-animation: myFrame 1.5s ease-in-out 0s infinite normal forwards;
-          animation: myFrame 1.5s ease-in-out 0s infinite normal forwards;
+  animation: myFrame 1.5s ease-in-out 0s infinite normal forwards;
 }
-
 .allSeason-arrow {
   font-size: 30px;
-  color: #cc9fd8;
+  color: $violeta;
   font-weight: 700;
   width: 18px;
-}
 
-@media (min-width: 768px) and (max-width: 1023px) {
-  .allSeason-arrow {
+  @include tablet {
     font-size: 45px;
   }
-}
-
-@media (min-width: 1024px) {
-  .allSeason-arrow {
+  @include desktop {
     font-size: 45px;
-  }
-}
-
-@-webkit-keyframes myFrame {
-  0% {
-    -webkit-transform: translate(5px);
-            transform: translate(5px);
-  }
-
-  50% {
-    -webkit-transform: translate(10px);
-            transform: translate(10px);
-  }
-
-  100% {
-    -webkit-transform: translate(20px);
-            transform: translate(20px);
   }
 }
 
 @keyframes myFrame {
   0% {
-    -webkit-transform: translate(5px);
-            transform: translate(5px);
+    transform: translate(5px);
   }
-
   50% {
-    -webkit-transform: translate(10px);
-            transform: translate(10px);
+    transform: translate(10px);
   }
-
   100% {
-    -webkit-transform: translate(20px);
-            transform: translate(20px);
+    transform: translate(20px);
   }
 }
 
 /*----STYLE BUTTON YOUTUBE*/
-
 /*
 .ytp-large-play-button-bg path
 {
@@ -336,15 +255,13 @@ fill:$violeta;
 /*___________________________________________________________END SECCION ALLSEASON*/
 
 /*___________________________________________________________SECCION NEW IN*/
-
 .newIn {
   position: relative;
   padding: 40px 0;
   width: 90%;
-  border: 3.5px solid #cc9fd8;
+  border: 3.5px solid $violeta;
   margin: 0px auto;
 }
-
 .glider-prev2,
 .glider-next2,
 .glider-prev2:focus:hover,
@@ -353,74 +270,63 @@ fill:$violeta;
   background: transparent;
   outline: none;
 }
-
 .glider2 {
   margin: 0 auto;
   position: relative;
 }
-
 .glider-contain2 {
   width: 90%;
   margin: 0 auto;
 }
-
 .g-slide {
   position: relative;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-          justify-content: center;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 .glider2 img {
   width: 200px;
   height: auto;
+
   z-index: 0;
 }
 
 .glider-prev2 {
   position: absolute;
+
   left: 3%;
   top: 40%;
 }
-
 .glider-next2 {
   position: absolute;
+
   right: 3%;
   top: 40%;
 }
-
 .arrow__black {
-  color: #232326;
+  color: $negro;
   font-size: 16px;
 }
 
 .newIn-titulo {
-  font-family: "Open Sans", sans-serif;
+  font-family: $font;
   font-weight: 900;
   font-size: 1.5rem;
   letter-spacing: 2px;
-  color: #cc9fd8;
+  color: $violeta;
   letter-spacing: 3px;
   top: -40px;
   right: -10px;
   position: absolute;
-}
 
-@media (min-width: 768px) and (max-width: 1023px) {
-  .newIn-titulo {
+  @include tablet {
     font-weight: 900;
     font-size: 2rem;
     top: -52px;
     right: -10px;
   }
-}
-
-@media (min-width: 1024px) {
-  .newIn-titulo {
+  @include desktop {
     font-weight: 900;
     font-size: 2rem;
     top: -53px;
@@ -431,160 +337,118 @@ fill:$violeta;
 .icon {
   position: relative;
 }
-
 .favorito {
   position: absolute;
   font-size: 1.5rem;
   left: 10px;
   top: 4px;
-  color: #cc9fd8;
+
+  color: $violeta;
   z-index: 1;
 }
 
 .newIn-bajadaFoto {
   width: 200px;
   padding-right: 5px;
-  font-family: "Open Sans", sans-serif;
+  font-family: $font;
   font-size: 0.9rem;
   text-align: right;
   padding: 5px 0;
-  color: #232326;
+  color: $negro;
 }
 
 /*___________________________________________________________END SECCION NEW IN*/
 
 /*___________________________________________________________SECCION CATEGORIAS*/
-
 .categoria {
-  margin: 40px 0 40px 0;
+  margin: $separacion 0 $separacion 0;
 }
-
 .categoria-plano {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
   justify-content: space-around;
-  margin-bottom: 40px;
+  margin-bottom: $separacion;
 }
-
 .categoria-plano h2 {
-  font-family: "Open Sans", sans-serif;
+  font-family: $font;
   font-size: 2rem;
   letter-spacing: 4px;
   margin-top: 40px;
   font-weight: 400;
   text-align: center;
-  color: #cc9fd8;
+  color: $violeta;
 }
-
-@media (min-width: 320px) and (max-width: 767px) {
-  .borrar-mt {
+.borrar-mt {
+  @include mobile {
+    display: none;
+  }
+  @include tablet {
     display: none;
   }
 }
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .borrar-mt {
-    display: none;
-  }
-}
-
 .categoria-plano1 {
-  background-color: #232326;
+  background-color: $negro;
   width: 49%;
   height: 120px;
-}
-
-@media (min-width: 320px) and (max-width: 767px) {
-  .categoria-plano1 {
+  @include mobile {
     width: 100%;
   }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .categoria-plano1 {
+  @include tablet {
     width: 100%;
   }
 }
 
 .categorias {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-          justify-content: center;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 .categoria-1 {
   position: relative;
   margin: 0 2px;
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .categoria-1 {
+  @include tablet {
     margin: 4px 6px;
   }
-}
-
-@media (min-width: 1024px) {
-  .categoria-1 {
+  @include desktop {
     margin: 8px;
   }
 }
-
 .categoria-1 img {
   height: auto;
   width: 100%;
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .categoria-1 img {
+  @include tablet {
     height: auto;
     width: 350px;
   }
-}
-
-@media (min-width: 1024px) {
-  .categoria-1 img {
+  @include desktop {
     height: auto;
     width: 420px;
   }
 }
-
-@media (min-width: 1024px) {
-  .categoria-1__borrar {
+.categoria-1__borrar {
+  @include desktop {
     display: none;
   }
 }
-
 .categoria-1 h3 {
   position: absolute;
-  background: #cc9fd8;
+  background: $violeta;
   opacity: 0.8;
   padding: 5px 40px;
-  font-family: "Open Sans", sans-serif;
+  font-family: $font;
   font-weight: 400;
   letter-spacing: 1px;
   bottom: 3px;
   left: 110px;
   font-size: 0.8rem;
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .categoria-1 h3 {
+  @include tablet {
     padding: 10px 80px;
     bottom: 3px;
     left: 77px;
     font-size: 1rem;
   }
-}
-
-@media (min-width: 1024px) {
-  .categoria-1 h3 {
+  @include desktop {
     padding: 10px 80px;
     bottom: 3px;
     left: 110px;
@@ -595,171 +459,120 @@ fill:$violeta;
 /*___________________________________________________________END SECCION CATEGORIAS*/
 
 /*___________________________________________________________SECCION INSTAGRAM*/
-
 .instagram {
   width: 80%;
   position: relative;
   margin: 0 auto;
 }
-
 .instagram-flechas {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-          justify-content: center;
+  flex-flow: row wrap;
+  justify-content: center;
   position: absolute;
   top: 1px;
   left: 140px;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-@media (min-width: 320px) and (max-width: 320px) {
-  .instagram-flechas {
+  transform: rotate(180deg);
+  @include mobileS {
     display: none;
   }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .instagram-flechas {
+  @include tablet {
     left: 180px;
   }
-}
-
-@media (min-width: 1024px) {
-  .instagram-flechas {
+  @include desktop {
     left: 270px;
   }
 }
-
-@media (min-width: 320px) and (max-width: 767px) {
-  .flechas-td {
+.flechas-td {
+  @include mobile {
     display: none;
   }
 }
-
 .flechas-des {
   display: none;
-}
-
-@media (min-width: 1024px) {
-  .flechas-des {
+  @include desktop {
     display: block;
   }
 }
-
 .instagram-flechas1 i {
   font-weight: 200;
   font-size: 2rem;
   margin: 0;
-}
-
-@media (min-width: 1024px) {
-  .instagram-flechas1 i {
+  @include desktop {
     font-size: 3rem;
   }
 }
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .instagram-flechas1 {
+.instagram-flechas1 {
+  @include tablet {
     margin-right: 8px;
   }
-}
-
-@media (min-width: 1024px) {
-  .instagram-flechas1 {
+  @include desktop {
     margin-right: 30px;
   }
 }
-
 .instagram-follow h2 {
-  font-family: "Open Sans", sans-serif;
+  font-family: $font;
   font-size: 2rem;
   font-weight: 400;
   letter-spacing: 4px;
-  color: #232326;
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .instagram-follow h2 {
+  color: $negro;
+  @include tablet {
     margin-left: 20px;
+  
   }
-}
-
-@media (min-width: 1024px) {
-  .instagram-follow h2 {
+  @include desktop {
     margin-left: 40px;
     font-size: 3rem;
   }
 }
-
 .instagram-follow {
   margin-bottom: 30px;
 }
-
 .instagram-fotos {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-          justify-content: center;
+  flex-flow: row wrap;
+  justify-content: center;
 }
-
 .instagram-fotos img {
   width: 140px;
   height: auto;
   margin-left: 3px;
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .instagram-fotos img {
+  @include tablet {
     width: 200px;
   }
-}
-
-@media (min-width: 1024px) {
-  .instagram-fotos img {
+  @include desktop {
     width: 300px;
     margin: 17px 20px;
   }
 }
 
 /*___________________________________________________________END SECCION INSTAGRAM*/
-
 /*___________________________________________________________BOTON BACK TO TOP*/
 
 .boton-back h4 {
-  font-family: "Open Sans", sans-serif;
+  font-family: $font;
   font-weight: 200;
-  color: #232326;
+  color: $negro;
   font-size: 1.2rem;
   margin: 0 40px;
   letter-spacing: 4px;
 }
-
 .boton-back {
   width: 300px;
   margin: 0 auto;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-          justify-content: center;
+  flex-flow: row wrap;
+  justify-content: center;
   padding: 40px 0;
 }
-
 .boton-back a {
   text-decoration: none;
 }
 
 /*___________________________________________________________END BOTON BACK TO TOP*/
+
+
+
+
 
 /*___________________________________________________________ PAGINA SHOP___________________________________________________________*/
 

@@ -14,22 +14,7 @@
       <!--Vista de productos -->
       <div class="">
         <ul>
-      @foreach ($carts as $product)
-        <li>
-        <div class="">
-            <img style="width:50px" src="/storage/{{$product->photo1}}" alt="">
-          </div>
-          <div class="">
-            <h4>{{$product->name}}</h4>
-          </div>
-          <div class="">
-            x {{$product->pivot->quantity}}
-          </div>
-          <div class="">
-            ${{$product->price * $product->pivot->quantity}}
-          </div>
-        </li>
-      @endforeach
+
       </ul>
       </div>
     </div>

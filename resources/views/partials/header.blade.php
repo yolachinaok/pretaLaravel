@@ -1,6 +1,7 @@
 <!-- ___________________________________NAV __________________________________________________-->
-
+<div class="nav-abajo"></div>
 <nav id="hero">
+
     <!-- ___________________________________HAMB-->
 
     <div class="nav-hamburguer">
@@ -27,7 +28,7 @@
             </a>
 
             <hr />
-            <a href="{{  url('/registro') }}">
+            <a href="{{  url('/register') }}">
               <h3>REGISTRARME</h3>
             </a>
           </div>
@@ -151,7 +152,7 @@
           </div>
           <div class="nav-ingresar">
             <ul>
-              <li><a href="{{  url('/registro') }}">INGRESAR</a></li>
+              <li><a href="{{  url('/login') }}">INGRESAR</a></li>
               <hr />
               <div class="nav-search">
                 <a href=""><i class="material-icons">favorite</i></a>
@@ -159,7 +160,7 @@
               </div>
               <hr />
               <li>
-                <a href=""> <i class="material-icons">shopping_basket</i></a>
+                <a href="{{  url('/carrito') }}"> <i class="material-icons">shopping_basket</i></a>
               </li>
             </ul>
           </div>

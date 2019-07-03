@@ -1,7 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -21,7 +22,6 @@ img {
 
 /*___________________________________________________________SECCION HERO
 /*HERO SLIDE*/
-
 @media (min-width: 1024px) {
   .Hero {
     padding-top: 111px;
@@ -79,6 +79,7 @@ img {
 
 #dots {
   display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -89,9 +90,7 @@ img {
 }
 
 /*END HERO SLIDE*/
-
 /*HERO DESCUENTO*/
-
 .Hero-descuento {
   position: absolute;
   top: 55px;
@@ -147,12 +146,10 @@ img {
 }
 
 /*END HERO DESCUENTO*/
-
 /*___________________________________________________________END SECCION HERO
 
 
 /*___________________________________________________________SECCION ALLSEASON*/
-
 .allSeason {
   margin: 20px 0px 40px 0;
   font-family: "Open Sans", sans-serif;
@@ -177,14 +174,16 @@ img {
 }
 
 /*START ALL SEASON TITULO*/
-
 .allSeason-titulo {
   display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   -webkit-box-pack: center;
+      -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
   color: #232326;
@@ -241,12 +240,10 @@ img {
     -webkit-transform: translate(5px);
             transform: translate(5px);
   }
-
   50% {
     -webkit-transform: translate(10px);
             transform: translate(10px);
   }
-
   100% {
     -webkit-transform: translate(20px);
             transform: translate(20px);
@@ -258,12 +255,10 @@ img {
     -webkit-transform: translate(5px);
             transform: translate(5px);
   }
-
   50% {
     -webkit-transform: translate(10px);
             transform: translate(10px);
   }
-
   100% {
     -webkit-transform: translate(20px);
             transform: translate(20px);
@@ -271,7 +266,6 @@ img {
 }
 
 /*----STYLE BUTTON YOUTUBE*/
-
 /*
 .ytp-large-play-button-bg path
 {
@@ -328,15 +322,10 @@ fill:$violeta;
   }
 
 */
-
 /*----*/
-
 /*END ALL SEASON TITULO*/
-
 /*___________________________________________________________END SECCION ALLSEASON*/
-
 /*___________________________________________________________SECCION NEW IN*/
-
 .newIn {
   position: relative;
   padding: 40px 0;
@@ -367,11 +356,14 @@ fill:$violeta;
 .g-slide {
   position: relative;
   display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   -webkit-box-pack: center;
+      -ms-flex-pack: center;
           justify-content: center;
 }
 
@@ -452,20 +444,21 @@ fill:$violeta;
 }
 
 /*___________________________________________________________END SECCION NEW IN*/
-
 /*___________________________________________________________SECCION CATEGORIAS*/
-
 .categoria {
   margin: 40px 0 40px 0;
 }
 
 .categoria-plano {
   display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin-bottom: 40px;
 }
 
@@ -511,11 +504,14 @@ fill:$violeta;
 
 .categorias {
   display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   -webkit-box-pack: center;
+      -ms-flex-pack: center;
           justify-content: center;
 }
 
@@ -593,9 +589,7 @@ fill:$violeta;
 }
 
 /*___________________________________________________________END SECCION CATEGORIAS*/
-
 /*___________________________________________________________SECCION INSTAGRAM*/
-
 .instagram {
   width: 80%;
   position: relative;
@@ -604,11 +598,14 @@ fill:$violeta;
 
 .instagram-flechas {
   display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   -webkit-box-pack: center;
+      -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
   top: 1px;
@@ -702,11 +699,14 @@ fill:$violeta;
 
 .instagram-fotos {
   display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   -webkit-box-pack: center;
+      -ms-flex-pack: center;
           justify-content: center;
 }
 
@@ -730,9 +730,7 @@ fill:$violeta;
 }
 
 /*___________________________________________________________END SECCION INSTAGRAM*/
-
 /*___________________________________________________________BOTON BACK TO TOP*/
-
 .boton-back h4 {
   font-family: "Open Sans", sans-serif;
   font-weight: 200;
@@ -746,11 +744,14 @@ fill:$violeta;
   width: 300px;
   margin: 0 auto;
   display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   -webkit-box-pack: center;
+      -ms-flex-pack: center;
           justify-content: center;
   padding: 40px 0;
 }
@@ -761,5 +762,6 @@ fill:$violeta;
 
 /*___________________________________________________________END BOTON BACK TO TOP*/
 
-/*___________________________________________________________ PAGINA SHOP___________________________________________________________*/
 
+/*___________________________________________________________ PAGINA SHOP___________________________________________________________*/
+/*# sourceMappingURL=home.css.map */

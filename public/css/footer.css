@@ -1,182 +1,174 @@
 /*___________________________________________________________ FOOTER*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 footer {
-    background-color: #232326;
-    padding-top: 20px;
-  }
-  
-  .newslater a h3,
-  .locales a h3,
-  .footer-menu a h3 {
-    font-family: "Open Sans", sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-  }
-  
-  .newslater,
-  .locales {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding-top: 10px;
-  }
-  
+  background-color: #232326;
+  padding-top: 20px;
+}
+
+.newslater a h3,
+.locales a h3,
+.footer-menu a h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.newslater,
+.locales {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+          justify-content: center;
+  padding-top: 10px;
+}
+
+.newslater a {
+  width: 90%;
+  display: inline-block;
+  background-color: #232326;
+}
+
+@media (min-width: 1024px) {
   .newslater a {
-    width: 90%;
-    display: inline-block;
-    background-color: #232326;
+    width: 40%;
   }
-  
-  @media (min-width: 1024px) {
-    .newslater a {
-      width: 40%;
-    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .newslater a {
+    width: 60%;
   }
-  
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .newslater a {
-      width: 60%;
-    }
-  }
-  
-  .newslater .boton {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding: 10px 20px;
-    border: 1px solid #f3f3f3;
-    color: #f3f3f3;
-  }
-  
+}
+
+.newslater .boton {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  padding: 10px 20px;
+  border: 1px solid #f3f3f3;
+  color: #f3f3f3;
+}
+
+.locales a {
+  width: 90%;
+  display: inline-block;
+  background-color: #f3f3f3;
+}
+
+@media (min-width: 1024px) {
   .locales a {
-    width: 90%;
-    display: inline-block;
-    background-color: #f3f3f3;
+    width: 40%;
   }
-  
-  @media (min-width: 1024px) {
-    .locales a {
-      width: 40%;
-    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .locales a {
+    width: 60%;
   }
-  
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .locales a {
-      width: 60%;
-    }
-  }
-  
-  .locales .boton {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 10px 20px;
-    border: 1px solid #f3f3f3;
-    color: #232326;
-  }
-  
-  .locales i {
-    font-size: 1.3rem;
-    margin-left: 3px;
-  }
-  
+}
+
+.locales .boton {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+          justify-content: center;
+  padding: 10px 20px;
+  border: 1px solid #f3f3f3;
+  color: #232326;
+}
+
+.locales i {
+  font-size: 1.3rem;
+  margin-left: 3px;
+}
+
+.footer-menu {
+  padding-top: 15px;
+  width: 89.5%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 1024px) {
   .footer-menu {
-    padding-top: 15px;
-    width: 89.5%;
-    margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    width: 39.5%;
   }
-  
-  @media (min-width: 1024px) {
-    .footer-menu {
-      width: 39.5%;
-    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .footer-menu {
+    width: 59.5%;
   }
-  
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .footer-menu {
-      width: 59.5%;
-    }
-  }
-  
-  .footer-menu a {
-    color: #f3f3f3;
-  }
-  
-  .footer-menu a:hover {
-    border-bottom: 1px solid #f3f3f3;
-    padding-bottom: 2px;
-  }
-  
-  .redes {
-    background-color: #cc9fd8;
-  }
-  
+}
+
+.footer-menu a {
+  color: #f3f3f3;
+}
+
+.footer-menu a:hover {
+  border-bottom: 1px solid #f3f3f3;
+  padding-bottom: 2px;
+}
+
+.redes {
+  background-color: #cc9fd8;
+}
+
+.redes ul {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
+  width: 90%;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  padding: 15px 15px;
+  margin-top: 15px;
+}
+
+@media (min-width: 1024px) {
   .redes ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    width: 90%;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin: 0 auto;
-    padding: 15px 15px;
-    margin-top: 15px;
+    width: 40%;
   }
-  
-  @media (min-width: 1024px) {
-    .redes ul {
-      width: 40%;
-    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .redes ul {
+    width: 60%;
   }
-  
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .redes ul {
-      width: 60%;
-    }
-  }
-  
-  .footer-icon {
-    color: #232326;
-    font-size: 2rem;
-  }
-  
-  .footer-icon:hover,
-  .footer-icon:focus {
-    color: #f3f3f3;
-  }
-  /*___________________________________________________________ END FOOTER*/
+}
+
+.footer-icon {
+  color: #232326;
+  font-size: 2rem;
+}
+
+.footer-icon:hover,
+.footer-icon:focus {
+  color: #f3f3f3;
+}
+

@@ -1,0 +1,302 @@
+/*___________________________________________________________NAV*/
+@import "media-queries";
+
+$font: "Open Sans", sans-serif;
+$violeta: #cc9fd8;
+$negro: #232326;
+$blanco: #f3f3f3;
+$separacion: 40px;
+
+.nav-abajo{
+padding:300px;
+width:100%;
+background:red;
+}
+nav {
+    font-family: $font;
+    font-size: 1rem;
+    font-weight: 200;
+    color: $negro;
+    background: $blanco;
+    padding-bottom: 10px;
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:100000;
+    box-sizing: border-box;
+  opacity: 0.8;  
+  @include mobile{
+    opacity:1;
+  }
+  }
+  
+  li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    color: $negro;
+  }
+  
+  .nav-container1 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 95%;
+    margin: 0 auto;
+  }
+  
+  .nav-container2 {
+    margin-top: 8px;
+  
+   
+  }
+  .nav-locales,
+  .nav-ingresar {
+    margin-top: 20px;
+  }
+  .nav-container2 ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  .nav-locales ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  .nav-container2 ul li:hover {
+    border-block-end: $violeta 1px solid;
+  }
+  .nav-locales,
+  .nav-ingresar {
+    width: 20%;
+    font-size: 0.8rem;
+    @include tablet {
+      width: 30%;
+    }
+  }
+  
+  .nav-ingresar ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  
+  .nav-search {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  .nav-search a {
+    margin-right: 2px;
+  }
+  .nav-search a i {
+    font-size: 1.2rem;
+  }
+  .nav-ingresar ul li a i {
+    font-size: 1.2rem;
+  }
+  .nav-logo img {
+    width: 100px;
+    height: auto;
+    margin-top: 10px;
+  }
+  
+  .nav-tablet-desktop {
+    @include mobile {
+      display: none;
+    }
+  }
+  .nav-hamburguer {
+    @include tablet {
+      display: none;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+  /*___________________________________________________________ NAV HAMBURGUESA*/
+  
+  .nav-hamburguer input + label {
+    position: fixed;
+    top: 18px;
+    left: 25px;
+    height: 20px;
+    width: 15px;
+    z-index: 5;
+  }
+  .nav-hamburguer input + label span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    margin-top: -1px;
+    left: 0;
+    display: block;
+    background: $negro;
+    transition: 0.5s;
+  }
+  .nav-hamburguer input + label span:first-child {
+    top: 3px;
+  }
+  .nav-hamburguer input + label span:last-child {
+    top: 16px;
+  }
+  .nav-hamburguer label:hover {
+    cursor: pointer;
+  }
+  .nav-hamburguer input:checked + label span {
+    opacity: 0;
+    top: 50%;
+  }
+  .nav-hamburguer input:checked + label span:first-child {
+    opacity: 1;
+    transform: rotate(405deg);
+  }
+  .nav-hamburguer input:checked + label span:last-child {
+    opacity: 1;
+    transform: rotate(-405deg);
+  }
+  .nav-hamburguer input ~ .hamb-nav {
+    background: $blanco;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 3;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    overflow: hidden;
+  }
+  .nav-hamburguer input ~ .hamb-nav > ul {
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+  }
+  .nav-hamburguer input ~ .hamb-nav > .hamb-redes {
+    text-align: center;
+    position: absolute;
+    bottom: 0%;
+    @include mobileS {
+      bottom: 2%;
+    }
+    width: 100%;
+  
+    background-color: $violeta;
+  }
+  .nav-hamburguer input ~ .hamb-nav > ul > a > li {
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0s;
+  }
+  .nav-hamburguer input ~ .hamb-nav > ul > a > li {
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: left;
+    color: #020304;
+    font-weight: 400;
+    font-family: $font;
+    display: block;
+  }
+  .nav-hamburguer input:checked ~ .hamb-nav {
+    height: 100%;
+    transition-delay: 0s;
+  }
+  .nav-hamburguer input:checked ~ .hamb-nav > ul > a > li {
+    opacity: 1;
+    transition-delay: 0.5s;
+  }
+  .nav-hamburguer input:checked ~ .hamb-nav img {
+    opacity: 1;
+    transition-delay: 0.5s;
+  }
+  
+  .nav-hamburguer input:checked ~ .hamb-nav .ingresar {
+    opacity: 1;
+    transition-delay: 0.5s;
+  }
+  .nav-hamburguer input:checked ~ .hamb-nav .hamb-redes {
+    opacity: 1;
+    transition-delay: 0.5s;
+  }
+  .nav-hamburguer input ~ .hamb-nav .ingresar {
+    opacity: 0;
+  }
+  .hamb-redes {
+    opacity: 0;
+    margin: 0;
+  }
+  
+  .hamb-redes ul {
+    @include flex;
+    width: 90%;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 15px;
+  }
+  .hamb-redes .footer-icon {
+    font-size: 1.4rem;
+  }
+  .hamb-nav img {
+    opacity: 0;
+  }
+  
+  .hamb-nav a .li-flex {
+    border: 1px solid $violeta;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-top: 3px;
+    padding: 6px 6px;
+  }
+  
+  .hamb-nav a .li-flex:focus {
+    font-weight: 600;
+  }
+  
+  .hamb-nav a .li-flex i {
+    font-size: 1.2rem;
+    margin-top: 4px;
+  }
+  .ingresar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+  
+  .ingresar a h3 {
+    font-weight: 400;
+    font-size: 1rem;
+  }
+  
+  .ingresar hr {
+    margin: 0px 10px;
+  }
+  
+  .nav-shop {
+    position: fixed;
+    top: 4%;
+    left: 89%;
+    z-index: 1000;
+  }
+  
+  .nav-shop i {
+    font-size: 1.5rem;
+  }
+  .nav-logo-mobile {
+    position: fixed;
+    width: 70px;
+    left: 40%;
+    top: 10px;
+    z-index: 800;
+  }
+  
+  /*___________________________________________________________ END NAV */

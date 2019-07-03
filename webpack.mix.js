@@ -11,5 +11,10 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');
+mix.sass('resources/sass/home.scss', 'public/css')
+    .sass('resources/sass/media-queries.scss', 'public/css')
+    .sass('resources/sass/footer.scss', 'public/css')
+    .sass('resources/sass/nav.scss', 'public/css')
+    .sass('resources/sass/product.scss', 'public/css')
+    .sass('resources/sass/shop.scss', 'public/css');
+    

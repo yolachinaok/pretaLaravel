@@ -1,0 +1,263 @@
+@import 'media-queries';
+$font: "Open Sans", sans-serif;
+$violeta: #cc9fd8;
+$negro: #232326;
+$blanco: #f3f3f3;
+$separacion: 40px;
+
+.container2{
+   
+    @include desktop{
+        margin-top:110px;
+    }
+    @include tablet{
+        margin-top:110px;
+    }
+    box-sizing: border-box;
+  max-width: 100%;
+ 
+  @include flex;
+  justify-content: center;
+  align-items: center;
+  background-color:$blanco;
+  @include tablet{
+   justify-content: space-around;
+   
+}
+}
+/*_____________________________________GALLERY*/
+.gallery{
+    margin:30px;
+    @include tablet{
+       margin:0;
+       
+    }
+@include flex;
+justify-content: flex-start;
+
+
+}
+.gallery__minim{
+ width:120px;
+ @include tablet{
+    width:80px;
+    margin-top:10px;
+   
+}
+@include mobile{
+
+    width:100%;
+}
+& img{
+  
+    max-height: 100%;
+    max-width: 100%;
+    margin:0 auto;
+
+}
+
+
+}
+
+.gallery__big{
+margin-left:30px;
+@include tablet{
+    margin:10px;
+    
+   
+}
+@include mobile{
+margin:0;
+}
+    & img{
+    width:366.5px;
+    @include tablet{
+        width:300px;
+       
+    }
+    @include mobile{
+
+        width:100%;
+    }
+}
+ 
+
+}
+/*______________________________________END GALLERY*/
+/*______________________________________BIG*/
+
+.buy{
+border:1px $violeta solid;
+height:400px;
+width:35%;
+margin-bottom: 6px;
+@include tablet{
+    width:40%;
+    height:400px;
+   
+}
+@include mobile{
+
+    width:100%;
+}
+display: flex;
+flex-flow: column wrap;
+align-items: center;
+align-content:space-around;
+justify-content: center;
+
+}
+
+.buy__categoria{
+    font-family: $font;
+ 
+    font-size: 1rem;
+    text-transform: uppercase;
+    & h4{
+        font-weight: 200;
+        letter-spacing: 0.1rem;
+        padding-bottom: 30px;
+        width: 80%;
+        text-align:center;
+        margin: 0 auto;
+    }
+ 
+}
+
+.buy__nombre{
+    font-family: $font;
+ 
+    font-size: 1rem;
+    text-transform: capitalize;
+   font-style: italic; 
+    & h2{
+        font-weight: 600;
+        padding-bottom: 30px;
+    }
+    
+}
+.buy__precio{
+    font-family: $font;
+
+padding: 10px;
+color:$negro;
+    font-size: 1rem;
+    text-transform: capitalize;
+
+    & h3{
+        font-weight: 400;
+        margin:0;
+        letter-spacing: 0.1rem;
+    }
+    
+}
+.buy__color{
+    @include flex;
+    justify-content: center;
+    width:40%;
+    padding: 20px;
+    
+}
+
+.buy__color input{
+    width: 1.3em;
+    height: 1.3em;
+    background-color: $blanco;
+    border-radius: 50%;
+    vertical-align: middle;
+    
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+
+}
+
+.buy__color input:checked{
+    border:2px solid grey;
+}
+.buy__color input:nth-child(1){
+   background-color:$negro;
+}
+.buy__color input:nth-child(2){
+    background-color:$violeta;
+ }
+ .buy__color input:nth-child(3){
+    background-color:pink;
+ }
+.buy__size{
+    margin:20px 0;
+    width:60%;
+   
+}
+.buy__size ul{
+
+@include flex;
+justify-content:space-between;
+
+margin:0;
+padding: 0;
+}
+.buy__size li{
+list-style: none;
+font-family:$font;
+font-weight: 400;
+color:$negro;
+width:25px;
+height:25px;
+text-align:center;
+border: 1px solid $negro;
+padding-top:2px;
+
+}
+.buy__size div{
+ text-decoration: none;
+ position: relative;
+
+}
+
+.buy__size input{
+    position: absolute;
+    top:0;
+    left:0;
+    opacity:0;
+    height:25px;
+    width:25px;
+
+}
+
+.buy__size input:checked ~ li{
+    background-color:$negro;
+    color:$blanco;
+}
+
+.buy__add{
+    //margin-top:30px;
+    background:$blanco;
+    margin: 20px;
+    display: block;
+    border:4px solid $violeta;
+    
+}
+
+.buy__add a{
+    text-decoration: none;
+    font-family: $font;
+    font-weight: 400;
+    color:$negro;
+    display:block;
+    border:1px solid $negro;
+    padding: 10px 70px;
+   
+    
+   
+}
+
+.buy__add a:hover{
+background-color:$negro;
+color:$blanco;
+}
+.buy__add a:focus{
+    background-color:$negro;
+    color:$blanco;
+    }
+/*______________________________________ END BIG*/
