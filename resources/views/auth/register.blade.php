@@ -1,77 +1,120 @@
-@extends('layouts.app')
+@extends('layouts.master')
+@section('styles')
+<link href="/css/style-registro.css" rel="stylesheet">
+@endsection
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+<!-- Un contenedor para ambos formularios -->
+<div class="contenedor">
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
+<div class="contenedor-formulario">
 
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+    <!-- REGISTRO -->
+    <div class="contenedor-formulario">
 
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+    <div class="borde-titulo">
+      <div class="contenedor-titulo margen-izq">
+        <h2 class="titulo">REGISTRATE</h2>
+      </div>
     </div>
+
+    <!--formulario registro -->
+    <div class="padding-eje-y">
+      <form class="margen-izq" action="{{ route('register')}}" method="post" enctype="multipart/form-data">
+        @csrf
+
+        <label class="label-desktop" for="name">
+          Nombre<span class="color-rojo">*</span>
+        </label> <br>
+          <input class="input-blanco @error ('name') is-invalid @enderror" type="text" id="nombre" name="name" value="{{old('name')}}"> <br>
+          @error('name')
+              <span>
+                  <strong>{{ $message }}</strong>
+              </span>
+          @enderror
+
+          <span class="separador-xs" ></span>
+
+        <br><label class="label-desktop" for="lastname">
+            Apellido<span class="color-rojo">*</span>
+        </label> <br>
+          <input class="input-blanco @error ('lastname') is-invalid @enderror" type="text" id="lastname" name="lastname" value="{{old('lastname')}}"> <br>
+          @error('lastname')
+              <span>
+                  <strong>{{ $message }}</strong>
+              </span>
+          @enderror
+
+          <span class="separador-xs"></span>
+
+        <br> <label class="label-desktop" for="email">
+          Correo Electrónico<span class="color-rojo">*</span>
+        </label> <br>
+          <input class="input-blanco @error('email') is-invalid @enderror" type="email" id="email" name="email" value="{{old('email')}}"><br>
+          @error('email')
+              <span>
+                  <strong>{{ $message }}</strong>
+              </span>
+          @enderror
+
+          <span class="separador-xs"></span>
+
+        <br><label class="label-desktop" for="password">
+          Contraseña<span class="color-rojo">*</span>
+        </label><br>
+          <input class="input-blanco @error('password') is-invalid @enderror" type="password" id="password" name="password"> <br>
+          @error('password')
+              <span>
+                  <strong>{{ $message }}</strong>
+              </span>
+          @enderror
+
+          <span class="separador-xs"></span>
+
+        <br><label class="label-desktop" for="password-confirm">
+          Repetir contraseña<span class="color-rojo">*</span>
+        </label> <br>
+          <input class="input-blanco" type="password" id="password-confirm" name="password_confirmation"><br>
+
+          <span class="separador-xs"></span>
+
+          <br> <label for="avatar" class="label-desktop">
+            Foto de perfil<span class="color-rojo">*</span> <br>
+          </label> <br>
+            <input id="avatar" type="file" name="avatar"> <br>
+
+            <span class="separador-xs"></span>
+
+          <br><label for="deacuerdo"></label>
+            <input type="checkbox" name="deacuerdo" required> Estoy de acuerdo con los Terminos y Condiciones
+
+            <span class="separador-s"></span>
+
+          <p class="boton">
+            <button class="boton-negro" type="submit">
+              REGISTRARME
+            </button>
+          </p>
+      </form>
+    </div>
+  </div>
+<!-- BOTONES TOP Y BACK -->
+<div id="seccion-back-top">
+
+  <div id="volver">
+    <i class="material-icons">
+    keyboard_arrow_left
+    </i>
+    <a id="volver-atras"href="home.html">VOLVER ATRAS</a>
+    </div>
+  <div id="top">
+    <i class="material-icons">
+    keyboard_arrow_up
+  </i>
+  <a id="palabra-top"href="#">TOP</a>
+   </div>
+</div>
+</div>
 </div>
 @endsection

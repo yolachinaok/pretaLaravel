@@ -12,7 +12,7 @@ class CartController extends Controller
   public function showCart(){
     $user = Auth::user();
     $products = $user->cart;
-    return view('cart')->with(['carts' => $products]);
+    return view('shop/cart')->with(['carts' => $products]);
 }
 
   public function add(Request $request){
