@@ -10,8 +10,8 @@
 @section('content')
 <nav>
 
-@include('partials/shop/nav_shop')
-@include('partials/shop/nav_shop_mobile')
+<!--@include('partials/shop/nav_shop')
+@include('partials/shop/nav_shop_mobile')-->
 
 </nav>
 

@@ -26,7 +26,7 @@
     />
 
   @yield('styles')
-    <link rel="stylesheet" href="/css/menu.css" />
+    <link rel="stylesheet" href="/css/nav.css" />
     <link rel="stylesheet" href="/css/footer.css" />
   </head>
 

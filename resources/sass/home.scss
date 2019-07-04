@@ -27,11 +27,7 @@ img {
 /*___________________________________________________________SECCION HERO
 /*HERO SLIDE*/
 .Hero{
-  @include desktop{
-  padding-top:111px;};
-  @include tablet{
-    padding-top:111px;  
-  }
+ 
 }
 .glider-contain {
   position: relative;

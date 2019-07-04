@@ -47,9 +47,8 @@
 <div class="buy__add">
   <form class="" action="/carrito" method="post">
     @csrf
-    <label for="quantity"></label>
-    <input type="text" name="quantity" value="">
-    <button type="submit" name="product_id" value="{{$product->id}}">AGREGAR</button>
+    
+    <button class="agregar" type="submit" name="product_id" value="{{$product->id}}">AGREGAR</button>
   </form>
 
 </div>

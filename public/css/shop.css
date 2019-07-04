@@ -1,20 +1,14 @@
 footer {
-  position: absolute;
   width: 100%;
-  top: 190%;
+  /*top:190%;
+  
   z-index: 1000000000;
-}
-
-@media (min-width: 320px) and (max-width: 767px) {
-  footer {
-    top: 175%;
+  @include mobile{
+    top:175%;
   }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  footer {
-    top: 302%;
-  }
+  @include tablet{
+    top:302%;
+  }*/
 }
 
 /*___________________________________________________________ NAV-SHOP*/
@@ -216,9 +210,7 @@ main {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  position: absolute;
-  left: 20%;
-  width: 80%;
+  width: 100%;
   background-color: #f3f3f3;
 }
 
@@ -232,13 +224,14 @@ main {
 /*___________________________________________________________ MODULO-SHOP*/
 
 .modulosTodos {
-  margin-top: 110px;
+  width: 100%;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
           flex-flow: row wrap;
-  justify-content: space-around;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -251,15 +244,18 @@ main {
 }
 
 .modulo-shop {
-  width: 30%;
+  padding: 0px 30px;
   background-color: #f3f3f3;
   display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-          flex-flow: row wrap;
+          flex-direction: column;
+  flex-wrap: nowrap;
   -webkit-box-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
 }
 
 @media (min-width: 320px) and (max-width: 320px) {

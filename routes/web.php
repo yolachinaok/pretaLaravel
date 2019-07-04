@@ -23,6 +23,7 @@ Route::post('admin/productos', 'ProductController@createProductSave')->middlewar
 
 
 Route::get('/shop/{product_id}','ProductController@showProduct');
+Route::get('/shop/{product_id}','ProductController@showProduct');
 
 Route::get('/shop/{category_name}/{category_id}','ProductController@showCategory');
 Route::get('/shop','ProductController@showShop');

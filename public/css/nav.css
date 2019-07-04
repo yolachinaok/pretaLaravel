@@ -1,9 +1,23 @@
 /*___________________________________________________________NAV*/
 
 .nav-abajo {
-  padding: 300px;
-  width: 100%;
-  background: red;
+  display: block;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .nav-abajo {
+    display: none;
+  }
+}
+
+.nav-abajo-m {
+  display: none;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .nav-abajo-m {
+    display: block;
+  }
 }
 
 nav {
@@ -235,7 +249,7 @@ a {
 
 @media (min-width: 320px) and (max-width: 320px) {
   .nav-hamburguer input ~ .hamb-nav > .hamb-redes {
-    bottom: 2%;
+    bottom: -60px;
   }
 }
 
@@ -273,6 +287,7 @@ a {
   opacity: 1;
   -webkit-transition-delay: 0.5s;
           transition-delay: 0.5s;
+  width: 100%;
 }
 
 .nav-hamburguer input:checked ~ .hamb-nav .ingresar {
@@ -288,6 +303,14 @@ a {
 }
 
 .nav-hamburguer input ~ .hamb-nav .ingresar {
+  opacity: 0;
+}
+
+.nav-hamburguer input:checked ~ .nav-shop {
+  opacity: 0;
+}
+
+.nav-hamburguer input:checked ~ .nav-logo-mobile {
   opacity: 0;
 }
 
@@ -361,10 +384,10 @@ a {
   margin: 0px 10px;
 }
 
-.nav-shop {
+.nav-shop a {
   position: fixed;
-  top: 4%;
-  left: 89%;
+  top: 3%;
+  right: 6%;
   z-index: 1000;
 }
 
@@ -372,7 +395,7 @@ a {
   font-size: 1.5rem;
 }
 
-.nav-logo-mobile {
+.nav-logo-mobile img {
   position: fixed;
   width: 70px;
   left: 40%;

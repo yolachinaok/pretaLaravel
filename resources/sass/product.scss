@@ -8,10 +8,10 @@ $separacion: 40px;
 .container2{
    
     @include desktop{
-        margin-top:110px;
+        padding:50px 0;
     }
     @include tablet{
-        margin-top:110px;
+        padding:50px 0;
     }
     box-sizing: border-box;
   max-width: 100%;
@@ -260,4 +260,23 @@ color:$blanco;
     background-color:$negro;
     color:$blanco;
     }
+
+.agregar{
+   
+    display: inline-block;
+    background-color: $blanco;
+    padding: 8px 60px; 
+    border: 3px solid $negro;
+    color:$negro;
+    font-weight: 600;
+    font-size: 1rem;
+    &:hover{
+        color:$blanco;  
+        
+            background-color:$negro;
+            color:$blanco;
+            border: 3px solid $blanco;
+        
+    }
+}
 /*______________________________________ END BIG*/

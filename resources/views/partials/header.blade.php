@@ -1,8 +1,8 @@
 <!-- ___________________________________NAV __________________________________________________-->
-<div class="nav-abajo"></div>
+<div class="nav-abajo" style="height:119px; width:100%; margin:0px; padding:0px; background-color:transparent;"></div>
+<div class="nav-abajo-m" style="height:60px; width:100%; margin:0px; padding:0px; background-color:transparent;"></div>
 <nav id="hero">
-
-    <!-- ___________________________________HAMB-->
+     <!-- ___________________________________HAMB-->
 
     <div class="nav-hamburguer">
       <input id="burger" type="checkbox" />
@@ -16,9 +16,13 @@
       <div class="nav-shop">
         <a href="{{  url('/shop') }}"><i class="material-icons">shop</i></a>
       </div>
+
       <div class="nav-logo-mobile">
-        <img src="/images/logo-preta.png" alt="" />
+        <a href="">    <img src="/images/logo-preta.png" /></a>
+  
+        
       </div>
+
       <div class="hamb-nav">
         <ul>
           <img src="/images/banner-menu.png" alt="" />

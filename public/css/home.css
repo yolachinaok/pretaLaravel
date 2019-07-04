@@ -22,18 +22,6 @@ img {
 /*___________________________________________________________SECCION HERO
 /*HERO SLIDE*/
 
-@media (min-width: 1024px) {
-  .Hero {
-    padding-top: 111px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .Hero {
-    padding-top: 111px;
-  }
-}
-
 .glider-contain {
   position: relative;
 }

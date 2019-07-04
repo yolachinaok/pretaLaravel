@@ -18,7 +18,7 @@ class CartController extends Controller
   public function add(Request $request){
     $user = Auth::user();
     $product_id = $request->product_id;
-    $quantity = $request->quantity;
+    $quantity = 1;//$request->quantity;
 
 
     Cart::create(

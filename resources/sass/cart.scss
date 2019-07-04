@@ -1,0 +1,253 @@
+@import "media-queries";
+
+$font: "Open Sans", sans-serif;
+$violeta: #cc9fd8;
+$negro: #232326;
+$blanco: #f3f3f3;
+$separacion: 40px;
+
+
+
+
+.carrito{
+background-color: $blanco;
+margin:0;
+box-sizing: border-box;
+font-family: $font;
+padding:80px  10px;
+@include mobile{
+    padding:40px  10px;
+        }
+display: flex;
+flex-flow: row nowrap;
+justify-content: space-around;
+@include tablet{
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+   
+
+}
+@include mobile{
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+   
+
+}
+
+&-confirmacion{
+    width:40%;
+    background:$violeta;
+    @include tablet{
+        width:70%;
+    }
+    @include mobile{
+        width:100%;
+    }
+  
+    
+    
+  
+}
+&-mybag{
+    width:50%;
+    @include tablet{
+        width:70%;
+        padding-bottom: 40px;
+    }
+    @include mobile{
+        width:100%;
+        padding-bottom: 40px;
+    }
+
+}
+}
+
+.mybag{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    border:1px solid $violeta;
+    padding:20px;
+    @include mobile{
+        width:100%;
+        
+        flex-flow: column nowrap;
+        justify-content: space-around;
+       
+    }
+      
+}
+
+
+.mybag-producto{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+  
+    width:80%;
+}
+.mybag-producto img{
+    width:200px;
+    margin-right: 20px;
+    
+}
+.producto-detalles{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+   
+}
+
+.producto-tipo{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    & h3{
+      
+        letter-spacing: 0.1rem;
+       
+       
+    }
+}
+.producto-titulo{
+    padding-bottom: 20px;
+    font-weight: 600;
+    font-style: italic;
+}
+.producto-precio{
+    padding: 10px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    background: $violeta;
+    
+      
+}
+.producto-favorito h3{
+    font-weight: 400;
+    font-size: 1rem;  
+   
+}
+.producto-favorito{
+    & a{
+        display: inline-block;
+        
+        & i {
+            font-size: 1rem;
+            color: $violeta;
+            } 
+        }
+    }
+
+.producto-favorito{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+   
+}
+
+.mybag-remove a{
+    display: inline-block;
+    background-color: $blanco;
+    color:$negro;
+    border: 3px solid $violeta;
+    font-weight: 400;
+    font-size: 0.7rem;
+    
+    padding: 5px 30px; 
+    &:hover{
+        background-color:$violeta;
+        color:$blanco;
+    }
+    &:focus{
+        background-color:$violeta;
+        color:$blanco;  
+    }
+    @include mobile{
+margin-top:20px;
+    }
+}
+/*///////////////////////////////////CONFIRMACION///////////////////////*/
+  .carrito-confirmacion {
+padding:10px;
+  
+  
+  & h2{
+       text-transform: uppercase;
+    
+    }
+}
+.confirmacion-cuerpo{
+    background-color:$blanco;
+    padding:10px;
+}
+
+.titulo{
+    padding-bottom: 10px;
+    
+    font-style: italic;
+    font-size:1rem;
+text-transform: uppercase;
+}
+.precio{
+    font-weight: 400;
+    font-size:1.1rem;
+}
+
+.confirmacion-flex{
+display: flex;
+flex-flow: row nowrap;
+justify-content: space-between;
+align-items: center;
+
+
+}
+
+.subtotal{
+margin-top:20px;
+
+}
+
+.total{
+    font-weight: 600;
+    margin-top:20px;
+}
+.precioOriginal .titulo, .precioDescuento .titulo, .subtotal .titulo, .envio .titulo{
+    font-weight: 400;
+}
+
+.checkout{
+    
+    margin-top:20px;
+    width:100%;
+    text-align: center;
+   padding-bottom:10px;
+   
+    
+    
+ 
+& a{
+    display: inline-block;
+    background-color: $blanco;
+    padding: 8px 60px; 
+    border: 3px solid $negro;
+    
+    color:$negro;
+    font-weight: 600;
+    font-size: 1rem;
+    &:hover{
+        color:$blanco;  
+        
+            background-color:$negro;
+            color:$blanco;
+            border: 3px solid $blanco;
+        
+    }
+}
+
+}

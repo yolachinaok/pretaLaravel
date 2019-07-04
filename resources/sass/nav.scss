@@ -7,11 +7,23 @@ $negro: #232326;
 $blanco: #f3f3f3;
 $separacion: 40px;
 
+
+
 .nav-abajo{
-padding:300px;
-width:100%;
-background:red;
+display:block;
+@include mobile{
+  display:none;
 }
+}
+
+ .nav-abajo-m{
+   display:none;
+  @include mobile{
+  display:block; }
+ }
+
+
+
 nav {
     font-family: $font;
     font-size: 1rem;
@@ -183,7 +195,8 @@ nav {
     position: absolute;
     bottom: 0%;
     @include mobileS {
-      bottom: 2%;
+      
+      bottom: -60px;
     }
     width: 100%;
   
@@ -214,6 +227,7 @@ nav {
   .nav-hamburguer input:checked ~ .hamb-nav img {
     opacity: 1;
     transition-delay: 0.5s;
+    width:100%;
   }
   
   .nav-hamburguer input:checked ~ .hamb-nav .ingresar {
@@ -226,6 +240,14 @@ nav {
   }
   .nav-hamburguer input ~ .hamb-nav .ingresar {
     opacity: 0;
+  }
+  .nav-hamburguer input:checked ~ .nav-shop {
+    opacity: 0;
+    
+  }
+  .nav-hamburguer input:checked ~ .nav-logo-mobile {
+    opacity: 0;
+    
   }
   .hamb-redes {
     opacity: 0;
@@ -281,22 +303,24 @@ nav {
     margin: 0px 10px;
   }
   
-  .nav-shop {
+  .nav-shop a {
     position: fixed;
-    top: 4%;
-    left: 89%;
+    top: 3%;
+    right:6%;
     z-index: 1000;
   }
   
-  .nav-shop i {
+  .nav-shop  i {
     font-size: 1.5rem;
+   
   }
-  .nav-logo-mobile {
+
+  .nav-logo-mobile img {
     position: fixed;
     width: 70px;
     left: 40%;
     top: 10px;
     z-index: 800;
-  }
   
+}
   /*___________________________________________________________ END NAV */
