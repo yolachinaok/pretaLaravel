@@ -178,23 +178,27 @@
       </div>
       <div class="categorias">
         <div class="categoria-1">
-          <img src="/images/categorias.jpg" alt="" />
-          <h3>TOPS</h3>
+          <a href="/shop/jeans/1">
+            <img src="/images/products/denim/icon-denim.jpeg" alt="" />
+          <h3>JEANS</h3></a>
         </div>
 
         <div class="categoria-1">
-          <img src="/images/categorias.jpg" alt="" />
-          <h3>TOPS</h3>
+          <a href="/shop/abrigos/3">
+          <img src="/images/products/outerwear/icon-dresses.jpeg" alt="" />
+          <h3>ABRIGOS</h3></a>
         </div>
 
         <div class="categoria-1">
-          <img src="/images/categorias.jpg" alt="" />
-          <h3>TOPS</h3>
+          <a href="/shop/vestidos/4">
+          <img src="/images/products/dresses/icon-dresses.jpeg" alt="" />
+          <h3>VESTIDOS</h3></a>
         </div>
 
-        <div class="categoria-1 categoria-1__borrar">
-          <img src="/images/categorias.jpg" alt="" />
-          <h3>TOPS</h3>
+        <div class="categoria-1">
+          <a href="/shop/tops/2">
+          <img src="/images/products/tops/icon-tops.jpeg" alt="" />
+          <h3>TOPS</h3></a>
         </div>
       </div>
     </section>
