@@ -224,6 +224,7 @@ main {
 /*___________________________________________________________ MODULO-SHOP*/
 
 .modulosTodos {
+  padding: 40px 0;
   width: 100%;
   display: -webkit-box;
   display: flex;
@@ -244,7 +245,7 @@ main {
 }
 
 .modulo-shop {
-  padding: 0px 30px;
+  padding: 30px 30px;
   background-color: #f3f3f3;
   display: -webkit-box;
   display: flex;
@@ -545,4 +546,57 @@ main {
 }
 
 /*___________________________________________________________ END FILTER-PAGE*/
+
+.pagination {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  width: 10%;
+  background: #cc9fd8;
+  padding: 10px;
+}
+
+.pagination li {
+  display: inline-block;
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.pagination span a {
+  font-size: 1rem;
+}
+
+.pag {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row nowrap;
+  -webkit-box-pack: end;
+          justify-content: flex-end;
+  margin-right: 60px;
+  padding-top: 50px;
+}
+
+.agregarProducto {
+  margin-right: 30px;
+  display: inline-block;
+  padding: 10px 20px;
+  background: #232326;
+  color: #f3f3f3;
+  font-family: "Open Sans", sans-serif;
+}
+
+.editarProducto {
+  display: inline-block;
+  padding: 10px 10px;
+  background: #232326;
+  color: #f3f3f3;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8rem;
+}
 

@@ -38,7 +38,7 @@ class ProductController extends Controller
 
     public function createProduct(){
       $categories = Category::all();
-      return view('productAdmin')->with(['categories'=> $categories]);
+      return view('admin/productAdmin')->with(['categories'=> $categories]);
     }
 
     public function createProductSave(Request $request){
@@ -86,7 +86,7 @@ class ProductController extends Controller
     public function editProduct($id){
       $product = Product::find($id);
       $categories = Category::all();
-      return view('editProductAdmin', compact('product','categories'));
+      return view('admin/editProductAdmin', compact('product','categories'));
     }
 
     public function updateProduct($id, Request $request){
@@ -135,5 +135,8 @@ $vac= compact("products");
 return view('shop.shop', $vac);
 
     }
+
+ 
+  
 
 }
