@@ -25,9 +25,12 @@
 </div>
 
 <div class="pag">
+@if(Auth::user())
 @if(Auth::user()->esAdmin)
 <a class="agregarProducto" href="{{  url('/admin/productos') }}">AGREGAR PRODUCTO</a>
-
+@elseif(!Auth::user()->esAdmin)
+<div></div>
+@endif
 @endif
 
 {{$products->onEachSide(1)->links()}}
@@ -56,12 +59,15 @@
     <div class="color"><h4>{{$product['discount']}}%OFF
   </h4></div></div>
 
-
+  @if(Auth::user())
   @if(Auth::user()->esAdmin)
     <div>
     <a class='editarProducto' href='/admin/productos/editar/{id}'>EDITAR</a>
     </div>
-    @endif
+    @elseif(!Auth::user()->esAdmin)
+<div></div>
+@endif
+@endif
   </div>
   @endforeach
 
