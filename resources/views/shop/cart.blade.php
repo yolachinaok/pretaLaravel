@@ -6,32 +6,38 @@
 @section('content')
 <div class="carrito">
 <div class="carrito-mybag">
+
+
+
+
 <h2>MY BAG</h2>
   <div class="mybag">
-    
+
+    @foreach ($carts as $product)
     <div class="mybag-producto">
-      <img src="images/instagram.png" alt="">
-      
+      <img src="/storage/{{$product->photo1}}" alt="">
+
       <div class="producto-detalles">
         <div class="producto-tipo">
-        <h3 class="producto-titulo">SOY UN PRODUCTO
+        <h3 class="producto-titulo">{{$product->name}}
         </h3>
-        <h3 class="producto-precio">83</h3>
-        <h3 class="producto-size">M</h3>
+        <h3 class="producto-precio">${{$product->price}}</h3>
+        <h3 class="producto-size">x {{$product->pivot->quantity}}</h3>
         </div>
         <div class="producto-favorito">
       <a href=""><i class="material-icons">favorite</i></a>
         <h3>Move to Likes</h3>
       </div>
       </div>
-    
-   
+
+
     </div>
     <div class="mybag-remove">
         <a href="">BORRAR</a>
       </div>
   </div>
   </div>
+@endforeach
 
 <div class="carrito-confirmacion">
 <h2>orden</h2>

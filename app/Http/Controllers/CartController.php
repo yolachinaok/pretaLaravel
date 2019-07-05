@@ -11,7 +11,10 @@ class CartController extends Controller
 {
   public function showCart(){
     $user = Auth::user();
-    $products = $user->cart;
+    $products = [];
+    if (isset($user->cart)) {
+      $products = $user->cart;
+    }
     return view('shop/cart')->with(['carts' => $products]);
 }
 

@@ -41,18 +41,18 @@
 </div>
 <div class="modulosTodos">
 
-@foreach ($products as $product) 
+@foreach ($products as $product)
   <div class="modulo-shop">
     <div class="modulo-shop__img">
-      <img class="uno" src="/storage/ 
-      {{$product['photo1']}} 
+      <img class="uno" src="/storage/
+      {{$product['photo1']}}
       " alt="">
       <img class="dos" src="/storage/
-      {{$product['photo3']}} 
+      {{$product['photo3']}}
       " alt="">
   </div>
   <div class="modulo-shop__descripcion">
-    <div class="titulo"><a href="/shop/'.$product['id'].'"><h4>
+    <div class="titulo"><a href="/shop/{{$product['id']}}"><h4>
     {{$product['name']}}
     '</h4></a></div>
     <div class="precio"><h4>${{ $product['price']}}</h4></div>
