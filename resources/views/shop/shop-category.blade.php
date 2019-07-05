@@ -1,4 +1,3 @@
-
 @extends('layouts.master')
 @yield('title')
 <title>SHOP - PRETA</title>
@@ -34,26 +33,21 @@
 </div>
 <div class="modulosTodos">
 
-  <?php foreach ($products as $product) {
-    echo '<div class="modulo-shop">
+  @foreach ($products as $product) 
+    <div class="modulo-shop">
     <div class="modulo-shop__img">
-      <img class="uno" src="/storage/' .
-      $product['photo1'] .
-      '" alt="">
-      <img class="dos" src="/storage/'.
-      $product['photo3'] .
-      '" alt="">
+      <img class="uno" src="/storage/{{$product->photo1}}" alt="">
+      <img class="dos" src="/storage/{{$product->photo3}}" alt="">
   </div>
   <div class="modulo-shop__descripcion">
-    <div class="titulo"><a href="/shop/'.$product['id'].'"><h4>'.
-    $product['name'].
-    '</h4></a></div>
-    <div class="precio"><h4>$'. $product['price'].'</h4></div>
-    <div class="color"><h4>' . $product['discount'] . '%OFF
+    <div class="titulo"><a href="/shop/{{$product->id}}"><h4>{{$product->name}}
+    </h4></a></div>
+    <div class="precio"><h4>${{$product->price}}</h4></div>
+    <div class="color"><h4>{{$product->discount}} %OFF
   </h4></div>
   </div>
   </div>';
-} ?>
+ @endforeach
 
 </div>
 </main>

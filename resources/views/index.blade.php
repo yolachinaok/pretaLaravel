@@ -129,17 +129,17 @@
             <picture>
               <source
                 media="(min-width: 1200px)"
-                srcset="<?php $producto->photo1?>"
+                srcset="/storage/{{$producto->photo1}}"
               />
               <source
                 media="(min-width: 768px)"
-                srcset="<?php $producto->photo1?>"
+                srcset="/storage/{{$producto->photo1}}"
               />
-              <img src="<?php $producto->photo1?>" />
+              <img src="/storage/{{$producto->photo1}}" />
             </picture>
             <div class="newIn-bajadaFoto">
-              <h3><?php $producto->name ?></h3>
-              <h4><?php $producto->price ?></h4>
+              <a href="/shop/{{$producto->id}}"><h3>{{$producto->name}}</h3></a>
+              <h4>{{$producto->price}}</h4>
             </div>
           </div>
         <?php endforeach; ?>
