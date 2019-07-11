@@ -11,9 +11,10 @@
 
 
 <h2>MY BAG</h2>
-  <div class="mybag">
+  
 
     @foreach ($carts as $product)
+    <div class="mybag">
     <div class="mybag-producto">
       <img src="/storage/{{$product->photo1}}" alt="">
 
@@ -29,15 +30,14 @@
         <h3>Move to Likes</h3>
       </div>
       </div>
-
-
     </div>
     <div class="mybag-remove">
         <a href="">BORRAR</a>
       </div>
   </div>
-  </div>
+  
 @endforeach
+</div>
 
 <div class="carrito-confirmacion">
 <h2>orden</h2>

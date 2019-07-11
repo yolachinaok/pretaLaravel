@@ -19,7 +19,7 @@
 <!-- CUERPO SHOP -->
 <main>
 
-<div class="filter-pages">
+<!--<div class="filter-pages">-->
 
 <!--@include('partials/shop/filterPages_shop')-->
 </div>

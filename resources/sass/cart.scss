@@ -38,6 +38,7 @@ justify-content: space-around;
 
 &-confirmacion{
     width:40%;
+    max-height: 350px;
     background:$violeta;
     @include tablet{
         width:70%;
@@ -52,6 +53,7 @@ justify-content: space-around;
 }
 &-mybag{
     width:50%;
+    
     @include tablet{
         width:70%;
         padding-bottom: 40px;
@@ -70,6 +72,7 @@ justify-content: space-around;
     justify-content: space-around;
     border:1px solid $violeta;
     padding:20px;
+    margin-top:20px;
     @include mobile{
         width:100%;
         

@@ -44,6 +44,7 @@
 
 .carrito-confirmacion {
   width: 40%;
+  max-height: 350px;
   background: #cc9fd8;
 }
 
@@ -86,6 +87,7 @@
   justify-content: space-around;
   border: 1px solid #cc9fd8;
   padding: 20px;
+  margin-top: 20px;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {

@@ -1,5 +1,6 @@
+
 <!-- ___________________________________NAV __________________________________________________-->
-<div class="nav-abajo" style="height:119px; width:100%; margin:0px; padding:0px; background-color:transparent;"></div>
+<div class="nav-abajo" style="height:90px; width:100%; margin:0px; padding:0px; background-color:transparent;"></div>
 <div class="nav-abajo-m" style="height:60px; width:100%; margin:0px; padding:0px; background-color:transparent;"></div>
 <nav id="hero">
      <!-- ___________________________________HAMB-->
@@ -18,7 +19,7 @@
       </div>
 
       <div class="nav-logo-mobile">
-        <a href="">    <img src="/images/logo-preta.png" /></a>
+        <a href=""><img src="/images/logo-preta.png" /></a>
   
         
       </div>
@@ -43,8 +44,7 @@
                 NEW IN
                 <i class="material-icons">chevron_right</i>
               </div>
-            </li></a
-          >
+            </li></a>
 
           <a class="nombre" href="#">
             <li>
@@ -52,8 +52,7 @@
                 SHOP ALL
                 <i class="material-icons">chevron_right</i>
               </div>
-            </li></a
-          >
+            </li></a>
           <a class="nombre" href="#">
             <li>
               <div class="li-flex">

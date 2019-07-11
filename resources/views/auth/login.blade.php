@@ -5,7 +5,7 @@
 @section('content')
 
 <!-- Un contenedor para ambos formularios -->
-<br><br><br><br><br><br><br>
+
 <div class="contenedor">
 
 <div class="contenedor-formulario">
@@ -21,29 +21,33 @@
     <div class="padding-eje-y">
       <form class="margen-izq" action="{{ route('login') }}" method="post">
           @csrf
+          <div class="email-cont">
         <label class="label-desktop" for="email" value="{{ old('email') }}">
           Correo Electrónico
         </label> <br>
           <input class="input-blanco @error('email') is-invalid @enderror" type="email" id="email" name="email">
 
-          @error('email')
+        @error('email')
               <span>
                   <strong>{{ $message }}</strong>
               </span>
           @enderror
-
+          <br>
+          </div>
         <span class="separador"></span>
-
+<div class="pass-cont">
         <label class="label-desktop" for="password">
           Contraseña
         </label><br>
           <input class="input-blanco @error('password') is-invalid @enderror" type="password" id="password" name="password">
 
-          @error('password')
+        <!--  @error('password')
               <span>
                   <strong>{{ $message }}</strong>
               </span>
-          @enderror
+          @enderror-->
+<br/>
+          </div>
         <span class="separador-xs"></span>
 
         <br><label class="label-desktop" for="recordarme"></label>
@@ -90,4 +94,5 @@
    </div>
 </div>
 </div>
+<script src="/js/auth/login.js"></script>
 @endsection
