@@ -8,7 +8,7 @@ window.onload = function () {
 
     email.onblur = function () {
         if (regexEmail.test(this.value)) {
-            this.classList.remove('is-invalid');
+            this.classList.remove('error-span');
         }
     }
 
@@ -20,8 +20,9 @@ window.onload = function () {
             error.classList.add('error-span');
             error.innerText = 'Este mail es inválido';
             var div = email.parentElement;
-            if (div.children[1]) {
-                div.removeChild(div.children[1]);
+            console.log(div.children[3])
+            if (div.children[3]) {
+                div.removeChild(div.children[3]);
             }
             div.append(error);
             event.preventDefault();
@@ -33,9 +34,13 @@ window.onload = function () {
             error.classList.add('error-span');
             error.innerText = 'Debes completar la contraseña';
             var div = password.parentElement;
-            if (div.children[1]) {
-                div.removeChild(div.children[1]);
+           
+            
+            if (div.children[3]) {
+                div.removeChild(div.children[3]);
             }
+         
+            
             div.append(error);
             event.preventDefault();
             password.value = '';

@@ -117,4 +117,5 @@
 </div>
 </div>
 </div>
+<script src="/js/auth/register.js"></script>
 @endsection

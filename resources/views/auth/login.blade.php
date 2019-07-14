@@ -25,28 +25,29 @@
         <label class="label-desktop" for="email" value="{{ old('email') }}">
           Correo Electrónico
         </label> <br>
-          <input class="input-blanco @error('email') is-invalid @enderror" type="email" id="email" name="email">
+          <input class="input-blanco " type="email" id="email" name="email">  
 
-        @error('email')
+       <!-- @error('email')
               <span>
                   <strong>{{ $message }}</strong>
               </span>
-          @enderror
-          <br>
+          @enderror -->
+        
           </div>
         <span class="separador"></span>
 <div class="pass-cont">
         <label class="label-desktop" for="password">
           Contraseña
         </label><br>
-          <input class="input-blanco @error('password') is-invalid @enderror" type="password" id="password" name="password">
+          <input class="input-blanco" type="password" id="password" name="password">
 
-        <!--  @error('password')
+        <!--   @error('password') is-invalid @enderror
+           @error('password')
               <span>
                   <strong>{{ $message }}</strong>
               </span>
           @enderror-->
-<br/>
+
           </div>
         <span class="separador-xs"></span>
 
