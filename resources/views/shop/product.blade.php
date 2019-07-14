@@ -26,28 +26,21 @@
 </section>
 <section class="buy">
 <div class="buy__nombre">
-<h2><?php echo $product['name'];?></h2>
+<h2>{{ $product->name }} </h2>
 </div>
 <div class="buy__categoria">
-  <h4><?php echo $product['description'];?></h4>
+  <h4>{{  $product->description  }}</h4>
 </div>
 <div class="buy__precio">
-<h3>$<?php echo $product['price'];?></h3>
+<h3>${{  $product->price  }}</h3>
 </div>
-<div class="buy__size">
-
-<ul>
-  <div class="boton-size"><input type="radio" name="size" id="size"><li>S</li></div>
-  <div class="boton-size"><input type="radio" name="size" id="size"><li>M</li></div>
-  <div class="boton-size"><input type="radio" name="size" id="size"><li>L</li></div>
-
-</ul>
-
+<form class="" action="/carrito" method="post">
+  @csrf
+<div class="buy__categoria">
+<label for="quantity">Cantidad</label>
+  <input type="number" name="quantity" value="">
 </div>
 <div class="buy__add">
-  <form class="" action="/carrito" method="post">
-    @csrf
-    
     <button class="agregar" type="submit" name="product_id" value="{{$product->id}}">AGREGAR</button>
   </form>
 
