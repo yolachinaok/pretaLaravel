@@ -25,14 +25,14 @@
         <label class="label-desktop" for="email" value="{{ old('email') }}">
           Correo Electrónico
         </label> <br>
-          <input class="input-blanco " type="email" id="email" name="email">  
+          <input class="input-blanco " type="email" id="email" name="email">
 
        <!-- @error('email')
               <span>
                   <strong>{{ $message }}</strong>
               </span>
           @enderror -->
-        
+
           </div>
         <span class="separador"></span>
 <div class="pass-cont">
@@ -72,7 +72,7 @@
           </p>
           </div>
       @endif
-      <a href="/login/facebook">Ingresar con Facebook</a>
+      
         </div>
 
   </div>
