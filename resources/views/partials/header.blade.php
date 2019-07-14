@@ -1,4 +1,3 @@
-
 <!-- ___________________________________NAV __________________________________________________-->
 <div class="nav-abajo" style="height:90px; width:100%; margin:0px; padding:0px; background-color:transparent;"></div>
 <div class="nav-abajo-m" style="height:60px; width:100%; margin:0px; padding:0px; background-color:transparent;"></div>
@@ -20,8 +19,8 @@
 
       <div class="nav-logo-mobile">
         <a href=""><img src="/images/logo-preta.png" /></a>
-  
-        
+
+
       </div>
 
       <div class="hamb-nav">
@@ -59,74 +58,58 @@
                 TOPS
                 <i class="material-icons">chevron_right</i>
               </div>
-            </li></a
-          >
+            </li></a>
           <a class="nombre" href="#">
             <li>
               <div class="li-flex">
                 JEANS
                 <i class="material-icons">chevron_right</i>
               </div>
-            </li></a
-          >
+            </li></a>
           <a class="nombre" href="#">
             <li>
               <div class="li-flex">
                 VESTIDOS
                 <i class="material-icons">chevron_right</i>
               </div>
-            </li></a
-          >
+            </li></a>
           <a class="nombre" href="#">
             <li>
               <div class="li-flex">
                 SALE
                 <i class="material-icons">chevron_right</i>
               </div>
-            </li></a
-          >
+            </li></a>
           <a class="nombre" href="#">
             <li>
               <div class="li-flex">
                 LOCALES
                 <i class="material-icons">chevron_right</i>
               </div>
-            </li></a
-          >
+            </li></a>
           <a class="nombre" href="{{  url('/ayuda') }}">
             <li>
               <div class="li-flex">
                 AYUDA
                 <i class="material-icons">chevron_right</i>
               </div>
-            </li></a
-          >
+            </li></a>
           <a class="nombre" href="#">
             <li>
               <div class="li-flex">
                 CONTACTO
                 <i class="material-icons">chevron_right</i>
               </div>
-            </li></a
-          >
+            </li></a>
         </ul>
         <div class="hamb-redes ">
           <ul>
-            <a href=""
-              ><li><i class="fab fa-facebook footer-icon"></i></li
+            <a href=""><li><i class="fab fa-facebook footer-icon"></i></li></a>
+            <a href=""><li><i class="fab fa-instagram  footer-icon"></i></li></a>
+            <a href=""><li><i class="fab fa-twitter-square  footer-icon"></i></li
             ></a>
-            <a href=""
-              ><li><i class="fab fa-instagram  footer-icon"></i></li
-            ></a>
-            <a href=""
-              ><li><i class="fab fa-twitter-square  footer-icon"></i></li
-            ></a>
-            <a href=""
-              ><li><i class="fab fa-youtube  footer-icon"></i></li
-            ></a>
-            <a href=""
-              ><li><i class="fab fa-linkedin  footer-icon"></i></li
-            ></a>
+            <a href=""><li><i class="fab fa-youtube  footer-icon"></i></li></a>
+            <a href=""><li><i class="fab fa-linkedin  footer-icon"></i></li></a>
           </ul>
         </div>
       </div>

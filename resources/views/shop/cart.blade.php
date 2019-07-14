@@ -11,7 +11,7 @@
 
 
 <h2>MY BAG</h2>
-  
+
 
     @foreach ($carts as $product)
     <div class="mybag">
@@ -32,10 +32,10 @@
       </div>
     </div>
     <div class="mybag-remove">
-        <a href="">BORRAR</a>
+        <button id="delete">BORRAR</button>
       </div>
   </div>
-  
+
 @endforeach
 </div>
 
