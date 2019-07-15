@@ -18,7 +18,7 @@ window.onload = function () {
             email.classList.add('is-invalid');
             var error = document.createElement('span');
             error.classList.add('error-span');
-            error.innerText = 'Este mail es inválido';
+            error.innerText = 'Debes completar tu email';
             var div = email.parentElement;
             console.log(div.children[3])
             if (div.children[3]) {

@@ -21,17 +21,19 @@
     <div class="padding-eje-y">
       <form class="margen-izq" action="{{ route('login') }}" method="post">
           @csrf
+          
           <div class="email-cont">
         <label class="label-desktop" for="email" value="{{ old('email') }}">
           Correo Electrónico
         </label> <br>
-          <input class="input-blanco " type="email" id="email" name="email">  
+          <input class="input-blanco  @error('email') is-invalid @enderror " type="email" id="email" name="email" value="{{ old('email') }}" >
 
-       <!-- @error('email')
-              <span>
+
+        @error('email')
+              <span class="error-span">
                   <strong>{{ $message }}</strong>
               </span>
-          @enderror -->
+          @enderror 
         
           </div>
         <span class="separador"></span>
@@ -39,14 +41,13 @@
         <label class="label-desktop" for="password">
           Contraseña
         </label><br>
-          <input class="input-blanco" type="password" id="password" name="password">
+          <input class="input-blanco @error('password') is-invalid @enderror" type="password" id="password" name="password" required autocomplete="new-password" >
 
-        <!--   @error('password') is-invalid @enderror
-           @error('password')
-              <span>
+          @error('password')
+              <span class="error-span" role="alert">
                   <strong>{{ $message }}</strong>
               </span>
-          @enderror-->
+          @enderror
 
           </div>
         <span class="separador-xs"></span>

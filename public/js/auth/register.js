@@ -12,16 +12,38 @@ function validarVacio(input) {
 function pintarError(input, mensaje) {
     input.classList.add('is-invalid');
     var error = document.createElement('span');
-    error.setAttribute('class','invalid-feedback');
+    error.setAttribute('class','error-span');
     var strong = document.createElement('strong');
     strong.innerText = mensaje;
     var div = elemento.parentElement;
-    if (div.children[1]) {
-        div.removeChild(div.children[1]);
+    console.log(div.children[2])
+    if (div.children[2]) {
+        div.removeChild(div.children[2]);
     }
     error.append(strong);
     div.append(error);
 }
+
+function validateFileExtension(tipo,elemento) 
+{
+    
+ if(!/(\.jpg|\.png|\.jpeg)$/i.test(tipo)) 
+   {
+    var error = document.createElement('span');
+    error.setAttribute('class','error-span');
+    var strong = document.createElement('strong');
+    strong.innerText = "Archivo inválido. Debe ser .jpg, .jpeg ó .png";
+    var div = elemento.parentElement;
+    console.log(div.children[2])
+    if (div.children[2]) {
+        div.removeChild(div.children[2]);
+    }
+    error.append(strong);
+    div.append(error);
+     return false;
+    }
+  return true;
+ }
 
 window.onload = function () {
     var form = document.querySelector('form');
@@ -48,13 +70,25 @@ window.onload = function () {
             if (elemento.name == 'password') {
                 var confirm = document.querySelector('#password-confirm');
                 if (elemento.value.length < 8) {
-                    pintarError(elemento, 'El password debe tener minimo 8 caracters');
+                    pintarError(elemento, 'El password debe tener minimo 8 caracteres');
                     event.preventDefault();
                 } else if (elemento.value != confirm.value) {
                     pintarError(elemento, 'Los pass no coinciden');
                     event.preventDefault();
                 }
             }
+        if (elemento.name == 'password_confirmation'){
+      var con= document.querySelector('#password');
+      if (elemento.value != con.value) {
+        pintarError(elemento, 'Los pass no coinciden');
+        event.preventDefault();
+
+
+        }
+        }
+
+        if(elemento.name == 'avatar'){
+            validateFileExtension(elemento.value,elemento)
         }
     }
-}
+}}

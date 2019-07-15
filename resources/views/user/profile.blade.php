@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('styles')
 <link href="/css/style-registro.css" rel="stylesheet">
-<script src="/js/perfil.js" charset="utf-8"></script>
+
 @endsection
 
 @section('content')
@@ -35,35 +35,40 @@
     <div class="padding-eje-y">
       <button class="boton-gris" type="button" name="button">EDITAR PERFIL</button> <br><br>
 
-      <form id="editar" style="display:none" class="margen-izq" action="" method="post" enctype="multipart/form-data">
+      <form id="editar"  class="margen-izq" action="" method="post" enctype="multipart/form-data">
         @csrf
 
         <label class="label-desktop" for="name">
           Nombre
         </label> <br>
+        <div class="name-cont">
           <input class="input-blanco" type="text" id="nombre" name="name" value="{{$user->name}}"> <br>
-
+</div>
           <span class="separador-xs" ></span>
 
         <br><label class="label-desktop" for="lastname">
             Apellido
         </label> <br>
+        <div class="apellido-cont">
           <input class="input-blanco" type="text" id="lastname" name="lastname" value="{{$user->lastname}}"> <br>
-
+          </div>
           <span class="separador-xs"></span>
 
         <br> <label class="label-desktop" for="email">
           Correo Electrónico
         </label> <br>
+        <div class="email-cont">
+    
           <input class="input-blanco" type="email" id="email" name="email" value="{{$user->email}}"><br>
-
+</div>
           <span class="separador-xs"></span>
 
           <br> <label class="label-desktop" for="adress">
             Direccion
           </label> <br>
+          <div class="direccion-cont">
             <input class="input-blanco" type="text" id="adress" name="adress" value="{{$user->adress}}"> <br>
-
+</div>
             <span class="separador-xs" ></span>
 
 
@@ -90,7 +95,7 @@
     <i class="material-icons">
     keyboard_arrow_left
     </i>
-    <a id="volver-atras"href="home.html">VOLVER ATRAS</a>
+    <a id="volver-atras"href="{{  url('/index') }}">VOLVER ATRAS</a>
     </div>
   <div id="top">
     <i class="material-icons">
@@ -101,4 +106,5 @@
 </div>
 </div>
 </div>
+<script src="/js/perfil.js" charset="utf-8"></script>
 @endsection

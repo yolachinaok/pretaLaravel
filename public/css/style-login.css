@@ -7,8 +7,6 @@
  
   /* texto */
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  color: #232326;
   }
 
 .contenedor {
@@ -17,6 +15,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  font-size: 14px;
+  color: #232326;
   }
 
 .titulo {
@@ -201,12 +201,17 @@
       .is-invalid{
         border:1px solid red;
         box-sizing: content-box;
+     
        
+      }
+      strong{
+        font-weight: 400;
       }
       .error-span{
         font-family: "Open Sans", sans-serif;
         font-size:16px;
        color:red;
+     
         text-align: left;
-        text-transform: capitalize;
+        
       }
