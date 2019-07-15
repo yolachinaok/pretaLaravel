@@ -1,13 +1,14 @@
 @extends('layouts.master')
 @section('styles')
-<link href="/css/style-registro.css" rel="stylesheet">
+<link href="/css/registro.css" rel="stylesheet">
 
 @endsection
 
 @section('content')
 <!-- Un contenedor para ambos formularios -->
-<br><br><br><br><br><br><br>
-<div class="contenedor">
+
+<div class="con">
+<div class="cont">
 
 <div class="contenedor-formulario">
 
@@ -32,10 +33,10 @@
 
     <!--formulario EDITAR DATOS MOSTRAR DIV SOLO SI QUIERE EDITAR
   route('/perfil') -->
-    <div class="padding-eje-y">
+    <div class="padding-eje-y" >
       <button class="boton-gris" type="button" name="button">EDITAR PERFIL</button> <br><br>
 
-      <form id="editar"  class="margen-izq" action="" method="post" enctype="multipart/form-data">
+      <form id="editar" style="display:none;"  class="margen-izq" action="{{url('/perfil')}}" method="post" enctype="multipart/form-data">
         @csrf
 
         <label class="label-desktop" for="name">
@@ -75,8 +76,9 @@
           <br> <label for="avatar" class="label-desktop">
             Foto de perfil<br>
           </label> <br>
+          <div class="avatar-cont">
             <input id="avatar" type="file" name="avatar"> <br>
-
+            </div>
             <span class="separador-xs"></span>
             <br>
 
@@ -88,6 +90,7 @@
       </form>
     </div>
   </div>
+  </div>
 <!-- BOTONES TOP Y BACK -->
 <div id="seccion-back-top">
 
@@ -95,7 +98,7 @@
     <i class="material-icons">
     keyboard_arrow_left
     </i>
-    <a id="volver-atras"href="{{  url('/index') }}">VOLVER ATRAS</a>
+    <a id="volver-atras"href="{{  url('/') }}">VOLVER ATRAS</a>
     </div>
   <div id="top">
     <i class="material-icons">

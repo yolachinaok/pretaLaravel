@@ -284,6 +284,7 @@ a {
 }
 
 .nav-hamburguer input:checked ~ .hamb-nav img {
+  display: block;
   opacity: 1;
   -webkit-transition-delay: 0.5s;
           transition-delay: 0.5s;
@@ -291,6 +292,7 @@ a {
 }
 
 .nav-hamburguer input:checked ~ .hamb-nav .ingresar {
+  display: block;
   opacity: 1;
   -webkit-transition-delay: 0.5s;
           transition-delay: 0.5s;
@@ -338,6 +340,7 @@ a {
 
 .hamb-nav img {
   opacity: 0;
+  display: none;
 }
 
 .hamb-nav a .li-flex {
@@ -373,6 +376,7 @@ a {
   margin-top: 20px;
   margin-bottom: 20px;
   margin-right: 20px;
+  display: none;
 }
 
 .ingresar a h3 {

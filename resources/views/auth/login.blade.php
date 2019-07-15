@@ -26,14 +26,14 @@
         <label class="label-desktop" for="email" value="{{ old('email') }}">
           Correo Electrónico
         </label> <br>
-          <input class="input-blanco " type="email" id="email" name="email">
+          <input class="input-blanco @error('email') is-invalid @enderror " type="email" id="email" name="email">
 
 
         @error('email')
               <span class="error-span">
                   <strong>{{ $message }}</strong>
               </span>
-          @enderror -->
+          @enderror<br> 
 
           </div>
         <span class="separador"></span>
@@ -47,7 +47,7 @@
               <span class="error-span" role="alert">
                   <strong>{{ $message }}</strong>
               </span>
-          @enderror
+          @enderror<br>
 
           </div>
         <span class="separador-xs"></span>

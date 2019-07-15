@@ -225,12 +225,14 @@ nav {
     transition-delay: 0.5s;
   }
   .nav-hamburguer input:checked ~ .hamb-nav img {
+    display:block;
     opacity: 1;
     transition-delay: 0.5s;
     width:100%;
   }
   
   .nav-hamburguer input:checked ~ .hamb-nav .ingresar {
+    display:block;
     opacity: 1;
     transition-delay: 0.5s;
   }
@@ -266,6 +268,7 @@ nav {
   }
   .hamb-nav img {
     opacity: 0;
+    display:none;
   }
   
   .hamb-nav a .li-flex {
@@ -280,7 +283,7 @@ nav {
   .hamb-nav a .li-flex:focus {
     font-weight: 600;
   }
-  
+ 
   .hamb-nav a .li-flex i {
     font-size: 1.2rem;
     margin-top: 4px;
@@ -292,6 +295,7 @@ nav {
     margin-top: 20px;
     margin-bottom: 20px;
     margin-right: 20px;
+    display:none;
   }
   
   .ingresar a h3 {

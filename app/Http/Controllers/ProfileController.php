@@ -13,6 +13,7 @@ class ProfileController extends Controller
   }
 
   public function editProfile(Request $request){
+    
     $user = Auth::user();
    $route1 = $request->file('avatar')->store('public');
    $avatar = basename($route1);
@@ -21,7 +22,6 @@ class ProfileController extends Controller
     $user->email = $request->email;
     $user->adress = $request->adress;
     $user->avatar = $avatar;
-
     $user->save();
 
     return redirect('/perfil');

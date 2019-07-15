@@ -1,0 +1,248 @@
+/* GENERALES */
+@import 'media-queries';
+$font: "Open Sans", sans-serif;
+$violeta: #cc9fd8;
+$negro: #232326;
+$blanco: #f3f3f3;
+$separacion: 40px;
+
+* {
+    margin: 0;
+    padding: 0;
+ 
+    /* texto */
+  
+    }
+    .con{
+        background-color: #F3F3F3;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        @include mobile{
+            width:100%;
+        }
+    }
+  
+  .cont{
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    background-color:$negro;
+    margin-bottom: 40px;
+    /* fondo */
+   
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: $blanco;
+    border: 2px solid $violeta;
+    display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        @include mobile{
+            width:100%;
+text-align: center;
+margin:10px 0;
+        
+
+        }
+    }
+
+
+  
+  .titulo {
+    color: #CC9FD8;
+    font-size: 1.5em;
+    }
+  
+  .contenedor-titulo {
+    padding: 8px 0;
+    }
+  
+  .margen-izq {
+    margin-left: 20px;
+    }
+  
+  .borde-titulo {
+    border-top: solid 1px #232326;
+    border-bottom: solid 1px #232326;
+  }
+  
+  .separador {
+    display: block;
+    height: 20px;
+    }
+  
+  .separador-s {
+    display: block;
+    height: 12px;
+    }
+  
+  .separador-xs {
+    display: block;
+    }
+  
+  /* REGISTRO - LOGIN*/
+  .contenedor-formulario{
+    width: 100%;
+    }
+  
+  .input-blanco {
+    background-color: white;
+    padding-left: 5px;
+    height: 25px;
+    width: 65%;
+    }
+  
+  .padding-eje-y {
+    padding: 20px 0;
+    }
+  
+  .boton {
+    text-align: center;
+    }
+  
+  .boton-gris {
+    border: solid 1px $blanco;
+    color: $negro;
+    background:$violeta;
+    padding: 5px 32px;
+    text-align: center;
+    display: inline-block;
+    }
+  
+  .boton-negro {
+    border: solid 1px $blanco;
+    background-color: $violeta;
+    color: $negro;
+    padding: 5px 32px;
+    text-align: center;
+    display: inline-block;
+    }
+  
+  .color-rojo{
+    color: red;
+    }
+  
+  .material-icons {
+    color: $blanco;
+    }
+  
+  #enlace-olvide {
+    font-size: 0.8em;
+    text-align: center;
+    }
+  #seccion-back-top {
+    margin: 15px 0;
+    }
+  
+  #volver-atras {
+    display: inline-block;
+    color:$blanco;
+    font-weight: bold;
+    letter-spacing: 0.3em;
+    vertical-align: super;
+    text-decoration: none;
+    position: relative;
+    bottom: 1px;
+      }
+  #volver{
+    width: 75%;
+    text-align: center;
+    display: inline-block;
+  
+    }
+  #top{
+    width: 20%;
+    text-align: center;
+    display: inline-block;
+  }
+  
+  #palabra-top {
+    display: block;
+    color:$blanco;
+    font-weight: bold;
+    letter-spacing: 0.3em;
+    text-decoration: none;
+    position: relative;
+    bottom: 5px;
+  }
+  
+  .is-invalid{
+    border:1px solid red;
+    box-sizing: content-box;
+  
+   
+  }
+  strong{
+    font-weight: 400;
+  }
+  .error-span{
+    font-family: "Open Sans", sans-serif;
+    font-size:16px;
+   color:red;
+  
+    text-align: left;
+    
+  }
+  
+  /*Media querys*/
+  /*Tablet*/
+  @media (min-width:768px) {
+  
+      .contenedor-formulario{
+      width: 80%;
+      display: inline-block;
+      vertical-align: top;
+      text-align: center;
+      }
+      .borde-titulo {
+      border: none;
+      }
+  
+      #volver{
+        width: 100%;
+        text-align: left;
+        display: inline-block;
+        padding-left: 20px;
+  
+        }
+      #top{
+        display: none;
+          }
+      }
+  
+        /*Desktop*/
+  
+        @media (min-width: 1024px) {
+          body {
+            width: 100%;
+          }
+  
+          #volver {
+            margin-bottom: 15px;
+          }
+  
+          .titulo {
+            font-size: 2em;
+          }
+  
+          .label-desktop {
+            display: block;
+            font-size: 1.2em;
+          }
+  
+          #enlace-olvide {
+            font-size: 1em;
+          }
+          button {
+            font-size: 1.2em;
+          }
+          .input-blanco {
+            height: 30px;
+            width: 60%;
+            font-size: 1.2em;
+          }
+        }
+  

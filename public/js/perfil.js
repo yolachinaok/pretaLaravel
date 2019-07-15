@@ -1,5 +1,5 @@
 
-
+console.log("ESTOY ANDANDO");
 
 function validarVacio(input) {
   if (input.value.trim() == '') {
@@ -15,9 +15,8 @@ function pintarError(input, mensaje) {
   var error = document.createElement('span');
   error.setAttribute('class','error-span');
   var strong = document.createElement('strong');
-  strong.innerText = mensaje;
+  strong.innerText = "El campo debe estar lleno";
   var div = elemento.parentElement;
-  console.log(div.childern[2])
   console.log(div.children[2])
   if (div.children[2]) {
       div.removeChild(div.children[2]);
@@ -55,8 +54,9 @@ window.onload = function(){
     editar.removeAttribute("style");
   };
 
-  var form = document.querySelector('form');
+  var form = document.querySelectorAll('form')[1];
 
+  console.log(form);
     // email.onblur = function () {
     //     if (regexEmail.test(this.value)) {
     //         this.classList.remove('is-invalid');
@@ -64,21 +64,27 @@ window.onload = function(){
     // }
 
     form.onsubmit = function (event) {
+      console.log(event);
         var elementos = this.elements;
+        
         for (elemento of elementos) {
+          console.log(elemento);
             if (elemento.type == 'submit' || elemento.type == 'hidden') {
                 continue;
             }
-            if (elemento.type != 'file' && validarVacio(elemento)) {
+            if (elemento.type != 'file'  && validarVacio(elemento)) {
                 event.preventDefault();
             }
+
+            
         
 
         if(elemento.name == 'avatar'){
             validateFileExtension(elemento.value,elemento)
         }
+       
     }
 }
-
-
+event.preventDefault();
+ 
 }
