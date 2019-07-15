@@ -18,12 +18,12 @@
 
 <div class="padding-eje-y">
     @if (session('status'))
-        <div class="alert alert-success" role="alert">
+        <div style="color:red; font-weight:bold;"class="alert alert-success" role="alert">
             {{ session('status') }}
         </div>
     @endif
 
-    <form class="margen-izq" method="POST" action="{{ route('password.email') }}">
+    <form class="margen-izq" method="GET" action="/reset-password/confirm">
         @csrf
         <div class="email-cont">
             <label for="email" class="label-desktop">¿Con qué email estas registrado?</label> <br>
@@ -35,10 +35,10 @@
                 @enderror
             </div>
 
-        <div class="form-group row mb-0">
-            <div class="col-md-6 offset-md-4"> <br>
+        <div class="">
+            <div class=""> <br>
                 <button type="submit" class="boton-gris">
-                    Enviar link para resetear
+                    Enviar código de reseteo
                 </button>
             </div>
         </div>

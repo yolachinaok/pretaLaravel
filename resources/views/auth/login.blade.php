@@ -63,16 +63,15 @@
 
       <span class="separador-s"></span>
 
-      @if (Route::has('password.request'))
-          <div class="contenedor">
+        <div class="contenedor">
             <p class="margen-izq">
-          <a id="enlace-olvide" href="{{ route('password.request') }}">
-              {{ __('Olvidé mi contraseña') }}
+          <a id="enlace-olvide" href="/reset-password">
+              Olvidé mi contraseña
           </a>
           </p>
           </div>
-      @endif
-      
+
+
         </div>
 
   </div>
