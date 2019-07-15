@@ -26,15 +26,15 @@
         <label class="label-desktop" for="email" value="{{ old('email') }}">
           Correo Electrónico
         </label> <br>
-          <input class="input-blanco  @error('email') is-invalid @enderror " type="email" id="email" name="email" value="{{ old('email') }}" >
+          <input class="input-blanco " type="email" id="email" name="email">
 
 
         @error('email')
               <span class="error-span">
                   <strong>{{ $message }}</strong>
               </span>
-          @enderror 
-        
+          @enderror -->
+
           </div>
         <span class="separador"></span>
 <div class="pass-cont">
@@ -64,16 +64,15 @@
 
       <span class="separador-s"></span>
 
-      @if (Route::has('password.request'))
-          <div class="contenedor">
+        <div class="contenedor">
             <p class="margen-izq">
-          <a id="enlace-olvide" href="{{ route('password.request') }}">
-              {{ __('Olvidé mi contraseña') }}
+          <a id="enlace-olvide" href="/reset-password">
+              Olvidé mi contraseña
           </a>
           </p>
           </div>
-      @endif
-      <a href="/login/facebook">Ingresar con Facebook</a>
+
+
         </div>
 
   </div>

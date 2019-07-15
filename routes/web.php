@@ -45,7 +45,12 @@ Route::get('/', 'IndexController@showIndex');
 
 Auth::routes();
 
+Route::post('/reset-password/confirm','\App\Http\Controllers\Auth\ForgotPasswordController@updatePassword');
+Route::get('/reset-password/confirm','\App\Http\Controllers\Auth\ForgotPasswordController@newPassword');
+Route::get('/reset-password', function () {
+    return view('auth/passwords/email');
+});
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
-Route::get('/login/facebook', 'Auth\LoginController@redirectToProvider');
-Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
+// Route::get('/login/facebook', 'Auth\LoginController@redirectToProvider');
+// Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');

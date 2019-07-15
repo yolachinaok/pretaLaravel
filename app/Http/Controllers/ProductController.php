@@ -102,12 +102,19 @@ class ProductController extends Controller
         'price.required' => 'El precio es necesario.',
         'category_id.required' => 'La categoría es necesaria.'
       ]);
-      $route1 = $request->file('photo1')->store('public');
-      $photo1= basename($route1);
-      $route2 = $request->file('photo2')->store('public');
-      $photo2= basename($route2);
-      $route3 = $request->file('photo3')->store('public');
-      $photo3= basename($route3);
+
+      if ($request->file('photo1')!== null) {
+        $route1 = $request->file('photo1')->store('public');
+        $photo1= basename($route1);
+      }
+      if ($request->file('photo2')!== null) {
+        $route2 = $request->file('photo2')->store('public');
+        $photo2= basename($route2);
+      }
+      if ($request->file('photo3')!== null) {
+        $route3 = $request->file('photo3')->store('public');
+        $photo3= basename($route3);
+      }
 
       $product = Product::find($id);
       $product->name = $request->name;
@@ -115,12 +122,18 @@ class ProductController extends Controller
       $product->description = $request->description;
       $product->category_id = $request->category_id;
       $product->discount = $request->discount;
-      $product->photo1 = $photo1;
-      $product->photo2 = $photo2;
-      $product->photo3 = $photo3;
+      if (isset($photo1)) {
+        $product->photo1 = $photo1;
+      }
+      if (isset($photo2)) {
+        $product->photo2 = $photo2;
+      }
+      if (isset($photo3)) {
+        $product->photo3 = $photo3;
+      }
 
       $product->save();
-      return redirect('/ruta');
+      return redirect("/shop/$product->id");
     }
 
     public function deleteProduct($id){
@@ -136,7 +149,7 @@ return view('shop.shop', $vac);
 
     }
 
- 
-  
+
+
 
 }

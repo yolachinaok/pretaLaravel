@@ -44,14 +44,14 @@ class LoginController extends Controller
       return view('auth/login');
     }
 
-    public function redirectToProvider(){
-      return Socialite::driver('facebook')->redirect();
-    }
-
-    public function handleProviderCallback(){
-      $user = Socialite::driver('facebook')->user();
-      dd($user);
-    }
+    // public function redirectToProvider(){
+    //   return Socialite::driver('facebook')->redirect();
+    // }
+    //
+    // public function handleProviderCallback(){
+    //   $user = Socialite::driver('facebook')->user();
+    //   dd($user);
+    // }
 
     public function logout(Request $request) {
       Auth::logout();
