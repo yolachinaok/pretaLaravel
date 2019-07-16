@@ -43,6 +43,7 @@
 
 @foreach ($products as $product)
   <div class="modulo-shop">
+    <a href="/shop/{{$product->id}}">
     <div class="modulo-shop__img">
       <img class="uno" src="/storage/{{$product->photo1}}" alt="">
       <img class="dos" src="/storage/{{$product->photo3}}" alt="">
@@ -50,14 +51,20 @@
   <div class="modulo-shop__descripcion">
     <div class="titulo"><a href="/shop/{{$product->id}}"><h4>
     {{$product->name}}</h4></a></div>
+    @if($product->discount!=null)
+    <div class="precio" style="text-decoration:line-through"><h4>${{$product->price}}</h4></div>
+    <div class="color"><h4>${{$product->price * (1 - ($product->discount / 100))}}</h4>
+    @else
     <div class="precio"><h4>${{$product->price}}</h4></div>
-    <div class="color"><h4>{{$product->discount}}%OFF
-  </h4></div></div>
+    <div class="color"><h4></h4>
+    @endif
+
+    </div></div>
 
   @if(Auth::user())
   @if(Auth::user()->esAdmin)
     <div>
-    <a class='editarProducto' href='/admin/productos/editar/{id}'>EDITAR</a>
+    <a class='editarProducto' href='/admin/productos/editar/{{$product->id}}'>EDITAR</a>
     </div>
     @elseif(!Auth::user()->esAdmin)
 <div></div>
