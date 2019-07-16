@@ -38,7 +38,7 @@ class User extends Authenticatable
     ];
 
     public function cart(){
-      return $this->belongsToMany(Product::class, 'carts')->withPivot('quantity');
+      return $this->belongsToMany(Product::class, 'carts')->withPivot('quantity', 'id');
     }
 
 

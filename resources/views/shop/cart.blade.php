@@ -2,6 +2,7 @@
 
 @section('styles')
             <link href="/css/cart.css" rel="stylesheet">
+
 @endsection
 @section('content')
 <div class="carrito">
@@ -14,7 +15,7 @@
 
 
     @foreach ($carts as $product)
-    <div class="mybag">
+    <div id="carrito{{$product->pivot->id}}" class="mybag">
     <div class="mybag-producto">
       <img src="/storage/{{$product->photo1}}" alt="">
 
@@ -32,7 +33,7 @@
       </div>
     </div>
     <div class="mybag-remove">
-        <button id="delete">BORRAR</button>
+        <button class="delete" id="{{$product->pivot->id}}">BORRAR</button>
       </div>
   </div>
 
@@ -69,5 +70,28 @@
 </div>
 </div>
 </div>
+<script type="text/javascript">
+  var botones = document.querySelectorAll('.delete');
 
+  for (boton of botones) {
+    boton.onclick = function(){
+      carritoId = this.getAttribute('id');
+
+      fetch('http://localhost:8000/api/borrar-producto/'+carritoId)
+      .then(function(response){
+            return response.json();
+        })
+      .then(function(datos){
+        if (datos.eliminado) {
+          elDiv = document.querySelector('#carrito'+carritoId);
+          elDiv.setAttribute("style", "display:none");
+        }
+
+        })
+      .catch(function(error){
+            console.log(error);
+        });
+    }
+  }
+</script>
 @endsection

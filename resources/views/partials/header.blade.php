@@ -30,11 +30,11 @@
             <a href="{{  url('/login') }}">
             @if (Auth::guest())
               <h3>INGRESAR</h3>
-              
-            </a>       
+
+            </a>
             <a href="{{  url('/register') }}">
               <h3>REGISTRARME</h3>
-            </a>               
+            </a>
   @else
   <li><a class="nombre" href="{{  url('/perfil') }}">{{ Auth::user()->name }}</a></li>
 
@@ -48,14 +48,14 @@
                                     {{ csrf_field() }}
                                 </form>
       </li>
-    
-  
 
-  </div>  
+
+
+  </div>
   @endif
 
 
-        
+
 
           <a class="nombre" href="#">
             <li>
@@ -122,7 +122,7 @@
               </div>
             </li></a>
         </ul>
-        <div class="hamb-redes ">
+        <div class="hamb-redes">
           <ul>
             <a href=""><li><i class="fab fa-facebook footer-icon"></i></li></a>
             <a href=""><li><i class="fab fa-instagram  footer-icon"></i></li></a>
@@ -177,10 +177,10 @@
                                     {{ csrf_field() }}
                                 </form>
       </li>
-    
-  
+
+
   </li>
-  
+
   @endif
 
 

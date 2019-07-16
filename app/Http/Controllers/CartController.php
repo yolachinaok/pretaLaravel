@@ -15,13 +15,17 @@ class CartController extends Controller
     if (isset($user->cart)) {
       $products = $user->cart;
     }
+
     return view('shop/cart')->with(['carts' => $products]);
 }
 
   public function add(Request $request){
+    $quantity = 1;
     $user = Auth::user();
     $product_id = $request->product_id;
-    $quantity = $request->quantity;
+    if ($request->quantity != null) {
+      $quantity = $request->quantity;
+    }
 
 
     Cart::create(
