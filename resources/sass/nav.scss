@@ -283,7 +283,20 @@ nav {
   .hamb-nav a .li-flex:focus {
     font-weight: 600;
   }
- 
+ .nombre{
+   text-transform: uppercase;
+   font-weight:800;
+   background:$violeta;
+   padding:1px 4px;
+
+   @include mobile{
+    background:none;
+    color:$violeta;
+    padding:0;
+    
+   }
+ }
+
   .hamb-nav a .li-flex i {
     font-size: 1.2rem;
     margin-top: 4px;

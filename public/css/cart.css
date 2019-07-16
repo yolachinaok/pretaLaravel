@@ -113,7 +113,14 @@
 
 .mybag-producto img {
   width: 200px;
+  background: #cc9fd8;
   margin-right: 20px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .mybag-producto img {
+    width: 150px;
+  }
 }
 
 .producto-detalles {
@@ -158,6 +165,11 @@
   background: #cc9fd8;
 }
 
+.producto-size {
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
 .producto-favorito h3 {
   font-weight: 400;
   font-size: 1rem;
@@ -182,29 +194,30 @@
           justify-content: space-between;
 }
 
-.mybag-remove a {
+.mybag-remove button {
   display: inline-block;
   background-color: #f3f3f3;
   color: #232326;
   border: 3px solid #cc9fd8;
+  outline: none;
   font-weight: 400;
   font-size: 0.7rem;
   padding: 5px 30px;
 }
 
-.mybag-remove a:hover {
+.mybag-remove button:hover {
   background-color: #cc9fd8;
   color: #f3f3f3;
 }
 
-.mybag-remove a:focus {
+.mybag-remove button:focus {
   background-color: #cc9fd8;
   color: #f3f3f3;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-  .mybag-remove a {
-    margin-top: 20px;
+  .mybag-remove button {
+    margin-top: 0px;
   }
 }
 

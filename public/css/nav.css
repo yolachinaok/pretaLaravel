@@ -360,6 +360,21 @@ a {
   font-weight: 600;
 }
 
+.nombre {
+  text-transform: uppercase;
+  font-weight: 800;
+  background: #cc9fd8;
+  padding: 1px 4px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .nombre {
+    background: none;
+    color: #cc9fd8;
+    padding: 0;
+  }
+}
+
 .hamb-nav a .li-flex i {
   font-size: 1.2rem;
   margin-top: 4px;

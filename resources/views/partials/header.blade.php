@@ -14,11 +14,11 @@
       </label>
 
       <div class="nav-shop">
-        <a href="{{  url('/shop') }}"><i class="material-icons">shop</i></a>
+        <a href="{{  url('/carrito') }}"><i class="material-icons">shop</i></a>
       </div>
 
       <div class="nav-logo-mobile">
-        <a href=""><img src="/images/logo-preta.png" /></a>
+        <a href="{{  url('/') }}"><img src="/images/logo-preta.png" /></a>
 
 
       </div>
@@ -28,14 +28,34 @@
           <img src="/images/banner-menu.png" alt="" />
           <div class="ingresar">
             <a href="{{  url('/login') }}">
+            @if (Auth::guest())
               <h3>INGRESAR</h3>
-            </a>
-
-            <hr />
+              
+            </a>       
             <a href="{{  url('/register') }}">
               <h3>REGISTRARME</h3>
-            </a>
-          </div>
+            </a>               
+  @else
+  <li><a class="nombre" href="{{  url('/perfil') }}">{{ Auth::user()->name }}</a></li>
+
+      <li>
+         <a href="{{ url('/logout') }}"
+                onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
+                LOGOUT
+         </a>
+         <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+      </li>
+    
+  
+
+  </div>  
+  @endif
+
+
+        
 
           <a class="nombre" href="#">
             <li>
@@ -136,6 +156,8 @@
           <div class="nav-logo">
             <a href="{{  url('/') }}"> <img src="/images/logo-preta.png" alt="" /></a>
           </div>
+
+
           <div class="nav-ingresar">
             <ul>
 
@@ -143,7 +165,7 @@
 @if (Auth::guest())
                     <li><a href="{{  url('/login') }}">INGRESAR</a></li>
   @else
-  <li><a href="{{  url('/perfil') }}">HOLA {{ Auth::user()->name }}</a></li>
+  <li><a class="nombre" href="{{  url('/perfil') }}">{{ Auth::user()->name }}</a></li>
 
       <li>
          <a href="{{ url('/logout') }}"
@@ -155,8 +177,10 @@
                                     {{ csrf_field() }}
                                 </form>
       </li>
-    </ul>
+    
+  
   </li>
+  
   @endif
 
 
@@ -169,9 +193,9 @@
               <li>
                 <a href="{{  url('/carrito') }}"> <i class="material-icons">shopping_basket</i></a>
               </li>
-            </ul>
           </div>
         </div>
+        </ul>
         <div class="nav-container2">
           <ul>
             <li><a href="{{  url('/shop') }}">NEW IN</a></li>

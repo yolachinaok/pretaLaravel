@@ -48,13 +48,18 @@ return true;
 
 window.onload = function(){
   var btn = document.querySelector('.boton-gris');
-  var editar = document.getElementById('editar');
-  
-  btn.onclick = function show(){
-    editar.removeAttribute("style");
-  };
-
   var form = document.querySelectorAll('form')[1];
+  
+  btn.addEventListener("click",()=>{
+    if (form.style.display === "none") {
+      form.style.display = "block";
+    } else if(form.style.display === "block") {
+      form.style.display = "none";
+    }
+  }
+  )
+ 
+
 
   console.log(form);
     // email.onblur = function () {

@@ -36,7 +36,7 @@
     <div class="padding-eje-y" >
       <button class="boton-gris" type="button" name="button">EDITAR PERFIL</button> <br><br>
 
-      <form id="editar" style="display:none;"  class="margen-izq" action="{{url('/perfil')}}" method="post" enctype="multipart/form-data">
+      <form id="editar" style="display:none;"  class="margen-izq style" action="{{url('/perfil')}}" method="post" enctype="multipart/form-data">
         @csrf
 
         <label class="label-desktop" for="name">

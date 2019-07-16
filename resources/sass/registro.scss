@@ -111,6 +111,12 @@ margin:10px 0;
     text-align: center;
     display: inline-block;
     }
+    .style{
+      display:none;
+    }
+    .editar{
+      display:block; 
+    }
   
   .boton-negro {
     border: solid 1px $blanco;
@@ -125,7 +131,7 @@ margin:10px 0;
     color: red;
     }
   
-  .material-icons {
+  #volver i {
     color: $blanco;
     }
   

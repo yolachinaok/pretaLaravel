@@ -93,7 +93,12 @@ justify-content: space-around;
 }
 .mybag-producto img{
     width:200px;
+    background:$violeta;
+   
     margin-right: 20px;
+   @include mobile{
+    width:150px;   
+   }
     
 }
 .producto-detalles{
@@ -131,6 +136,12 @@ justify-content: space-around;
     
       
 }
+.producto-size{
+    
+    margin-bottom: 20px;
+    font-weight: 400;
+    
+}
 .producto-favorito h3{
     font-weight: 400;
     font-size: 1rem;  
@@ -154,11 +165,12 @@ justify-content: space-around;
    
 }
 
-.mybag-remove a{
+.mybag-remove button{
     display: inline-block;
     background-color: $blanco;
     color:$negro;
     border: 3px solid $violeta;
+    outline: none;
     font-weight: 400;
     font-size: 0.7rem;
     
@@ -172,7 +184,7 @@ justify-content: space-around;
         color:$blanco;  
     }
     @include mobile{
-margin-top:20px;
+margin-top:0px;
     }
 }
 /*///////////////////////////////////CONFIRMACION///////////////////////*/
