@@ -37,7 +37,7 @@ class ForgotPasswordController extends Controller
       ]);
 
       $usuario = User::find($request->userid);
-      $usuario->password = Hash::make($pass);
+      $usuario->password = Hash::make($request->password);
       $usuario->save();
       return redirect('/login');
 

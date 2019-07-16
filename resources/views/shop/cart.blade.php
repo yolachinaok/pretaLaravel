@@ -39,40 +39,61 @@
 
 @endforeach
 </div>
+<?php
+$precioOriginal = 0;
+$save = 0;
+foreach ($carts as $prod) {
+  $totalProd = $prod->price * $prod->pivot->quantity;
+  $totalSave = $totalProd * ($prod->discount / 100);
+  $precioOriginal = $precioOriginal + $totalProd;
+  $save = $save + $totalSave;
+}
+?>
 
 <div class="carrito-confirmacion">
 <h2>orden</h2>
+Enviar a:
+@if(Auth::user()->address != null)
+<a id="direc" style="text-decoration:underline;"href="/perfil">Agrega direccion a tu perfil</a>
+@else
+{{Auth::user()->adress}}
+@endif
 <div class="confirmacion-cuerpo">
 <div class="precioOriginal confirmacion-flex">
 <h3 class="titulo">Precio original</h3>
-<h3 class="precio">85</h3>
+<h3 class="precio">{{$precioOriginal}}</h3>
 </div>
 <div class="precioDescuento confirmacion-flex">
 <h3 class="titulo">Descuento</h3>
-<h3 class="precio">85</h3>
+<h3 class="precio">{{$save}}</h3>
 </div>
 <div class="subtotal confirmacion-flex">
 <h3 class="titulo">Subtotal</h3>
-<h3 class="precio">85</h3>
+<h3 class="precio">{{$precioOriginal - $save}}</h3>
 </div>
 <div class="envio confirmacion-flex">
 <h3 class="titulo">Envio</h3>
-<h3 class="valor">S/C</h3>
+<h3 class="valor">
+@if(Auth::user()->address != null)
+{{$envio=0}}
+@else
+{{$envio = 200}}
+@endif
+</h3>
 </div>
 <div class="total confirmacion-flex">
 <h3 class="titulo">total de compra($)</h3>
-<h3 class="precio">85</h3>
+<h3 class="precio">{{$precioOriginal - $save + $envio}}</h3>
 </div>
 
 </div>
 <div class="checkout">
-<a href="">CONFIRMAR</a>
+<a id="confirmar" href="">CONFIRMAR</a>
 </div>
 </div>
 </div>
 <script type="text/javascript">
   var botones = document.querySelectorAll('.delete');
-
   for (boton of botones) {
     boton.onclick = function(){
       carritoId = this.getAttribute('id');
@@ -93,5 +114,13 @@
         });
     }
   }
+
+    var checkout = document.querySelector('#confirmar');
+    var sinDir = document.querySelector('#direc');
+
+    if (sinDir!=null) {
+      checkout.onclick = function(){return false;}
+    }
+
 </script>
 @endsection

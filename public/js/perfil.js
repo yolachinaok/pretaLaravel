@@ -1,5 +1,5 @@
 
-console.log("ESTOY ANDANDO");
+//console.log("ESTOY ANDANDO");
 
 function validarVacio(input) {
   if (input.value.trim() == '') {
@@ -25,10 +25,10 @@ function pintarError(input, mensaje) {
   div.append(error);
 }
 
-function validateFileExtension(tipo,elemento) 
+function validateFileExtension(tipo,elemento)
 {
-  
-if(!/(\.jpg|\.png|\.jpeg)$/i.test(tipo)) 
+
+if(!/(\.jpg|\.png|\.jpeg)$/i.test(tipo))
  {
   var error = document.createElement('span');
   error.setAttribute('class','error-span');
@@ -48,8 +48,8 @@ return true;
 
 window.onload = function(){
   var btn = document.querySelector('.boton-gris');
-  var form = document.querySelectorAll('form')[1];
-  
+  var form = document.querySelector('#editar');
+
   btn.addEventListener("click",()=>{
     if (form.style.display === "none") {
       form.style.display = "block";
@@ -58,7 +58,7 @@ window.onload = function(){
     }
   }
   )
- 
+
 
 
   console.log(form);
@@ -71,7 +71,7 @@ window.onload = function(){
     form.onsubmit = function (event) {
       console.log(event);
         var elementos = this.elements;
-        
+
         for (elemento of elementos) {
           console.log(elemento);
             if (elemento.type == 'submit' || elemento.type == 'hidden') {
@@ -81,15 +81,15 @@ window.onload = function(){
                 event.preventDefault();
             }
 
-            
-        
+
+
 
         if(elemento.name == 'avatar'){
             validateFileExtension(elemento.value,elemento)
         }
-       
+
     }
 }
 event.preventDefault();
- 
+
 }

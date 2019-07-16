@@ -24,7 +24,10 @@
 
     <div class="padding-eje-y">
       <ul>
-        <li><img src="/storage/{{$user->avatar}}" alt="" style="width:150px"> @if(!$user->avatar) No tenes foto de perfil pero podes agregar una. @endif</li>
+        <li>@if(!$user->avatar) No tenes foto de perfil pero podes agregar una.
+          @else
+          <img src="/storage/{{$user->avatar}}" alt="" style="width:150px">
+          @endif</li>
         <li>Usuario: {{$user->name}} {{$user->lastname}}</li>
         <li>Email: {{$user->email}}</li>
         <li>Direccion: {{$user->adress}} @if(!$user->adress)No cargaste ninguna direccion. @endif </li>
@@ -59,7 +62,7 @@
           Correo Electrónico
         </label> <br>
         <div class="email-cont">
-    
+
           <input class="input-blanco" type="email" id="email" name="email" value="{{$user->email}}"><br>
 </div>
           <span class="separador-xs"></span>
@@ -70,7 +73,7 @@
           <div class="direccion-cont">
             <input class="input-blanco" type="text" id="adress" name="adress" value="{{$user->adress}}"> <br>
 </div>
-            <span class="separador-xs" ></span>
+            <span class="separador-xs"></span>
 
 
           <br> <label for="avatar" class="label-desktop">
