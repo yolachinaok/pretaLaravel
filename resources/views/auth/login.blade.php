@@ -25,15 +25,16 @@
           <div class="email-cont">
         <label class="label-desktop" for="email" value="{{ old('email') }}">
           Correo Electrónico
-        </label> <br>
+        </label> </br>
           <input class="input-blanco @error('email') is-invalid @enderror " type="email" id="email" name="email">
-
+        </br> 
 
         @error('email')
               <span class="error-span">
                   <strong>{{ $message }}</strong>
               </span>
-          @enderror<br> 
+          @enderror<br>
+
 
           </div>
         <span class="separador"></span>
@@ -41,11 +42,11 @@
         <label class="label-desktop" for="password">
           Contraseña
         </label><br>
-          <input class="input-blanco @error('password') is-invalid @enderror" type="password" id="password" name="password" required autocomplete="new-password" >
-
-          @error('password')
+          <input class="input-blanco @error('email') is-invalid @enderror" type="password" id="password" name="password"  >
+          </br> 
+          @error('email')
               <span class="error-span" role="alert">
-                  <strong>{{ $message }}</strong>
+                  <strong>La contraseña no es correcta</strong>
               </span>
           @enderror<br>
 

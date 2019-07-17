@@ -2,7 +2,7 @@ var regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
 function validarVacio(input) {
     if (input.value.trim() == '') {
-        pintarError(input, 'Debe de estar lleno');
+        pintarError(input,'Debes completar el campo');
         input.value = '';
         return true;
     }
@@ -48,6 +48,8 @@ function validateFileExtension(tipo,elemento)
 window.onload = function () {
     var form = document.querySelector('form');
 
+ 
+  
     // email.onblur = function () {
     //     if (regexEmail.test(this.value)) {
     //         this.classList.remove('is-invalid');
@@ -64,7 +66,7 @@ window.onload = function () {
                 event.preventDefault();
             }
             if (elemento.name == 'email' &&  !regexEmail.test(elemento.value)) {
-                pintarError(elemento, 'Email invalido');
+                pintarError(elemento, 'Email inválido');
                 event.preventDefault();
             }
             if (elemento.name == 'password') {
@@ -86,9 +88,24 @@ window.onload = function () {
 
         }
         }
-
+        if(elemento.name == 'deacuerdo'){
+           let check=document.querySelector(".de");
+           console.log(check);
+           check.style.color="red";
+           check.style.fontFamily= "'Open Sans', sans-serif";
+  check.style.fontSize= '16px';
+  check.style.paddingLeft="5px";
+           check.innerText="Debes aceptar los Términos y Condiciones";
+           event.preventDefault();
+        }
+         
+      
+      
+              
+              
         if(elemento.name == 'avatar'){
             validateFileExtension(elemento.value,elemento)
         }
     }
+     
 }}

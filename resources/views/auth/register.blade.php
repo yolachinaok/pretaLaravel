@@ -99,7 +99,7 @@
 </div>
 <!--------------------------------------------------------->
           <br><label for="deacuerdo"></label>
-            <input type="checkbox" name="deacuerdo" required> Estoy de acuerdo con los Terminos y Condiciones
+            <input  type="checkbox" name="deacuerdo" ><span class="de"> Estoy de acuerdo con los Terminos y Condiciones</span>
 
             <span class="separador-s"></span>
 

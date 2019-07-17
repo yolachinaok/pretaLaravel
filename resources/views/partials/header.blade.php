@@ -163,36 +163,39 @@
 
 
 @if (Auth::guest())
-                    <li><a href="{{  url('/login') }}">INGRESAR</a></li>
+                    <li><a href="{{  url('/login') }}">INGRESA</a></li>
+                    <hr />
+              <div class="nav-search">
+                <li><a href="{{  url('/register') }}">REGISTRATE</a></li>
+              </div>
+             
   @else
   <li><a class="nombre" href="{{  url('/perfil') }}">{{ Auth::user()->name }}</a></li>
 
-      <li>
+  <hr />
+              <div class="nav-search">
+          <li>
          <a href="{{ url('/logout') }}"
                 onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">
-                LOGOUT
+                SALIR
          </a>
          <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                                     {{ csrf_field() }}
                                 </form>
       </li>
-
+      </div>
+      <hr />
+              <li>
+                <a href="{{  url('/carrito') }}"> <i class="material-icons">shopping_basket</i></a>
+              </li>
 
   </li>
 
   @endif
 
 
-              <hr />
-              <div class="nav-search">
-                <a href=""><i class="material-icons">favorite</i></a>
-                <li><a href="">FAVORITOS</a></li>
-              </div>
-              <hr />
-              <li>
-                <a href="{{  url('/carrito') }}"> <i class="material-icons">shopping_basket</i></a>
-              </li>
+
           </div>
         </div>
         </ul>
