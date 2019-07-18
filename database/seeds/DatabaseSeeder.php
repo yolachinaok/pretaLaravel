@@ -12,6 +12,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
      {
+       DB::table('categories')->insert(
+         [
+           ['name'=> 'denim'],
+           ['name'=> 'tops'],
+           ['name'=> 'outerwear'],
+           ['name'=> 'dresses']
+         ]
+       );
+     }
+   }
+
     //   OTRA FORMA
     //   DB::table('products')->insert(
     //     [
@@ -39,5 +50,3 @@ class DatabaseSeeder extends Seeder
         // OTRA FORMA MAS
         // hay que crear un seeder especifico de productos y llamarlo, dentro del seeder va a estar el run con las instrucciones de que ejecutar
         // $this->call(UsersTableSeeder::class);
-    }
-}

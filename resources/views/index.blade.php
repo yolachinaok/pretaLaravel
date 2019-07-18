@@ -73,7 +73,7 @@
 
       <div class="Hero-descuento">
         <h2>60% OFF JACKETS</h2>
-        <a href="">
+        <a href="{{  url('/shopby/sale') }}">
           <h2>SHOP NOW</h2>
         </a>
       </div>
@@ -83,7 +83,7 @@
    <!-- ___________________________________SECCION ALL / VIDEO ___________________________________________________-->
 
    <section class="allSeason">
-      <a href="home.html">
+      <a href="{{  url('/shopby/newin') }}">
         <div class="allSeason-titulo">
           <div>
             <h2>ALL // NEW SEASON</h2>

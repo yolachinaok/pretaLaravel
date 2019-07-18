@@ -12,8 +12,8 @@
 */
 
 
-Route::post('carrito', 'CartController@add');//->middleware('auth');
-Route::get('carrito', 'CartController@showCart');//->middleware('auth');
+Route::post('carrito', 'CartController@add')->middleware('auth');
+Route::get('carrito', 'CartController@showCart')->middleware('auth');
 Route::delete('admin/productos/eliminar/{id}', 'ProductController@deleteProduct')->middleware(['auth', 'admin']);
 Route::post('admin/productos/editar/{id}', 'ProductController@updateProduct')->middleware(['auth', 'admin']);
 Route::get('/admin/productos/editar/{id}', 'ProductController@editProduct')->middleware(['auth', 'admin']);
@@ -23,12 +23,13 @@ Route::post('/admin/productos', 'ProductController@createProductSave')->middlewa
 
 Route::get('/shop/{product_id}','ProductController@showProduct');
 Route::get('/shop/{product_id}','ProductController@showProduct');
-
+Route::get('/shopby/{type}','ProductController@showType');
 Route::get('/shop/{category_name}/{category_id}','ProductController@showCategory');
 Route::get('/shop','ProductController@showShop');
 Route::get('/shop','ProductController@listProduct');
 
 Route::get('/contacto','ContactController@showContact');
+Route::get('/faqs','HelpController@showFaqs');
 Route::get('/ayuda','HelpController@showHelp');
 
 Route::post('/perfil', 'ProfileController@editProfile')->middleware('auth');

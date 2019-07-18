@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Product;
 use App\Category;
+use Carbon\Carbon;
 
 class ProductController extends Controller
 {
@@ -13,6 +14,20 @@ class ProductController extends Controller
     // $quantity = Product::count();
     return view('shop.shop')->with(['products'=> $products]);
     //->with(['quantity'=>$quantity]);
+  }
+
+  public function showType($type){
+      if ($type=="newin") {
+      $mesAnterior = Carbon::now()->subMonth();
+        $productsNewIn = Product::where('created_at','>=',$mesAnterior)->get();
+        return view('shop.shop-new')->with(['products'=>$productsNewIn]);
+      } elseif ($type=="sale") {
+        $productsSale= Product::where('discount', '!=' , "")->get();
+        // dd($productsSale);
+        return view('shop.shop-new')->with(['products'=>$productsSale]);
+      }
+
+
   }
 
   public function showCategory($categoria, $category_id){
@@ -32,6 +47,7 @@ class ProductController extends Controller
     $product = Product::find($product_id);
     return view('shop.product')->with('product', $product);
     }
+
 
     public function showProductAdmin(){
       return view('productAdmin');
@@ -149,8 +165,6 @@ $vac= compact("products");
 return view('shop.shop', $vac);
 
     }
-
-
 
 
 }
