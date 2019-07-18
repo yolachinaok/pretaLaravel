@@ -52,6 +52,51 @@
   border-bottom: solid 1px #232326;
 }
 
+#volver i {
+  color: #f3f3f3;
+}
+
+#enlace-olvide {
+  font-size: 0.8em;
+  text-align: center;
+}
+
+#seccion-back-top {
+  margin: 15px 0;
+}
+
+#volver-atras {
+  display: inline-block;
+  color: #f3f3f3;
+  font-weight: bold;
+  letter-spacing: 0.3em;
+  vertical-align: super;
+  text-decoration: none;
+  position: relative;
+  bottom: 1px;
+}
+
+#volver {
+  width: 75%;
+  text-align: center;
+  display: inline-block;
+}
+
+#top {
+  width: 20%;
+  text-align: center;
+  display: inline-block;
+}
+
+#palabra-top {
+  display: block;
+  color: #f3f3f3;
+  font-weight: bold;
+  letter-spacing: 0.3em;
+  text-decoration: none;
+  position: relative;
+  bottom: 5px;
+}
 
 /*Media querys*/
 /*Tablet*/
@@ -64,6 +109,17 @@
     height: 130px;
     padding: 52px 0;
   }
+
+  #volver {
+    width: 100%;
+    text-align: left;
+    display: inline-block;
+    padding-left: 20px;
+  }
+
+  #top {
+    display: none;
+  }
 }
 
 /*Desktop*/
@@ -73,5 +129,8 @@
     height: 180px;
     padding: 78px 0;
   }
+  #volver {
+    margin-bottom: 15px;
+  }
 
-}
+  }

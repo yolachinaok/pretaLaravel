@@ -32,4 +32,21 @@
         <p class="categoria-pregunta">MAS PREGUNTAS</p>
       </div></a>
     </div>
+
+    <!-- BOTONES TOP Y BACK -->
+    <div id="seccion-back-top">
+
+      <div id="volver">
+        <i class="material-icons">
+        keyboard_arrow_left
+        </i>
+        <a id="volver-atras"href="/">VOLVER ATRAS</a>
+        </div>
+      <div id="top">
+        <i class="material-icons">
+        keyboard_arrow_up
+      </i>
+      <a id="palabra-top"href="#">TOP</a>
+       </div>
+    </div>
 @endsection

@@ -27,8 +27,8 @@
         <label class="label-desktop" for="name">
           Nombre<span class="color-rojo">*</span>
         </label> <br>
-        
-       <div class="name-cont"> 
+
+       <div class="name-cont">
 
           <input class="input-blanco @error ('name') is-invalid @enderror" type="text" id="nombre" name="name" value="{{old('name')}}"> <br>
           @error('name')
@@ -43,7 +43,7 @@
         <br><label class="label-desktop" for="lastname">
             Apellido<span class="color-rojo">*</span>
         </label> <br>
-        <div class="name-cont"> 
+        <div class="name-cont">
           <input class="input-blanco @error ('lastname') is-invalid @enderror" type="text" id="lastname" name="lastname" value="{{old('lastname')}}"> <br>
           @error('lastname')
               <span>
@@ -56,7 +56,7 @@
         <br> <label class="label-desktop" for="email">
           Correo Electrónico<span class="color-rojo">*</span>
         </label> <br>
-     <div class="email.cont"> 
+     <div class="email.cont">
 
           <input class="input-blanco @error('email') is-invalid @enderror" type="email" id="email" name="email" value="{{old('email')}}"><br>
           @error('email')
@@ -70,7 +70,7 @@
         <br><label class="label-desktop" for="password">
           Contraseña<span class="color-rojo">*</span>
         </label><br>
-        <div class="cñ.cont"> 
+        <div class="cñ.cont">
           <input class="input-blanco @error('password') is-invalid @enderror" type="password" id="password" name="password"> <br>
           @error('password')
               <span>
@@ -83,7 +83,7 @@
         <br><label class="label-desktop" for="password-confirm">
           Repetir contraseña<span class="color-rojo">*</span>
         </label> <br>
-        <div class="cñ2.cont"> 
+        <div class="cñ2.cont">
           <input class="input-blanco" type="password" id="password-confirm" name="password_confirmation"><br>
 
           <span class="separador-xs"></span>
@@ -118,7 +118,7 @@
     <i class="material-icons">
     keyboard_arrow_left
     </i>
-    <a id="volver-atras"href="home.html">VOLVER ATRAS</a>
+    <a id="volver-atras"href="/">VOLVER ATRAS</a>
     </div>
   <div id="top">
     <i class="material-icons">
