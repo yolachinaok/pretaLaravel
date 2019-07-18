@@ -57,7 +57,7 @@
 
 
 
-          <a class="nombre" href="#">
+          <a class="nombre" href="{{  url('/shopby/newin') }}">
             <li>
               <div class="li-flex">
                 NEW IN
@@ -93,7 +93,7 @@
                 <i class="material-icons">chevron_right</i>
               </div>
             </li></a>
-          <a class="nombre" href="#">
+          <a class="nombre" href="{{  url('/shopby/sale') }}">
             <li>
               <div class="li-flex">
                 SALE
@@ -168,7 +168,7 @@
               <div class="nav-search">
                 <li><a href="{{  url('/register') }}">REGISTRATE</a></li>
               </div>
-             
+
   @else
   <li><a class="nombre" href="{{  url('/perfil') }}">{{ Auth::user()->name }}</a></li>
 
@@ -201,13 +201,13 @@
         </ul>
         <div class="nav-container2">
           <ul>
-            <li><a href="{{  url('/shop') }}">NEW IN</a></li>
+            <li><a href="{{  url('/shopby/newin') }}">NEW IN</a></li>
             <li><a href="{{  url('/shop') }}">SHOP</a></li>
             <li><a href="/shop/jeans/1">JEANS</a></li>
             <li><a href="/shop/abrigos/3">ABRIGOS</a></li>
             <li><a href="/shop/vestidos/4">VESTIDOS</a></li>
             <li><a href="/shop/tops/2">TOPS</a></li>
-            <li><a href="">SALE</a></li>
+            <li><a href="{{  url('/shopby/sale') }}">SALE</a></li>
           </ul>
         </div>
       </div>
