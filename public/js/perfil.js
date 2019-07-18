@@ -42,6 +42,7 @@ if(!/(\.jpg|\.png|\.jpeg)$/i.test(tipo))
   error.append(strong);
   div.append(error);
    return false;
+  
   }
 return true;
 }
@@ -69,7 +70,7 @@ window.onload = function(){
     // }
 
     form.onsubmit = function (event) {
-      console.log(event);
+     
         var elementos = this.elements;
 
         for (elemento of elementos) {
@@ -85,7 +86,12 @@ window.onload = function(){
 
 
         if(elemento.name == 'avatar'){
-            validateFileExtension(elemento.value,elemento)
+          
+            validateFileExtension(elemento.value,elemento);
+            console.log(elemento.value);
+         if(validateFileExtension(elemento.value,elemento)==false){
+          event.preventDefault();
+         }
         }
 
     }

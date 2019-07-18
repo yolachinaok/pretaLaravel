@@ -26,7 +26,7 @@
       <ul>
         <li>@if(!$user->avatar) No tenes foto de perfil pero podes agregar una.
           @else
-          <img src="/storage/{{$user->avatar}}" alt="" style="width:150px">
+          <img src="storage/{{$user->avatar}}" alt="" style="width:150px">
           @endif</li>
         <li>Usuario: {{$user->name}} {{$user->lastname}}</li>
         <li>Email: {{$user->email}}</li>

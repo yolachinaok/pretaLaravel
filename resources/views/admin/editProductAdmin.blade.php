@@ -1,11 +1,11 @@
 @extends('layouts.master')
 
 @section('styles')
-<link href="/css/style-registro.css" rel="stylesheet">
+<link href="/css/registro.css" rel="stylesheet">
 @endsection
 
 @section('content')
-<br><br><br><br><br><br><br>
+
 <div class="borde-titulo">
       <div class="contenedor-titulo margen-izq">
         <h2 class="titulo">EDITAR PRODUCTO</h2>
@@ -122,5 +122,5 @@
       </form>
     </div>
   </div>
-
+  <script src="/js/auth/editar_producto.js" charset="utf-8"></script>
 @endsection
