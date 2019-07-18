@@ -119,5 +119,5 @@
       </div>
     @endif
   </div>
- <!-- <script src="/js/auth/nuevo_producto.js" charset="utf-8"></script>-->
+ <script src="/js/auth/nuevo_producto.js" charset="utf-8"></script>-->
 @endsection

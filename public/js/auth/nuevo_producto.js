@@ -67,19 +67,12 @@ function validarVacio(input,num) {
            
             
               if(elemento.name == 'category_id'){
-             
+             if(elemento.value == ""){
                 pintarError(elemento, 'Debes seleccionar una categoría',3);
-                event.preventDefault();
+                event.preventDefault();}
 
               }
             
-              if(elemento.name == 'discount'){
-            
-                pintarError(elemento, 'El valor no debe ser mayo a 100',3);
-                event.preventDefault();
-
-              }
-  
   
           if(elemento.name == 'photo1' || elemento.name == 'photo2' || elemento.name == 'photo3' ){
             
@@ -89,7 +82,7 @@ function validarVacio(input,num) {
             event.preventDefault();
            }
           }
-  
+ 
       }
   }
   
