@@ -9,6 +9,15 @@ use App\Product;
 
 class CartController extends Controller
 {
+
+  public function purchase(Request $request){
+  $user = $request->user;
+  $carritos= Cart::where('user_id', '=', $user)->get();
+  foreach ($carritos as $carrito) {
+    $carrito->delete();
+  }
+  }
+
   public function showCart(){
     $user = Auth::user();
     $products = [];

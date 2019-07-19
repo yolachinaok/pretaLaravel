@@ -170,7 +170,7 @@ return view('shop.shop', $vac);
       $products=Product::paginate(6);
       $vac= compact("products");
       return view('shop.shop-category', $vac);
-      
+
           }
 
 
