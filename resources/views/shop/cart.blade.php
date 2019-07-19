@@ -8,8 +8,7 @@
 <div class="carrito">
 <div class="carrito-mybag">
   <h2>MY BAG</h2>
-<div id="check-child">
-  @foreach ($carts as $product)
+<div id="check-child">@foreach ($carts as $product)
     <div id="carrito{{$product->pivot->id}}" class="mybag">
     <div class="mybag-producto">
       <img src="/storage/{{$product->photo1}}" alt="">
@@ -31,8 +30,7 @@
         <button class="delete" id="{{$product->pivot->id}}">BORRAR</button>
       </div>
   </div>
-  @endforeach
-</div>
+  @endforeach</div>
 </div>
 <?php
 $precioOriginal = 0;
@@ -48,7 +46,7 @@ foreach ($carts as $prod) {
 <div class="carrito-confirmacion">
 <h2>orden</h2>
 Enviar a:
-@if(Auth::user()->address != null)
+@if(Auth::user()->adress == null || trim(Auth::user()->adress) == "")
 <a id="direc" style="text-decoration:underline;"href="/perfil">Agrega direccion a tu perfil</a>
 @else
 {{Auth::user()->adress}}
@@ -69,7 +67,7 @@ Enviar a:
 <div class="envio confirmacion-flex">
 <h3 class="titulo">Envio</h3>
 <h3 class="valor">
-@if(Auth::user()->address != null)
+@if(Auth::user()->adress == null || trim(Auth::user()->adress) == "")
 {{$envio=0}}
 @else
 {{$envio = 200}}
@@ -111,7 +109,7 @@ Enviar a:
     var sinDir = document.querySelector('#direc');
     var cont = document.querySelector('#check-child');
     var hayItems = cont.hasChildNodes();
-    console.log(cont.innerHTML);
+    console.log(hayItems);
     if (sinDir!=null) {
       checkout.onclick = function(){return false;}
     }
