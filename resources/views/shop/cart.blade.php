@@ -9,8 +9,7 @@
 <div class="carrito-mybag">
   <h2>MY BAG</h2>
 <div id="check-child">
-
-    @foreach ($carts as $product)
+  @foreach ($carts as $product)
     <div id="carrito{{$product->pivot->id}}" class="mybag">
     <div class="mybag-producto">
       <img src="/storage/{{$product->photo1}}" alt="">
@@ -32,8 +31,7 @@
         <button class="delete" id="{{$product->pivot->id}}">BORRAR</button>
       </div>
   </div>
-
-@endforeach
+  @endforeach
 </div>
 </div>
 <?php
@@ -113,14 +111,14 @@ Enviar a:
     var sinDir = document.querySelector('#direc');
     var cont = document.querySelector('#check-child');
     var hayItems = cont.hasChildNodes();
-    console.log(cont);
+    console.log(cont.innerHTML);
     if (sinDir!=null) {
       checkout.onclick = function(){return false;}
     }
     if (!hayItems){
       checkout.onclick = function(){return false;}
     };
-    if (hayItems && !sinDir) {
+    if (hayItems!="" && !sinDir) {
       var orden = parseInt(Math.ceil((Math.random()*10000)+1));
       checkout.onclick = function(){
         alert('Compra exitosa! Su orden es la #' + orden + ' y recibiras todas las instrucciones para el seguimiento a tu email.');
