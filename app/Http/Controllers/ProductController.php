@@ -19,10 +19,10 @@ class ProductController extends Controller
   public function showType($type){
       if ($type=="newin") {
       $mesAnterior = Carbon::now()->subMonth();
-        $productsNewIn = Product::where('created_at','>=',$mesAnterior)->get();
+        $productsNewIn = Product::where('created_at','>=',$mesAnterior)->paginate(6);
         return view('shop.shop-new')->with(['products'=>$productsNewIn]);
       } elseif ($type=="sale") {
-        $productsSale= Product::where('discount', '!=' , "")->get();
+        $productsSale= Product::where('discount', '!=' , "")->paginate(6);
         // dd($productsSale);
         return view('shop.shop-new')->with(['products'=>$productsSale]);
       }
@@ -32,7 +32,7 @@ class ProductController extends Controller
 
   public function showCategory($categoria, $category_id){
     $cat = $categoria;
-    $products = Product::where('category_id', '=', $category_id)->get();
+    $products = Product::where('category_id', '=', $category_id)->paginate(6);
     $quantity = count($products);
     return view('shop.shop-category')->with(['products' => $products])->with(['quantity'=>$quantity])->with(['cat'=>$cat]);
 //OTRA FORMA DE HACERLO USANDO HASMANY()
@@ -166,12 +166,7 @@ return view('shop.shop', $vac);
 
     }
 
-    public function listProductCategory(){
-      $products=Product::paginate(6);
-      $vac= compact("products");
-      return view('shop.shop-category', $vac);
-      
-          }
+ 
 
 
 }

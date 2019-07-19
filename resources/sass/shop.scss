@@ -358,12 +358,38 @@ height:25px;
   color: $negro;
 }
 
-.filter-pages__categoria .link {
+.link a {
   color: $negro;
+font-family: $font;
+font-size:1 rem;
+margin:0 10px;
+color:$violeta;
+text-transform: uppercase;
 
-  @include flex;
-  justify-content: flex-start;
-  align-items: flex-end;
+  
+}
+
+.link a:hover{
+  color:$negro;
+}
+.contene{
+  display: flex;
+  flex-flow: row nowrap;
+   justify-content: space-around;
+}
+.link{
+  width:40%;
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top:30px;
+  margin-left:40px;
+   justify-content: flex-start;
+   align-items: center;
+
+}
+
+.link h4{
+  font-weight:200;
 }
 .filter-pages__categoria h4,
 .filter h4 {
@@ -376,9 +402,7 @@ height:25px;
 .filter-pages__categoria h4:last-child {
   margin-left: 5px;
 }
-.filter-pages__categoria .link a h4 {
-  color: $negro;
-}
+
 .filter {
     @include mobile{
         padding-left:10px;
@@ -423,19 +447,7 @@ height:25px;
   font-weight: 200;
 }
 
-.filter-pages-left {
-  width: 260px;
-  @include flex;
-  @include mobile{
-      justify-content: flex-end;
-      margin:0;
-      width:100%;
-      padding-right:20px;
-  }
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 20%;
-}
+
 
 /*___________________________________________________________ END FILTER-PAGE*/
 
@@ -460,7 +472,15 @@ font-family: $font;
   display:flex;
   flex-flow:row nowrap;
   justify-content: flex-end;
-
+width:50%;
+  margin-right:60px;
+  padding-top:50px;
+}
+.pag2{
+  display:flex;
+  flex-flow:row nowrap;
+  justify-content: flex-end;
+width:96%;
   margin-right:60px;
   padding-top:50px;
 }
