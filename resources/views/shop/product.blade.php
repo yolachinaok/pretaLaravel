@@ -33,6 +33,7 @@
 </div>
 <div class="buy__precio">
   @if($product->discount!=null)
+<h3 style="text-decoration:line-through">${{  $product->price  }}</h3>
 <h3>${{  $product->price * (1 - ($product->discount / 100))  }}</h3>
   @else
 <h3>${{  $product->price  }}</h3>
