@@ -99,7 +99,7 @@ Enviar a:
         if (datos.eliminado) {
           elDiv = document.querySelector('#carrito'+carritoId);
           elDiv.setAttribute("style", "display:none");
-          refreshDiv.load(location.href + refreshDiv);
+          location.reload();
 
         }
         })
