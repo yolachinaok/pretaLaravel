@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Product;
+use App\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,7 +13,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
      {
-       DB::table('categories')->insert(
+       
+      factory(User::class,20)->create();
+
+      DB::table('categories')->insert(
          [
            ['name'=> 'denim'],
            ['name'=> 'tops'],
