@@ -21,6 +21,8 @@
         <button style="color:white; background-color:red; outline: none;" type="submit" name="eliminar" id="eliminar">ELIMINAR PRODUCTO</button>
       </p>
     </form>
+
+
     <div class="margen-izq contenedor">
       <div width="30%">
         <p class="boton">FRONT</p>
@@ -35,12 +37,16 @@
       <img src="/storage/{{$product->photo3}}" width="100px" alt="">
       </div>
     </div>
-      <form class="margen-izq" action="" method="post" enctype="multipart/form-data">
+
+
+      <form id="editar" class="margen-izq" action="" method="post" enctype="multipart/form-data">
         @csrf
+        <div class="name-cont">
         <label class="label-desktop" for="name">
           Nombre<span class="color-rojo">*</span>
         </label> <br>
           <input class="input-blanco" type="text" id="nombre" name="name" value="{{old('name',$product->name)}}">
+          </div>
           @error('name')
           <div class="">
           {{$message}}
@@ -49,10 +55,12 @@
 
           <span class="separador-xs" ></span>
 
-        <br><label class="label-desktop" for="price">
+        <br><div class="precio-cont">
+        <label class="label-desktop" for="price">
            Precio<span class="color-rojo">*</span>
         </label> <br>
           <input class="input-blanco" type="text" id="precio" name="price" value="{{old('price',$product->price)}}">
+          </div>
           @error('price')
           <div class="">
           {{$message}}
@@ -61,6 +69,7 @@
 
           <span class="separador-xs"></span>
             <br>
+            <div class="categoria-cont">
           <label class="label-desktop" for="category_id">
              Categoría<span class="color-rojo">*</span>
           </label> <br>
@@ -70,6 +79,7 @@
                 <option value="{{$category->id}}"> {{$category->name}} </option>
               @endforeach
             </select>
+            </div>
             {{ $product->category->name }} <br>
             @error('category_id')
             <div class="">
@@ -79,39 +89,48 @@
 
             <span class="separador-xs"></span>
 
-        <br> <label class="label-desktop" for="description">
+        <br> 
+        <div class="desc-cont">
+        <label class="label-desktop" for="description">
           Descripción<span class="color-rojo">*</span>
         </label> <br>
           <textarea name="description" id="" cols="30" rows="10" >{{$product->description}}</textarea>
-
+          </div>
           <span class="separador-xs"></span>
 
-        <br><label class="label-desktop" for="discount">
+        <br><div class="discount-cont">
+        <label class="label-desktop" for="discount">
           Descuento <span class="color-rojo">*</span>
         </label><br>
           <input class="input-blanco" type="text" id="discount" name="discount" value="{{$product['discount']}}">
-
+          </div>
           <span class="separador-xs"></span>
 
-          <br> <label for="photo1" class="label-desktop">
+          <br> 
+          <div class="f1">
+          <label for="photo1" class="label-desktop">
            FRONT<span class="color-rojo">*</span> <br>
           </label> <br>
             <input id="foto1" type="file" name="photo1">
-
+            </div>
             <span class="separador-xs"></span>
 
-            <br> <label for="photo2" class="label-desktop">
+            <br>
+            <div class="f2"> 
+            <label for="photo2" class="label-desktop">
            BACK<span class="color-rojo">*</span> <br>
           </label> <br>
             <input id="foto2" type="file" name="photo2">
-
+            </div>
             <span class="separador-xs"></span>
 
-            <br> <label for="photo3" class="label-desktop">
+            <br> 
+            <div class="f3">
+            <label for="photo3" class="label-desktop">
            DETAIL<span class="color-rojo">*</span> <br>
           </label> <br>
             <input id="foto3" type="file" name="photo3">
-
+            </div>
             <span class="separador-xs"></span>
 
 
