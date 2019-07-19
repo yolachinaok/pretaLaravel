@@ -165,8 +165,4 @@ $vac= compact("products");
 return view('shop.shop', $vac);
 
     }
-
- 
-
-
 }

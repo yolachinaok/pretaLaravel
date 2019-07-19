@@ -11,7 +11,7 @@
 |
 */
 
-
+Route::get('carrito/comprar', 'CartController@purchase')->middleware('auth');
 Route::post('carrito', 'CartController@add')->middleware('auth');
 Route::get('carrito', 'CartController@showCart')->middleware('auth');
 Route::delete('admin/productos/eliminar/{id}', 'ProductController@deleteProduct')->middleware(['auth', 'admin']);
@@ -21,7 +21,7 @@ Route::get('/admin/productos', 'ProductController@createProduct')->middleware(['
 Route::post('/admin/productos', 'ProductController@createProductSave')->middleware(['auth', 'admin']);
 
 
-Route::get('/shop/{product_id}','ProductController@showProduct');
+//Route::get('/shop/{product_id}','ProductController@showProduct');
 Route::get('/shop/{product_id}','ProductController@showProduct');
 Route::get('/shopby/{type}','ProductController@showType');
 Route::get('/shop/{category_name}/{category_id}','ProductController@showCategory');
