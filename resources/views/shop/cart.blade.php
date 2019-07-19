@@ -32,16 +32,6 @@
   </div>
   @endforeach</div>
 </div>
-<?php
-$precioOriginal = 0;
-$save = 0;
-foreach ($carts as $prod) {
-  $totalProd = $prod->price * $prod->pivot->quantity;
-  $totalSave = $totalProd * ($prod->discount / 100);
-  $precioOriginal = $precioOriginal + $totalProd;
-  $save = $save + $totalSave;
-}
-?>
 
 <div class="carrito-confirmacion">
 <h2>orden</h2>
@@ -52,6 +42,16 @@ Enviar a:
 {{Auth::user()->adress}}
 @endif
 <div class="confirmacion-cuerpo">
+  <?php
+  $precioOriginal = 0;
+  $save = 0;
+  foreach ($carts as $prod) {
+    $totalProd = $prod->price * $prod->pivot->quantity;
+    $totalSave = $totalProd * ($prod->discount / 100);
+    $precioOriginal = $precioOriginal + $totalProd;
+    $save = $save + $totalSave;
+  }
+  ?>
 <div class="precioOriginal confirmacion-flex">
 <h3 class="titulo">Precio original</h3>
 <h3 class="precio">{{$precioOriginal}}</h3>
@@ -87,6 +87,7 @@ Enviar a:
 </div>
 <script type="text/javascript">
   var botones = document.querySelectorAll('.delete');
+  var refreshDiv = document.querySelector('.confirmacion-cuerpo');
   for (boton of botones) {
     boton.onclick = function(){
       carritoId = this.getAttribute('id');
@@ -98,6 +99,8 @@ Enviar a:
         if (datos.eliminado) {
           elDiv = document.querySelector('#carrito'+carritoId);
           elDiv.setAttribute("style", "display:none");
+          refreshDiv.load(location.href + refreshDiv);
+
         }
         })
       .catch(function(error){
