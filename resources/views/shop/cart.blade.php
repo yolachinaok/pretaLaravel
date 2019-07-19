@@ -50,7 +50,7 @@ foreach ($carts as $prod) {
 <div class="carrito-confirmacion">
 <h2>orden</h2>
 Enviar a:
-@if(Auth::user()->address == null||Auth::user()->address == "")
+@if(Auth::user()->address != null)
 <a id="direc" style="text-decoration:underline;"href="/perfil">Agrega direccion a tu perfil</a>
 @else
 {{Auth::user()->adress}}
@@ -71,7 +71,7 @@ Enviar a:
 <div class="envio confirmacion-flex">
 <h3 class="titulo">Envio</h3>
 <h3 class="valor">
-@if(Auth::user()->address == null||Auth::user()->address == "")
+@if(Auth::user()->address != null)
 {{$envio=0}}
 @else
 {{$envio = 200}}
@@ -94,8 +94,7 @@ Enviar a:
   for (boton of botones) {
     boton.onclick = function(){
       carritoId = this.getAttribute('id');
-
-      fetch('http://localhost:8000/api/borrar-producto/'+carritoId)
+      fetch('http://preta.dhalumnos.com/api/borrar-producto/'+carritoId)
       .then(function(response){
             return response.json();
         })
@@ -104,25 +103,31 @@ Enviar a:
           elDiv = document.querySelector('#carrito'+carritoId);
           elDiv.setAttribute("style", "display:none");
         }
-
         })
       .catch(function(error){
             console.log(error);
         });
     }
   }
-
     var checkout = document.querySelector('#confirmar');
     var sinDir = document.querySelector('#direc');
     var cont = document.querySelector('#check-child');
     var hayItems = cont.hasChildNodes();
+    console.log(cont);
     if (sinDir!=null) {
       checkout.onclick = function(){return false;}
     }
     if (!hayItems){
       checkout.onclick = function(){return false;}
     };
-
-
+    if (hayItems && !sinDir) {
+      var orden = parseInt(Math.ceil((Math.random()*10000)+1));
+      checkout.onclick = function(){
+        alert('Compra exitosa! Su orden es la #' + orden + ' y recibiras todas las instrucciones para el seguimiento a tu email.');
+      }
+    }
 </script>
+
+
+
 @endsection
