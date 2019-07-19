@@ -13,12 +13,12 @@
 <section class="gallery">
 
 <div class="gallery__minim">
-<img src="/storage/<?php echo $product['photo1'];?>" alt="">
-<img src="/storage/<?php echo $product['photo2'];?>" alt="">
-<img src="/storage/<?php echo $product['photo3'];?>" alt="">
+<img src="/storage/<?php echo $product->photo1 ;?>" alt="">
+<img src="/storage/<?php echo $product->photo2 ;?>" alt="">
+<img src="/storage/<?php echo $product->photo3 ;?>" alt="">
 </div>
 <div class="gallery__big">
-<img src="/storage/<?php echo $product['photo1'];?>" alt="">
+<img src="/storage/<?php echo $product->photo1 ;?>" alt="">
 
 </div>
 
@@ -32,7 +32,11 @@
   <h4>{{  $product->description  }}</h4>
 </div>
 <div class="buy__precio">
+  @if($product->discount!=null)
+<h3>${{  $product->price * (1 - ($product->discount / 100))  }}</h3>
+  @else
 <h3>${{  $product->price  }}</h3>
+  @endif
 </div>
 <form class="" action="/carrito" method="post">
   @csrf
