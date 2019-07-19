@@ -20,7 +20,7 @@ Route::get('/admin/productos/editar/{id}', 'ProductController@editProduct')->mid
 Route::get('/admin/productos', 'ProductController@createProduct')->middleware(['auth', 'admin']);
 Route::post('/admin/productos', 'ProductController@createProductSave')->middleware(['auth', 'admin']);
 
-
+Route::get('/shop/{product_id}','ProductController@listProductCategory');
 Route::get('/shop/{product_id}','ProductController@showProduct');
 Route::get('/shop/{product_id}','ProductController@showProduct');
 Route::get('/shopby/{type}','ProductController@showType');

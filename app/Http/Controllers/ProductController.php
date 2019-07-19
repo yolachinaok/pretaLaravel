@@ -166,5 +166,12 @@ return view('shop.shop', $vac);
 
     }
 
+    public function listProductCategory(){
+      $products=Product::paginate(6);
+      $vac= compact("products");
+      return view('shop.shop-category', $vac);
+      
+          }
+
 
 }
