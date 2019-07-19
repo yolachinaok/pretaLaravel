@@ -13,7 +13,7 @@
    
 
   <!--formulario carga -->
-
+<div class="form-cont">
     
       <form  id="alta" class="margen-izq" action="" method="post" enctype="multipart/form-data">
         @csrf
@@ -100,7 +100,7 @@
 
       </form>
     </div>
-  </div>
+  
   <div class="margen-izq">
     @if (session('message'))
     <div class="alert alert-success">
@@ -118,6 +118,7 @@
         </ul>
       </div>
     @endif
+    </div>
   </div>
- <script src="/js/auth/nuevo_producto.js" charset="utf-8"></script>-->
+ <script src="/js/auth/nuevo_producto.js" charset="utf-8"></script>
 @endsection

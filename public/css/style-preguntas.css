@@ -3,15 +3,17 @@
   padding: 0;
   box-sizing: border-box;
   /* fondo */
-  background-color: #F3F3F3;
-  /* texto */
+  
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
-  color: #232326;
+  
   }
 
   .contenedor {
     width: 100%;
+    color: #232326;
+    background-color: #F3F3F3;
+  /* texto */
     }
 
   .titulo {

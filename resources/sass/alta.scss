@@ -1,0 +1,130 @@
+@import "media-queries";
+
+$font: "Open Sans", sans-serif;
+$violeta: #cc9fd8;
+$negro: #232326;
+$blanco: #f3f3f3;
+$separacion: 40px;
+
+
+.cont{
+    display:flex;
+    flex-flow: column wrap;
+   
+    align-items: center;
+  
+ 
+        
+        box-sizing: border-box;
+      
+        margin: 40px 0;
+        /* fondo */
+       
+        justify-content: center;
+        font-family: 'Open Sans', sans-serif;
+        
+      
+     
+        
+            @include mobile{
+                width:100%;
+    text-align: center;
+    margin:10px 0;
+            
+    
+            }
+        
+    
+
+}
+.borde-titulo{
+color:$violeta;
+margin-bottom:30px;
+}
+label{
+    color:$negro;
+    font-size: 16px;
+   
+    width:100%;
+}
+input{
+    width:100%;
+}
+.is-invalid{
+    border:1px solid red;
+    box-sizing: content-box;
+  
+   
+  }
+  strong{
+    font-weight: 400;
+  }
+  .error-span{
+    font-family: "Open Sans", sans-serif;
+    font-size:14px;
+   color:red;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content:center;
+  @include mobile{
+    text-align: center;
+}
+    
+  }
+.form-cont{
+  
+  display: flex;
+  flex-flow: column nowrap;
+ justify-content: center;
+ 
+}
+.boton{
+    display: flex;
+    flex-flow:row nowrap;
+    justify-content: center;
+}
+
+.boton-negro{
+display: inline-block;
+background-color: $blanco;
+color:$negro;
+border: 3px solid $violeta;
+outline: none;
+font-size:1rem;
+font-weight: bold;
+
+
+padding: 10px 80px; 
+&:hover{
+    background-color:$violeta;
+    color:$blanco;
+}
+&:focus{
+    background-color:$violeta;
+    color:$blanco;  
+}
+@include mobile{
+margin-top:0px;
+}}
+
+#foto1, #foto2, #foto3{
+    font-family: $font;
+    outline: none;
+    font-weight: 400;
+    font-size: 1rem;
+}
+.fotos{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+.eliminar{
+    padding:10px 30px;
+    margin-bottom:30px;
+    background:$violeta;
+    border:none;
+    font-size:0.8rem;
+    color:$blanco;
+    outline: none;
+}

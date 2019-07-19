@@ -1,0 +1,142 @@
+.cont {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+          align-items: center;
+  box-sizing: border-box;
+  margin: 40px 0;
+  /* fondo */
+  -webkit-box-pack: center;
+          justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .cont {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+}
+
+.borde-titulo {
+  color: #cc9fd8;
+  margin-bottom: 30px;
+}
+
+label {
+  color: #232326;
+  font-size: 16px;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+}
+
+.is-invalid {
+  border: 1px solid red;
+  box-sizing: content-box;
+}
+
+strong {
+  font-weight: 400;
+}
+
+.error-span {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: red;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .error-span {
+    text-align: center;
+  }
+}
+
+.form-cont {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.boton {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.boton-negro {
+  display: inline-block;
+  background-color: #f3f3f3;
+  color: #232326;
+  border: 3px solid #cc9fd8;
+  outline: none;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 80px;
+}
+
+.boton-negro:hover {
+  background-color: #cc9fd8;
+  color: #f3f3f3;
+}
+
+.boton-negro:focus {
+  background-color: #cc9fd8;
+  color: #f3f3f3;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .boton-negro {
+    margin-top: 0px;
+  }
+}
+
+#foto1,
+#foto2,
+#foto3 {
+  font-family: "Open Sans", sans-serif;
+  outline: none;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.fotos {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.eliminar {
+  padding: 10px 30px;
+  margin-bottom: 30px;
+  background: #cc9fd8;
+  border: none;
+  font-size: 0.8rem;
+  color: #f3f3f3;
+  outline: none;
+}
+

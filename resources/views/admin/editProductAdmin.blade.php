@@ -1,11 +1,11 @@
 @extends('layouts.master')
 
 @section('styles')
-<link href="/css/registro.css" rel="stylesheet">
+<link href="/css/alta.css" rel="stylesheet">
 @endsection
 
 @section('content')
-
+<div class="cont">
 <div class="borde-titulo">
       <div class="contenedor-titulo margen-izq">
         <h2 class="titulo">EDITAR PRODUCTO</h2>
@@ -13,17 +13,18 @@
     </div>
 
   <!--formulario carga -->
-  <div class="padding-eje-y">
+  <div class="form-cont">
+
     <form class="" action="/admin/productos/eliminar/{{$product->id}}" method="post">
       @csrf
       @method('DELETE')
       <p class="boton">
-        <button style="color:white; background-color:red; outline: none;" type="submit" name="eliminar" id="eliminar">ELIMINAR PRODUCTO</button>
+        <button class="eliminar " type="submit" name="eliminar" id="eliminar">ELIMINAR PRODUCTO</button>
       </p>
     </form>
 
 
-    <div class="margen-izq contenedor">
+    <div class="fotos">
       <div width="30%">
         <p class="boton">FRONT</p>
         <img src="/storage/{{$product->photo1}}" width="100px" alt="">
@@ -38,7 +39,7 @@
       </div>
     </div>
 
-
+<div class="form">
       <form id="editar" class="margen-izq" action="" method="post" enctype="multipart/form-data">
         @csrf
         <div class="name-cont">
@@ -106,40 +107,46 @@
           </div>
           <span class="separador-xs"></span>
 
-          <br> 
+          
+
+          
           <div class="f1">
           <label for="photo1" class="label-desktop">
            FRONT<span class="color-rojo">*</span> <br>
           </label> <br>
             <input id="foto1" type="file" name="photo1">
-            </div>
+            </div><br>
+            
             <span class="separador-xs"></span>
-
-            <br>
+            
             <div class="f2"> 
             <label for="photo2" class="label-desktop">
            BACK<span class="color-rojo">*</span> <br>
-          </label> <br>
+          </label> 
             <input id="foto2" type="file" name="photo2">
-            </div>
+            </div><br>
+            
             <span class="separador-xs"></span>
-
-            <br> 
+            
             <div class="f3">
             <label for="photo3" class="label-desktop">
            DETAIL<span class="color-rojo">*</span> <br>
-          </label> <br>
+          </label> 
             <input id="foto3" type="file" name="photo3">
-            </div>
+            </div><br>
+          
+
+            
             <span class="separador-xs"></span>
-
-
+            <br>
           <p class="boton">
             <button class="boton-negro" type="submit" name="editar" id="editar">EDITAR</button>
           </p>
 
       </form>
+      </div>
     </div>
+  </div>
   </div>
   <script src="/js/auth/editar_producto.js" charset="utf-8"></script>
 @endsection
