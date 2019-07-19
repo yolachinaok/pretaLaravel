@@ -65,12 +65,17 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+      $route1 = $data[('avatar')]->store('public');
+      $photo1= basename($route1);
+
         return User::create([
             'name' => $data['name'],
             'lastname' => $data['lastname'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'esAdmin' => 0,
+            'avatar' => $photo1
+
         ]);
     }
 
