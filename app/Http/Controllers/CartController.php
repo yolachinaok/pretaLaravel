@@ -15,7 +15,7 @@ class CartController extends Controller
   $carritos= Cart::where('user_id', '=', $user)->get();
   foreach ($carritos as $carrito) {
     $carrito->delete();
-  }
+  } return redirect('/'); 
   }
 
   public function showCart(){
