@@ -24,7 +24,7 @@
 <!--@include('partials/shop/filterPages_shop')-->
 </div>
 
-<div class="pag">
+<div class="pag2">
 @if(Auth::user())
 @if(Auth::user()->esAdmin)
 <a class="agregarProducto" href="{{  url('/admin/productos') }}">AGREGAR PRODUCTO</a>

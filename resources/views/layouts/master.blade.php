@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="/css/footer.css" />
   </head>
 
-  <body>
+  <body style="background:#f3f3f3;">
   @include("partials/header")
 
 <!--------------------------------------------MAIN -->

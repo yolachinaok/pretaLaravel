@@ -19,18 +19,21 @@
 <!--
 <div class="filter-pages">
   <div class="filter-pages__categoria">
-  <div class="link">
-    <a href="">
-      <h4>Home</h4>
+
+@include('partials/shop/filterPages_shop')
+</div>-->
+<div class="contene">
+<div class="link">
+    <a href="{{  url('/shop') }}">
+      <h4>Shop</h4>
     </a>
-    <h4>/</h4>
+    
+<span>/</span>
+    
     <a href="">
         <h4> {{$cat}}</h4>
       </a>
   </div>
-</div>
-@include('partials/shop/filterPages_shop')
-</div>-->
 <div class="pag">
 @if(Auth::user())
 @if(Auth::user()->esAdmin)
@@ -42,10 +45,9 @@
 
 {{$products->onEachSide(1)->links()}}
 
-
-
-
 </div>
+
+  </div>
 <div class="modulosTodos">
 
   @foreach ($products as $product)
@@ -70,6 +72,15 @@
 
   </div></div>
 
+  @if(Auth::user())
+  @if(Auth::user()->esAdmin)
+    <div>
+    <a class='editarProducto' href='/admin/productos/editar/{{$product->id}}'>EDITAR</a>
+    </div>
+    @elseif(!Auth::user()->esAdmin)
+<div></div>
+@endif
+@endif
 
   </div>
  @endforeach

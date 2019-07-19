@@ -20,8 +20,8 @@
      <div class="footer-menu">
        <a href=""><h3>ABOUT US</h3></a>
        <a href=""><h3>CONTACT US</h3></a>
-       <a href=""><h3>AYUDA</h3></a>
-       <a href=""><h3>SIGN IN</h3></a>
+       <a href="{{  url('/ayuda') }}"><h3>AYUDA</h3></a>
+       <a href="{{  url('/login') }}"><h3>SIGN IN</h3></a>
      </div>
      <div class="redes">
        <ul>

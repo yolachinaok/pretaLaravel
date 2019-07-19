@@ -17,19 +17,31 @@
 <!-- CUERPO SHOP -->
 <main>
 
-<div class="filter-pages">
-  <div class="filter-pages__categoria">
-  <div class="link">
-    <a href="">
-      <h4>Home</h4>
+<div class="contene">
+<div class="link">
+    <a href="{{  url('/shop') }}">
+      <h4>Shop</h4>
     </a>
-    <h4>/</h4>
+    
+<span>/</span>
+    
     <a href="">
-        <h4></h4>
+        <h4> SALE</h4>
       </a>
   </div>
+<div class="pag">
+@if(Auth::user())
+@if(Auth::user()->esAdmin)
+<a class="agregarProducto" href="{{  url('/admin/productos') }}">AGREGAR PRODUCTO</a>
+@elseif(!Auth::user()->esAdmin)
+<div></div>
+@endif
+@endif
+
+{{$products->onEachSide(1)->links()}}
+
 </div>
-@include('partials/shop/filterPages_shop')
+
 </div>
 <div class="modulosTodos">
 
@@ -55,6 +67,15 @@
 
   </div></div>
 
+  @if(Auth::user())
+  @if(Auth::user()->esAdmin)
+    <div>
+    <a class='editarProducto' href='/admin/productos/editar/{{$product->id}}'>EDITAR</a>
+    </div>
+    @elseif(!Auth::user()->esAdmin)
+<div></div>
+@endif
+@endif
 
   </div>
  @endforeach
