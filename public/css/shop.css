@@ -560,6 +560,12 @@ main {
   padding: 10px;
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+  .pagination {
+    width: 40%;
+  }
+}
+
 .pagination li {
   display: inline-block;
   font-size: 20px;

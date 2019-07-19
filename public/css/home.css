@@ -445,6 +445,13 @@ fill:$violeta;
 
 .categoria {
   margin: 40px 0 40px 0;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
 .categoria-plano {
@@ -498,13 +505,13 @@ fill:$violeta;
 }
 
 .categorias {
+  width: 80%;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
           flex-flow: row wrap;
-  -webkit-box-pack: center;
-          justify-content: center;
+  justify-content: space-around;
 }
 
 .categoria-1 {
@@ -557,8 +564,8 @@ fill:$violeta;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
-  bottom: 3px;
-  left: 110px;
+  bottom: 0px;
+  left: 80px;
   font-size: 0.8rem;
 }
 
@@ -574,7 +581,7 @@ fill:$violeta;
 @media (min-width: 1024px) {
   .categoria-1 h3 {
     padding: 10px 80px;
-    bottom: 3px;
+    bottom: 0px;
     left: 110px;
     font-size: 1rem;
   }

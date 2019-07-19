@@ -358,6 +358,9 @@ fill:$violeta;
 /*___________________________________________________________SECCION CATEGORIAS*/
 .categoria {
   margin: $separacion 0 $separacion 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 .categoria-plano {
   display: flex;
@@ -395,9 +398,10 @@ fill:$violeta;
 }
 
 .categorias {
+  width:80%;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .categoria-1 {
@@ -435,8 +439,9 @@ fill:$violeta;
   font-family: $font;
   font-weight: 400;
   letter-spacing: 1px;
-  bottom: 3px;
-  left: 110px;
+  bottom: 0px;
+  left: 80px;
+  
   font-size: 0.8rem;
   @include tablet {
     padding: 10px 80px;
@@ -446,7 +451,7 @@ fill:$violeta;
   }
   @include desktop {
     padding: 10px 80px;
-    bottom: 3px;
+    bottom: 0px;
     left: 110px;
     font-size: 1rem;
   }

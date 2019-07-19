@@ -458,6 +458,9 @@ text-transform: uppercase;
   width:10%;
   background:$violeta;
   padding:10px;
+  @include mobile{
+    width:40%;
+  }
 
 }
 .pagination li{

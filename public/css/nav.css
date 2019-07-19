@@ -424,3 +424,31 @@ a {
 
 /*___________________________________________________________ END NAV */
 
+.tooltip2 {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip2 .tiptext2 {
+  visibility: hidden;
+  width: 120px;
+  background-color: #cc9fd8;
+  color: #232326;
+  text-align: center;
+  border-radius: 3px;
+  padding: 6px 0;
+  position: absolute;
+  z-index: 1000000;
+}
+
+.tooltip2 .tiptext2::after {
+  content: "";
+  position: absolute;
+  border-width: 5px;
+}
+
+.tooltip2:hover .tiptext2 {
+  visibility: visible;
+}
+

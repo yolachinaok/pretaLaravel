@@ -126,3 +126,33 @@ footer {
     color: $blanco;
   }
   
+
+
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+.tooltip .tiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: $blanco;
+    color:$negro;
+    font-family: $font;
+    text-align: center;
+    border-radius: 3px;
+    padding: 6px 0;
+    margin-bottom: 10px;
+    position: absolute;
+    z-index: 1000000;
+  
+}
+.tooltip .tiptext::after {
+    content: "";
+    position: absolute;
+    border-width: 5px;
+   
+}
+.tooltip:hover .tiptext {
+    visibility: visible;
+}

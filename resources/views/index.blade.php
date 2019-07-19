@@ -10,7 +10,7 @@
 
  <!-- ___________________________________SECCION HERO / SLIDE __________________________________________________-->
 
- <section class="Hero">
+ <section id="H"  class="Hero">
       <div class="glider-contain" id="hero">
         <div class="glider draggable" id="glider-single">
           <div>
@@ -210,7 +210,7 @@
     <!-- ___________________________________BOTON BACK TO TOP______________________________________________-->
     <div class="boton-back">
       <i class="material-icons back-arrow">expand_less</i>
-      <a href="#hero">
+      <a href="#H">
         <h4>BACK TO TOP</h4>
       </a>
       <i class="material-icons back-arrow">expand_less</i>

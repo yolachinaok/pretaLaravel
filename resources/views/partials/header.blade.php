@@ -65,28 +65,28 @@
               </div>
             </li></a>
 
-          <a class="nombre" href="#">
+          <a class="nombre" href="{{  url('/shop') }}">
             <li>
               <div class="li-flex">
                 SHOP ALL
                 <i class="material-icons">chevron_right</i>
               </div>
             </li></a>
-          <a class="nombre" href="#">
+          <a class="nombre" href="{{  url('/shop/tops/2') }}">
             <li>
               <div class="li-flex">
                 TOPS
                 <i class="material-icons">chevron_right</i>
               </div>
             </li></a>
-          <a class="nombre" href="#">
+          <a class="nombre" href="{{  url('/shop/jeans/1') }}">
             <li>
               <div class="li-flex">
                 JEANS
                 <i class="material-icons">chevron_right</i>
               </div>
             </li></a>
-          <a class="nombre" href="#">
+          <a class="nombre" href="{{  url('/shop/vestidos/4') }}">
             <li>
               <div class="li-flex">
                 VESTIDOS
@@ -114,13 +114,7 @@
                 <i class="material-icons">chevron_right</i>
               </div>
             </li></a>
-          <a class="nombre" href="#">
-            <li>
-              <div class="li-flex">
-                CONTACTO
-                <i class="material-icons">chevron_right</i>
-              </div>
-            </li></a>
+         
         </ul>
         <div class="hamb-redes">
           <ul>
@@ -140,14 +134,22 @@
 
       <div class="nav-tablet-desktop">
         <div class="nav-container1">
+          
           <div class="nav-locales">
             <ul>
-              <li><a href="">LOCALES</a></li>
+            <div class="tooltip2 top">
+              <li><a >LOCALES</a></li>
+              <span class="tiptext2">MUY PRONTO :)</span>
+</div>
               <hr />
+              <div class="tooltip2 top">
               <div class="nav-search">
-                <a href=""><i class="material-icons">search</i></a>
-                <li><a href="{{  url('/ayuda') }}">BUSCAR</a></li>
-              </div>
+                <a ><i class="material-icons">search</i></a>
+                <li><a >BUSCAR</a></li>
+</div>
+
+    <span class="tiptext2">FUNCIONALIDAD EN CONSTRUCCIÓN :)</span>
+</div>
               <hr />
               <li><a href="{{  url('/ayuda') }}">AYUDA</a></li>
             </ul>
