@@ -89,15 +89,27 @@ window.onload = function () {
         }
         }
         if(elemento.name == 'deacuerdo'){
+            console.log(elemento.checked);
+            if(!elemento.checked){
            let check=document.querySelector(".de");
-           console.log(check);
+      
            check.style.color="red";
            check.style.fontFamily= "'Open Sans', sans-serif";
   check.style.fontSize= '16px';
   check.style.paddingLeft="5px";
            check.innerText="Debes aceptar los Términos y Condiciones";
            event.preventDefault();
+        }else{
+            let check=document.querySelector(".de");
+            check.style.color="black";
+            check.style.fontFamily= "'Open Sans', sans-serif";
+   check.style.fontSize= '16px';
+   check.style.paddingLeft="5px";
+            check.innerText="Estoy de acuerdo con los Términos y Condiciones";
+
         }
+    
+    }
          
       
       
