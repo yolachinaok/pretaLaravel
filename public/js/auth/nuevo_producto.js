@@ -60,10 +60,11 @@ function validarVacio(input,num) {
               if (elemento.type == 'submit' || elemento.type == 'hidden') {
                   continue;
               }
-              if (elemento.type != 'file'  &&  validarVacio(elemento,3)) {
+              if (elemento.type != 'file'  && elemento.name != 'discount' && validarVacio(elemento,3)) {
                 event.preventDefault();  
               }
   
+
            
             
               if(elemento.name == 'category_id'){

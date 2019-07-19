@@ -16,7 +16,7 @@
 
 <!-- CUERPO SHOP -->
 <main>
-
+<!--
 <div class="filter-pages">
   <div class="filter-pages__categoria">
   <div class="link">
@@ -30,6 +30,21 @@
   </div>
 </div>
 @include('partials/shop/filterPages_shop')
+</div>-->
+<div class="pag">
+@if(Auth::user())
+@if(Auth::user()->esAdmin)
+<a class="agregarProducto" href="{{  url('/admin/productos') }}">AGREGAR PRODUCTO</a>
+@elseif(!Auth::user()->esAdmin)
+<div></div>
+@endif
+@endif
+
+{{$products->onEachSide(1)->links()}}
+
+
+
+
 </div>
 <div class="modulosTodos">
 
